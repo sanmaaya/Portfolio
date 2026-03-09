@@ -1,16 +1,66 @@
-# React + Vite
+# Sanmaya M B - Full Stack Developer Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to the source code of my personal portfolio website! This project is a highly customized, visually immersive digital showcase built to detail my skills, projects, and journey as a developer. 
 
-Currently, two official plugins are available:
+## 🌟 Live Demo
+*(You can link your hosted website URL here later)*
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
+- **Award-Winning Aesthetic**: Deep dark theme (slate/navy) with dynamic glassmorphism and animated components.
+- **Smooth Animations**: Built-in Framer Motion page transitions, scroll progress indicators, and custom cursors.
+- **Interactive Particle Background**: Integrated universal falling snow effect for a creative touch.
+- **Modular Sections**: 
+  - Dynamic Hero Banner
+  - About & Education (Targeted B.Tech journey)
+  - Interactive "Technical Arsenal" using React Icons
+  - Glowing Project Cards
+  - Achievements & Training Highlights
+  - Fully functional minimalist Contact Form
+- **Dedicated Resume Route**: A dedicated `/resume` page that expands upon experience and allows for a direct PDF download.
 
-## React Compiler
+## 🛠️ Tech Stack
+**Frontend:**
+- React.js (Component-based architecture)
+- Vite (Lightning-fast development environment)
+- Tailwind CSS v4 (Utility-first styling & custom design system)
+- Framer Motion (Complex micro-interactions & animations)
+- React Scroll (Smooth in-page navigation)
+- React Router DOM (Client-side routing)
+- React Icons (FontAwesome, SimpleIcons, Ionicons)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+**Backend / API:**
+- Node.js & Express.js (REST API Structure)
+- MongoDB & Mongoose (NoSQL Database)
 
-## Expanding the ESLint configuration
+## 💻 Running Locally
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 1. Clone the Repository
+```bash
+git clone https://github.com/sanmaaya/Portfolio.git
+cd Portfolio
+```
+
+### 2. Start the Backend Server
+```bash
+cd server
+npm install
+npm run dev
+```
+
+### 3. Start the Frontend React App
+Open a new terminal window:
+```bash
+cd client
+npm install
+npm run dev
+```
+
+The app will now be available locally (usually at `http://localhost:5173`).
+
+## 📬 Contact
+**Name**: Sanmaya M B  
+**Role**: Full Stack Developer  
+**Email**: sanmayamb@gmail.com *(Update with your actual email if needed)*  
+**Location**: Punjab, India (Lovely Professional University)
+
+Feel free to connect or reach out regarding any collaboration, project inquiries, or full-stack opportunities!
