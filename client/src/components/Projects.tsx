@@ -4,24 +4,36 @@ import { ExternalLink, Github, Folder } from "lucide-react";
 export default function Projects() {
     const projects = [
         {
-            title: "Employee Leave Management System",
-            description: "A full-stack web application that simulates a real company HR workflow for managing employee leave requests. Includes role-based dashboards, secure auth, and protected routing.",
-            tech: ["React.js", "Tailwind CSS", "Node.js", "Express.js", "MongoDB"],
-            github: "https://github.com/",
-            live: "https://example.com"
+            title: "WORK Balance – Premium Employee & Team Management",
+            description: "Architected a full-stack real-time management system with Role-Based Access Control (RBAC). Spearheaded the integration of Socket.io for peer-to-peer instant messaging and designed an operational command center including a Risk Monitor.",
+            tech: ["React.js", "Node.js", "Express.js", "MongoDB", "Socket.io", "Tailwind CSS"],
+            github: "https://github.com/sanmaaya",
+            live: ""
         },
         {
-            title: "Drug Review Sentiment Analysis",
-            description: "A machine learning project that analyzes user drug reviews and classifies them into positive, negative, or neutral sentiments using feature extraction with TF-IDF.",
-            tech: ["Python", "Scikit-learn", "Pandas", "Power BI"],
-            github: "https://github.com/",
+            title: "Paise Bachaaoo – Premium Financial Command Centre",
+            description: "Engineered a high-end finance tracker that tracks real-time global market benchmarks. Implemented a 'Sync to Vault' architecture using Firebase Firestore to maintain data integrity and crafted a premium Glassmorphic UI.",
+            tech: ["React 18", "Firebase", "Recharts", "JavaScript", "Tailwind CSS"],
+            github: "https://github.com/sanmaaya",
         },
         {
-            title: "Academic Performance Tracker",
-            description: "A personalized web application designed to track academic performance across different semesters. Evaluates marks tracking with custom weightage and automatic CGPA generation.",
-            tech: ["HTML", "CSS", "Tailwind CSS", "Bootstrap", "JavaScript", "Chart.js"],
-            github: "https://github.com/",
-            live: "https://example.com"
+            title: "Electrosystem – Hybrid Renewable Energy Platform",
+            description: "Architected a full-stack web platform to simulate and evaluate hybrid renewable energy systems. Engineered complex energy-flow logic and designed modular simulation workflows that enable data-driven analysis.",
+            tech: ["Node.js", "Express.js", "MongoDB", "JavaScript", "HTML", "CSS"],
+            github: "https://github.com/sanmaaya",
+        },
+        {
+            title: "SOHAM – Pranic Healing & Meditation (Client Project)",
+            description: "Architected a professional, client-ready web platform using PHP and MySQL to manage official guidelines. Engineered a custom registration workflow with automated email notifications.",
+            tech: ["PHP", "MySQL", "JavaScript", "HTML", "CSS"],
+            github: "https://github.com/sanmaaya",
+            live: ""
+        },
+        {
+            title: "TechnoGrowX – Smart Agriculture Support Platform",
+            description: "Developed a robust three-tier architecture featuring specialized portals for Farmers, Experts, and Admins. Implemented a report-submission engine and integrated a secure Node.js authentication system.",
+            tech: ["Node.js", "MySQL", "Tailwind CSS", "JavaScript", "HTML", "CSS"],
+            github: "https://github.com/sanmaaya",
         }
     ];
 

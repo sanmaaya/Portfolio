@@ -3,15 +3,14 @@ import { motion } from "framer-motion";
 export default function Experience() {
     const experiences = [
         {
-            role: "Data Science Trainee",
-            company: "Lovely Professional University (LPU)",
-            location: "Phagwara",
-            date: "June 2025 - July 2025",
+            role: "Software Engineering Virtual Experience",
+            company: "Skyscanner | Forage",
+            location: "Remote",
+            date: "Jan 2026 - Feb 2026",
             points: [
-                "Completed a hands-on data science training focused on NLP, machine learning, and data visualization.",
-                "Built a Drug Review Sentiment Analysis model using TF-IDF and Logistic Regression.",
-                "Classified reviews into Positive, Negative, and Neutral categories.",
-                "Designed an interactive Power BI dashboard to visualize sentiment insights."
+                "Constructed RESTful microservices utilizing Java and Dropwizard, ensuring structured API endpoints via YAML configuration.",
+                "Developed a modular Android application in Kotlin by integrating Backpack UI components and React.js features.",
+                "Translated Figma UI designs into technical specifications while managing project tasks through JIRA user stories."
             ]
         }
     ];
