@@ -4,6 +4,16 @@ import { BookOpen, Award } from "lucide-react";
 export default function Certifications() {
     const certs = [
         {
+            title: "Cloud Computing | NPTEL",
+            details: [
+                "Achieved in Nov '25",
+                "Mastery of cloud architecture patterns",
+                "Virtualization and distributed computing",
+                "SaaS, PaaS, and IaaS service models"
+            ],
+            project: "Accredited Certification"
+        },
+        {
             title: "From Data to Decisions: A Hands-On Approach to Data Science",
             details: [
                 "Data preprocessing and cleaning",

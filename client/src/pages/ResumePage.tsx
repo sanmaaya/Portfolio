@@ -46,13 +46,31 @@ export default function ResumePage() {
                         <div className="space-y-8">
                             <div className="relative pl-6 border-l border-zinc-800">
                                 <div className="absolute w-3 h-3 bg-blue-500 rounded-full -left-[6.5px] top-2 border-2 border-[#0a0a0a]"></div>
-                                <h4 className="text-xl font-medium">Bachelor of Technology – Computer Science & Engineering</h4>
-                                <p className="text-blue-400 mt-1">Lovely Professional University, Punjab, India</p>
+                                <h4 className="text-xl font-medium">B.Tech Computer Science and Engineering</h4>
+                                <p className="text-blue-400 mt-1">Lovely Professional University, Punjab</p>
+                                <p className="text-zinc-500 text-sm mt-1">Aug '23 - Present</p>
                                 <div className="mt-4 flex flex-wrap gap-2 text-sm text-zinc-400">
-                                    <span className="bg-white/5 px-3 py-1.5 rounded border border-white/5">Web Development</span>
-                                    <span className="bg-white/5 px-3 py-1.5 rounded border border-white/5">Data Science</span>
-                                    <span className="bg-white/5 px-3 py-1.5 rounded border border-white/5">Software Engineering</span>
-                                    <span className="bg-white/5 px-3 py-1.5 rounded border border-white/5">Database Management</span>
+                                    <span className="bg-white/5 px-3 py-1.5 rounded border border-white/5">CGPA: 7.3</span>
+                                </div>
+                            </div>
+                            <div className="relative pl-6 border-l border-zinc-800">
+                                <div className="absolute w-3 h-3 bg-blue-500 rounded-full -left-[6.5px] top-2 border-2 border-[#0a0a0a]"></div>
+                                <h4 className="text-xl font-medium">12th with Science</h4>
+                                <p className="text-blue-400 mt-1">Presentation Higher Secondary School</p>
+                                <p className="text-zinc-500 text-sm mt-1">Mar '21 - May '23</p>
+                                <div className="mt-4 flex flex-wrap gap-2 text-sm text-zinc-400">
+                                    <span className="bg-white/5 px-3 py-1.5 rounded border border-white/5">Percentage: 87.50%</span>
+                                    <span className="bg-white/5 px-3 py-1.5 rounded border border-white/5">Kozhikode, Kerala</span>
+                                </div>
+                            </div>
+                            <div className="relative pl-6 border-l border-zinc-800">
+                                <div className="absolute w-3 h-3 bg-blue-500 rounded-full -left-[6.5px] top-2 border-2 border-[#0a0a0a]"></div>
+                                <h4 className="text-xl font-medium">10th with Science</h4>
+                                <p className="text-blue-400 mt-1">Pallotti Hill Public School</p>
+                                <p className="text-zinc-500 text-sm mt-1">Mar '20 - May '21</p>
+                                <div className="mt-4 flex flex-wrap gap-2 text-sm text-zinc-400">
+                                    <span className="bg-white/5 px-3 py-1.5 rounded border border-white/5">Percentage: 85%</span>
+                                    <span className="bg-white/5 px-3 py-1.5 rounded border border-white/5">Kozhikode, Kerala</span>
                                 </div>
                             </div>
                         </div>
@@ -77,10 +95,10 @@ export default function ResumePage() {
                             <span className="p-2 bg-amber-500/10 rounded-lg text-amber-400"><Trophy className="w-5 h-5" /></span> Highlights
                         </h3>
                         <ul className="list-disc list-inside text-zinc-400 space-y-3 leading-relaxed text-lg">
-                            <li>Developed multiple full-stack web applications using modern technologies.</li>
-                            <li>Completed a hands-on data science training program.</li>
-                            <li>Built machine learning models for sentiment classification.</li>
-                            <li>Actively building a portfolio of real-world projects.</li>
+                            <li>Hacker Rank Awards: 4-Star in C++, 2-Star in C, 2-Star in 30 Days of Code, Java, and 10 Days of JS.</li>
+                            <li>Hacker Rank Verified Skills: JavaScript (Basic), CSS (Basic).</li>
+                            <li>Coding Stats: Solved 200+ problems; Global Rank 22,861 on Codolio based on C Score.</li>
+                            <li>NPTEL Certified in Cloud Computing (Nov '25).</li>
                         </ul>
                     </section>
                 </div>

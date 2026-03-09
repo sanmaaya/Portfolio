@@ -3,10 +3,9 @@ import { CheckCircle2 } from "lucide-react";
 
 export default function Achievements() {
     const highlights = [
-        "Developed multiple full-stack web applications using modern technologies",
-        "Completed a hands-on data science training program",
-        "Built machine learning models for sentiment classification",
-        "Actively building a portfolio of real-world projects"
+        "Hacker Rank Awards: 4-Star in C++, 2-Star in C, 2-Star in 30 Days of Code, Java, and 10 Days of JS.",
+        "Hacker Rank Verified Skills: JavaScript (Basic), CSS (Basic).",
+        "Coding Stats: Solved 200+ problems; Global Rank 22,861 on Codolio based on C Score."
     ];
 
     return (
