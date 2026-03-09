@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #020617;
+  /* Very dark slate for better depth */
+  --color-foreground: #f8fafc;
+  --color-primary: #3b82f6;
+  --color-primary-foreground: #ffffff;
+  --color-secondary: #0f172a;
+  --color-secondary-foreground: #f8fafc;
+  --color-accent: #2563eb;
+  --color-muted: #1e293b;
+  --color-muted-foreground: #94a3b8;
+}
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    overflow-x: hidden;
+    background-image:
+      radial-gradient(circle at 10% 20%, rgba(59, 130, 246, 0.08), transparent 25%),
+      radial-gradient(circle at 90% 80%, rgba(79, 70, 229, 0.08), transparent 30%);
+    background-attachment: fixed;
+    background-color: #020617;
+  }
+}
+
+.glass-panel {
+  background: rgba(15, 23, 42, 0.4);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #93c5fd, #3b82f6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.section-padding {
+  @apply py-24 px-4 md:px-8 max-w-7xl mx-auto;
+}
+
+.heading-2 {
+  @apply text-4xl md:text-5xl lg:text-6xl font-black mb-12 tracking-tight;
+}
+
+/* Custom Scrollbar - Very Clean */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #020617;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
+
+/* Base selection color */
+::selection {
+  background: rgba(59, 130, 246, 0.3);
+  color: #fff;
+}
