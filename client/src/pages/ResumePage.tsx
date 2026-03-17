@@ -35,7 +35,7 @@ export default function ResumePage() {
                             <span className="p-2 bg-blue-500/10 rounded-lg text-blue-400"><Briefcase className="w-5 h-5" /></span> Summary
                         </h3>
                         <p className="text-zinc-400 leading-relaxed text-lg">
-                            B.Tech Computer Science student at Lovely Professional University focused on Full Stack Web Development. Experienced in designing responsive user interfaces, implementing backend APIs, and managing databases with React, Node.js, and MongoDB. Also skilled in Data Science and Machine Learning with hands-on sentiment analysis models.
+                            B.Tech Computer Science student at Lovely Professional University focused on Full Stack Web Development. Experienced in designing responsive user interfaces, implementing backend APIs, and managing databases with React, Node.js, and Firebase. Also skilled in Data Science and Machine Learning with hands-on sentiment analysis models.
                         </p>
                     </section>
 

@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import {
     SiReact, SiTailwindcss, SiNodedotjs, SiExpress,
-    SiMongodb, SiPython, SiCplusplus, SiC, SiMysql,
+    SiMongodb, SiFirebase, SiPython, SiCplusplus, SiC, SiMysql,
     SiJavascript, SiBootstrap, SiFigma, SiJupyter,
     SiGit, SiGithub
 } from "react-icons/si";
@@ -28,6 +28,7 @@ export default function Skills() {
             skills: [
                 { name: "Node.js", icon: <SiNodedotjs className="text-[#339933]" /> },
                 { name: "Express.js", icon: <SiExpress className="text-white" /> },
+                { name: "Firebase", icon: <SiFirebase className="text-[#FFCA28]" /> },
                 { name: "MongoDB", icon: <SiMongodb className="text-[#47A248]" /> },
                 { name: "MySQL", icon: <SiMysql className="text-[#4479A1]" /> },
                 { name: "REST APIs", icon: <span className="font-mono text-blue-400 font-bold px-1">{'{}'}</span> },

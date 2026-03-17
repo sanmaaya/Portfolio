@@ -57,7 +57,7 @@ export default function Hero() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }}
                 >
-                    I am a Computer Science student at Lovely Professional University passionate about turning ideas into functional, user-friendly digital products using React, Node.js, and MongoDB.
+                    I am a Computer Science student at Lovely Professional University passionate about turning ideas into functional, user-friendly digital products using React, Node.js, and Firebase.
                 </motion.p>
 
                 <motion.div

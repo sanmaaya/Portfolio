@@ -26,6 +26,12 @@ export default function Contact() {
             return;
         }
 
+        if (!rtdb) {
+            setError("Contact service is temporarily unavailable. Please try again later or use the email link.");
+            console.error("Firebase RTDB is not initialized.");
+            return;
+        }
+
         setIsSubmitting(true);
         setError("");
 
