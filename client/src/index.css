@@ -1,21 +1,23 @@
 @import "tailwindcss";
 
 @theme {
-  --color-background: #020617;
-  /* Very dark slate for better depth */
-  --color-foreground: #f8fafc;
+  --color-background: #ffffff;
+  /* Pure white background for light mode */
+  --color-foreground: #0f172a;
+  /* Dark slate for text */
   --color-primary: #ec4899;
+  /* Vibrant pink */
   --color-primary-foreground: #ffffff;
-  --color-secondary: #0f172a;
-  --color-secondary-foreground: #f8fafc;
+  --color-secondary: #f8fafc;
+  --color-secondary-foreground: #0f172a;
   --color-accent: #db2777;
-  --color-muted: #1e293b;
-  --color-muted-foreground: #94a3b8;
+  --color-muted: #f1f5f9;
+  --color-muted-foreground: #64748b;
 }
 
 @layer base {
   :root {
-    color-scheme: dark;
+    color-scheme: light;
   }
 
   html {
@@ -27,23 +29,23 @@
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
     overflow-x: hidden;
     background-image:
-      radial-gradient(circle at 10% 20%, rgba(236, 72, 153, 0.08), transparent 25%),
-      radial-gradient(circle at 90% 80%, rgba(219, 39, 119, 0.08), transparent 30%);
+      radial-gradient(circle at 10% 20%, rgba(236, 72, 153, 0.05), transparent 25%),
+      radial-gradient(circle at 90% 80%, rgba(219, 39, 119, 0.05), transparent 30%);
     background-attachment: fixed;
-    background-color: #020617;
+    background-color: #ffffff;
   }
 }
 
 .glass-panel {
-  background: rgba(15, 23, 42, 0.4);
+  background: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(236, 72, 153, 0.1);
+  box-shadow: 0 8px 32px rgba(236, 72, 153, 0.05);
 }
 
 .text-gradient {
-  background: linear-gradient(135deg, #f9a8d4, #ec4899);
+  background: linear-gradient(135deg, #ec4899, #db2777);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -54,29 +56,29 @@
 }
 
 .heading-2 {
-  @apply text-4xl md:text-5xl lg:text-6xl font-black mb-12 tracking-tight;
+  @apply text-4xl md:text-5xl lg:text-6xl font-black mb-12 tracking-tight text-slate-900;
 }
 
-/* Custom Scrollbar - Very Clean */
+/* Custom Scrollbar - Light Mode */
 ::-webkit-scrollbar {
   width: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #020617;
+  background: #ffffff;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #334155;
+  background: #e2e8f0;
   border-radius: 6px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #475569;
+  background: #cbd5e1;
 }
 
 /* Base selection color */
 ::selection {
-  background: rgba(236, 72, 153, 0.3);
-  color: #fff;
+  background: rgba(236, 72, 153, 0.2);
+  color: #000;
 }
