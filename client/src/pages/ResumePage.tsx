@@ -76,7 +76,7 @@ export default function ResumePage() {
                         <div className="flex items-center gap-2">
                             <span className="font-medium text-pink-400">Mobile:</span> +91 8075230575
                         </div>
-                        <button onClick={() => window.print()} className="mt-4 bg-gradient-to-r from-pink-600 to-indigo-600 text-white px-8 py-3 rounded-full font-medium flex items-center gap-2 hover:scale-105 transition-all shadow-[0_0_20px_rgba(59,130,246,0.3)] print:hidden">
+                        <button onClick={() => window.print()} className="mt-4 bg-gradient-to-r from-pink-600 to-pink- text-white px-8 py-3 rounded-full font-medium flex items-center gap-2 hover:scale-105 transition-all shadow-[0_0_20px_rgba(59,130,246,0.3)] print:hidden">
                             <Download className="w-4 h-4" /> Download CV
                         </button>
                     </div>
@@ -242,7 +242,7 @@ export default function ResumePage() {
                     {/* CERTIFICATES */}
                     <section>
                         <h3 className="text-2xl font-semibold mb-6 flex items-center gap-3">
-                            <span className="p-2 bg-indigo-500/10 rounded-lg text-indigo-400"><Award className="w-5 h-5" /></span> CERTIFICATES
+                            <span className="p-2 bg-pink-600/10 rounded-lg text-pink-"><Award className="w-5 h-5" /></span> CERTIFICATES
                         </h3>
                         <div className="space-y-4">
                             <div className="flex flex-col sm:flex-row justify-between sm:items-center py-3 border-b border-white/5 group hover:bg-white/5 px-2 rounded-lg transition-colors">

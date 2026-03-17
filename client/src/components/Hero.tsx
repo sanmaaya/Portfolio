@@ -15,11 +15,11 @@ export default function Hero() {
                     maxSize={1.4}
                     particleDensity={100}
                     className="w-full h-full"
-                    particleColor="#ec4899"
+                    particleColor={["#ffffff", "#ec4899"]}
                     speed={1}
                 />
                 <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-pink-600/20 rounded-full blur-[128px] animate-pulse"></div>
-                <div className="absolute bottom-1/4 right-1/4 w-[28rem] h-[28rem] bg-teal-600/10 rounded-full blur-[128px] animate-pulse" style={{ animationDelay: '2s' }}></div>
+                <div className="absolute bottom-1/4 right-1/4 w-[28rem] h-[28rem] bg-pink-600/10 rounded-full blur-[128px] animate-pulse" style={{ animationDelay: '2s' }}></div>
             </div>
 
             <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-8 flex flex-col items-center text-center">

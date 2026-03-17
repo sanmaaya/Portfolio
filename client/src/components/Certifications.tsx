@@ -479,7 +479,7 @@ export default function Certifications() {
                             onClick={() => setShowAll(!showAll)}
                             className="group relative px-6 py-3 bg-white/5 border border-white/10 rounded-xl flex items-center gap-3 text-white font-bold hover:bg-pink-500 transition-all hover:border-pink-400 overflow-hidden"
                         >
-                            <div className="absolute inset-0 bg-gradient-to-r from-pink-600/20 to-indigo-600/20 opacity-0 group-hover:opacity-100 transition-opacity" />
+                            <div className="absolute inset-0 bg-gradient-to-r from-pink-600/20 to-pink-/20 opacity-0 group-hover:opacity-100 transition-opacity" />
                             <span className="relative z-10 text-xs tracking-widest uppercase">
                                 {showAll ? "Show Less" : "See More Certificates"}
                             </span>

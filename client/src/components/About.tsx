@@ -10,7 +10,7 @@ export default function About() {
             desc: "From designing responsive user interfaces to implementing backend APIs and databases."
         },
         {
-            icon: <Sparkles className="w-6 h-6 text-indigo-400" />,
+            icon: <Sparkles className="w-6 h-6 text-pink-" />,
             title: "Machine Learning Concepts",
             desc: "Explored sentiment analysis and natural language processing techniques in Python."
         },

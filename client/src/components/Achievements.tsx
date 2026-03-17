@@ -54,7 +54,7 @@ export default function Achievements() {
                             />
                             <div className="relative h-full w-full glass-panel p-8 rounded-3xl flex flex-col gap-6 group hover:bg-white/5 transition-all overflow-hidden">
                                 <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-pink-500/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                                <div className="bg-gradient-to-br from-pink-500/20 to-indigo-500/20 p-4 rounded-2xl text-pink-400 group-hover:scale-110 group-hover:from-pink-500/30 group-hover:to-indigo-500/30 transition-all self-start shadow-inner">
+                                <div className="bg-gradient-to-br from-pink-500/20 to-pink-/20 p-4 rounded-2xl text-pink-400 group-hover:scale-110 group-hover:from-pink-500/30 group-hover:to-pink-/30 transition-all self-start shadow-inner">
                                     {item.icon}
                                 </div>
                                 <div>

@@ -77,8 +77,8 @@ export default function Contact() {
                                     </div>
                                     <span className="font-medium text-lg">Email Me</span>
                                 </a>
-                                <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer" className="flex items-center gap-5 text-zinc-400 hover:text-indigo-400 transition-colors group">
-                                    <div className="w-14 h-14 bg-white/5 rounded-2xl flex items-center justify-center group-hover:bg-indigo-500/10 group-hover:shadow-[0_0_15px_rgba(99,102,241,0.2)] transition-all">
+                                <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer" className="flex items-center gap-5 text-zinc-400 hover:text-pink- transition-colors group">
+                                    <div className="w-14 h-14 bg-white/5 rounded-2xl flex items-center justify-center group-hover:bg-pink-600/10 group-hover:shadow-[0_0_15px_rgba(99,102,241,0.2)] transition-all">
                                         <Linkedin className="w-6 h-6" />
                                     </div>
                                     <span className="font-medium text-lg">LinkedIn</span>
