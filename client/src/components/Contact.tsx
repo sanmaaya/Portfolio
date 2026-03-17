@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
-import { Send, Mail, Linkedin, Github, Loader2 } from "lucide-react";
+import { Send, Mail, Linkedin, Github, Loader2, ShieldCheck } from "lucide-react";
 import { useState } from "react";
-import { db } from "../firebase";
-import { collection, addDoc, serverTimestamp } from "firebase/firestore";
+import { rtdb } from "../firebase";
+import { ref, push, serverTimestamp } from "firebase/database";
 
 export default function Contact() {
     const [formData, setFormData] = useState({
@@ -30,14 +30,14 @@ export default function Contact() {
         setError("");
 
         try {
-            await addDoc(collection(db, "messages"), {
+            await push(ref(rtdb, "messages"), {
                 ...formData,
                 timestamp: serverTimestamp()
             });
             setSubmitted(true);
             setFormData({ name: "", email: "", message: "" });
         } catch (err) {
-            console.error("Error adding document: ", err);
+            console.error("Error adding message: ", err);
             setError("Something went wrong. Please try again later.");
         } finally {
             setIsSubmitting(false);
@@ -164,7 +164,4 @@ export default function Contact() {
         </section>
     );
 }
-
-// Helper component for the success icon (I'll import ShieldCheck if available or use a checkmark)
-import { ShieldCheck } from "lucide-react";
 
