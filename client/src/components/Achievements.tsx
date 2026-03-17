@@ -30,7 +30,7 @@ export default function Achievements() {
                 transition={{ duration: 0.6 }}
             >
                 <div className="flex items-center gap-4 mb-16">
-                    <div className="flex-1 h-[1px] bg-white/10 hidden md:block"></div>
+                    <div className="flex-1 h-[1px] bg-slate-200/50 hidden md:block"></div>
                     <h2 className="heading-2 m-0 text-right">Achievements & Highlights<span className="text-pink-500">.</span></h2>
                 </div>
 
@@ -52,14 +52,14 @@ export default function Achievements() {
                                 inactiveZone={0.01}
                                 borderWidth={3}
                             />
-                            <div className="relative h-full w-full glass-panel p-8 rounded-3xl flex flex-col gap-6 group hover:bg-white/5 transition-all overflow-hidden">
+                            <div className="relative h-full w-full glass-panel p-8 rounded-3xl flex flex-col gap-6 group hover:bg-slate-100/50 transition-all overflow-hidden">
                                 <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-pink-500/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
                                 <div className="bg-gradient-to-br from-pink-500/20 to-pink-/20 p-4 rounded-2xl text-pink-400 group-hover:scale-110 group-hover:from-pink-500/30 group-hover:to-pink-/30 transition-all self-start shadow-inner">
                                     {item.icon}
                                 </div>
                                 <div>
-                                    <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-pink-400 transition-colors leading-tight">{item.title}</h3>
-                                    <p className="text-zinc-400 text-lg leading-relaxed font-medium group-hover:text-zinc-300 transition-colors">{item.desc}</p>
+                                    <h3 className="text-2xl font-bold text-slate-900 font-bold mb-3 group-hover:text-pink-400 transition-colors leading-tight">{item.title}</h3>
+                                    <p className="text-slate-600 text-lg leading-relaxed font-medium group-hover:text-slate-700 font-medium transition-colors">{item.desc}</p>
                                 </div>
                             </div>
                         </motion.div>
@@ -76,8 +76,8 @@ export default function Achievements() {
                 className="mt-32"
             >
                 <div className="flex items-center gap-4 mb-16">
-                    <h2 className="heading-2 m-0 text-white">HackerRank <span className="text-emerald-500">Badges.</span></h2>
-                    <div className="flex-1 h-[1px] bg-white/10 hidden md:block"></div>
+                    <h2 className="heading-2 m-0 text-slate-900 font-bold">HackerRank <span className="text-emerald-500">Badges.</span></h2>
+                    <div className="flex-1 h-[1px] bg-slate-200/50 hidden md:block"></div>
                 </div>
 
                 <div className="flex flex-wrap justify-center gap-6 md:gap-10">
@@ -97,7 +97,7 @@ export default function Achievements() {
                             whileHover={{ y: -10 }}
                             className="relative group cursor-pointer"
                         >
-                            <div className="absolute inset-0 bg-white/10 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity" />
+                            <div className="absolute inset-0 bg-slate-200/50 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity" />
                             <div 
                                 className={`relative w-36 h-40 md:w-40 md:h-44 flex flex-col items-center justify-center transition-transform group-hover:scale-105 shadow-2xl ${badge.color}`}
                                 style={{ clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)' }}

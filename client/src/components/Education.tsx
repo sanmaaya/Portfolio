@@ -32,7 +32,7 @@ export default function Education() {
                 transition={{ duration: 0.6 }}
             >
                 <div className="flex items-center gap-4 mb-16">
-                    <div className="flex-1 h-[1px] bg-white/10 hidden md:block"></div>
+                    <div className="flex-1 h-[1px] bg-slate-200/50 hidden md:block"></div>
                     <h2 className="heading-2 m-0 text-right">Education<span className="text-pink-500">.</span></h2>
                 </div>
 
@@ -57,19 +57,19 @@ export default function Education() {
                                                 <GraduationCap className="w-4 h-4" />
                                                 Academic Background
                                             </div>
-                                            <div className="text-xs font-mono text-zinc-500 tracking-wider">
+                                            <div className="text-xs font-mono text-slate-500 tracking-wider">
                                                 {item.date}
                                             </div>
                                         </div>
-                                        <h3 className="text-xl font-bold mb-1.5 text-white">{item.degree}</h3>
-                                        <div className="text-base text-zinc-400 font-medium">{item.institution}</div>
+                                        <h3 className="text-xl font-bold mb-1.5 text-slate-900 font-bold">{item.degree}</h3>
+                                        <div className="text-base text-slate-600 font-medium">{item.institution}</div>
                                     </div>
 
-                                    <div className="mt-2 pt-4 border-t border-white/10">
-                                        <h4 className="text-xs font-medium text-zinc-500 mb-3 uppercase tracking-wider">Relevant Focus Areas</h4>
+                                    <div className="mt-2 pt-4 border-t border-slate-200">
+                                        <h4 className="text-xs font-medium text-slate-500 mb-3 uppercase tracking-wider">Relevant Focus Areas</h4>
                                         <div className="flex flex-wrap gap-2">
                                             {item.focus.map((f, i) => (
-                                                <span key={i} className="px-3 py-1.5 bg-white/5 rounded-full text-xs font-medium text-zinc-300 border border-white/5 hover:bg-white/10 transition-colors cursor-default">
+                                                <span key={i} className="px-3 py-1.5 bg-slate-100/50 rounded-full text-xs font-medium text-slate-700 font-medium border border-slate-200 hover:bg-slate-200/50 transition-colors cursor-default">
                                                     {f}
                                                 </span>
                                             ))}

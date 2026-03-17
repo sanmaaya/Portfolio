@@ -35,7 +35,7 @@ export function ThemeToggle({ className }: ThemeToggleProps) {
                 >
                     {isDark ? (
                         <Moon
-                            className="w-4 h-4 text-white"
+                            className="w-4 h-4 text-slate-900 font-bold"
                             strokeWidth={1.5}
                         />
                     ) : (

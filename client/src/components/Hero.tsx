@@ -43,7 +43,7 @@ export default function Hero() {
                 </motion.h1>
 
                 <motion.h2
-                    className="text-2xl md:text-3xl font-light text-slate-600 mb-6 max-w-3xl leading-relaxed"
+                    className="text-2xl md:text-3xl font-medium text-slate-600 mb-6 max-w-3xl leading-relaxed"
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
@@ -71,7 +71,7 @@ export default function Hero() {
                         smooth={true}
                         offset={-100}
                         duration={500}
-                        className="group px-8 py-4 bg-slate-900 text-white rounded-full font-semibold flex items-center gap-3 hover:scale-105 transition-all cursor-pointer shadow-lg hover:shadow-pink-200"
+                        className="group px-8 py-4 bg-slate-900 text-slate-900 font-bold rounded-full font-semibold flex items-center gap-3 hover:scale-105 transition-all cursor-pointer shadow-lg hover:shadow-pink-200"
                     >
                         View Projects <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                     </ScrollLink>
@@ -100,7 +100,7 @@ export default function Hero() {
                 animate={{ opacity: 1 }}
                 transition={{ delay: 1.2, duration: 1 }}
             >
-                <span className="text-xs uppercase tracking-widest text-zinc-500">Scroll</span>
+                <span className="text-xs uppercase tracking-widest text-slate-500">Scroll</span>
                 <div className="w-[1px] h-12 bg-gradient-to-b from-zinc-500 to-transparent"></div>
             </motion.div>
         </section>

@@ -61,7 +61,7 @@ export default function Contact() {
             >
                 <div className="flex items-center gap-4 mb-16 text-center justify-center flex-col">
                     <h2 className="text-4xl md:text-5xl lg:text-6xl font-black mb-6 tracking-tight">Let's Create Together<span className="text-pink-500">.</span></h2>
-                    <p className="text-zinc-400 max-w-2xl text-lg leading-relaxed">
+                    <p className="text-slate-600 max-w-2xl text-lg leading-relaxed">
                         If you are interested in collaborating, discussing projects, or offering internship opportunities, feel free to reach out.
                     </p>
                 </div>
@@ -69,22 +69,22 @@ export default function Contact() {
                 <div className="grid grid-cols-1 lg:grid-cols-5 gap-16 items-start">
                     <div className="space-y-8 lg:col-span-2">
                         <div className="glass-panel p-8 lg:p-10 rounded-3xl h-full">
-                            <h3 className="text-2xl font-bold mb-8 text-white">Contact Info</h3>
+                            <h3 className="text-2xl font-bold mb-8 text-slate-900 font-bold">Contact Info</h3>
                             <div className="space-y-8">
-                                <a href="mailto:your-email@example.com" className="flex items-center gap-5 text-zinc-400 hover:text-pink-400 transition-colors group">
-                                    <div className="w-14 h-14 bg-white/5 rounded-2xl flex items-center justify-center group-hover:bg-pink-500/10 group-hover:shadow-[0_0_15px_rgba(59,130,246,0.2)] transition-all">
+                                <a href="mailto:your-email@example.com" className="flex items-center gap-5 text-slate-600 hover:text-pink-400 transition-colors group">
+                                    <div className="w-14 h-14 bg-slate-100/50 rounded-2xl flex items-center justify-center group-hover:bg-pink-500/10 group-hover:shadow-[0_0_15px_rgba(59,130,246,0.2)] transition-all">
                                         <Mail className="w-6 h-6" />
                                     </div>
                                     <span className="font-medium text-lg">Email Me</span>
                                 </a>
-                                <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer" className="flex items-center gap-5 text-zinc-400 hover:text-pink- transition-colors group">
-                                    <div className="w-14 h-14 bg-white/5 rounded-2xl flex items-center justify-center group-hover:bg-pink-600/10 group-hover:shadow-[0_0_15px_rgba(99,102,241,0.2)] transition-all">
+                                <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer" className="flex items-center gap-5 text-slate-600 hover:text-pink- transition-colors group">
+                                    <div className="w-14 h-14 bg-slate-100/50 rounded-2xl flex items-center justify-center group-hover:bg-pink-600/10 group-hover:shadow-[0_0_15px_rgba(99,102,241,0.2)] transition-all">
                                         <Linkedin className="w-6 h-6" />
                                     </div>
                                     <span className="font-medium text-lg">LinkedIn</span>
                                 </a>
-                                <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" className="flex items-center gap-5 text-zinc-400 hover:text-white transition-colors group">
-                                    <div className="w-14 h-14 bg-white/5 rounded-2xl flex items-center justify-center group-hover:bg-white/10 group-hover:shadow-[0_0_15px_rgba(255,255,255,0.1)] transition-all">
+                                <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" className="flex items-center gap-5 text-slate-600 hover:text-slate-900 font-bold transition-colors group">
+                                    <div className="w-14 h-14 bg-slate-100/50 rounded-2xl flex items-center justify-center group-hover:bg-slate-200/50 group-hover:shadow-[0_0_15px_rgba(255,255,255,0.1)] transition-all">
                                         <Github className="w-6 h-6" />
                                     </div>
                                     <span className="font-medium text-lg">GitHub</span>
@@ -99,8 +99,8 @@ export default function Contact() {
                                 <div className="text-pink-500 mb-4 flex justify-center">
                                     <ShieldCheck className="w-16 h-16" />
                                 </div>
-                                <h3 className="text-2xl font-bold text-white mb-2">Message Received!</h3>
-                                <p className="text-zinc-400">Thanks for reaching out. I'll get back to you soon.</p>
+                                <h3 className="text-2xl font-bold text-slate-900 font-bold mb-2">Message Received!</h3>
+                                <p className="text-slate-600">Thanks for reaching out. I'll get back to you soon.</p>
                                 <button
                                     onClick={() => setSubmitted(false)}
                                     className="mt-8 text-pink-400 hover:underline"
@@ -112,39 +112,39 @@ export default function Contact() {
                             <>
                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                                     <div>
-                                        <label htmlFor="name" className="block text-sm font-medium text-zinc-400 mb-2">Your Name</label>
+                                        <label htmlFor="name" className="block text-sm font-medium text-slate-600 mb-2">Your Name</label>
                                         <input
                                             type="text"
                                             id="name"
                                             value={formData.name}
                                             onChange={handleChange}
                                             placeholder="John Doe"
-                                            className="w-full bg-black/50 border border-white/10 rounded-xl px-5 py-4 text-white focus:outline-none focus:border-pink-500 focus:bg-white/5 transition-all"
+                                            className="w-full bg-black/50 border border-slate-200 rounded-xl px-5 py-4 text-slate-900 font-bold focus:outline-none focus:border-pink-500 focus:bg-slate-100/50 transition-all"
                                             required
                                         />
                                     </div>
                                     <div>
-                                        <label htmlFor="email" className="block text-sm font-medium text-zinc-400 mb-2">Your Email</label>
+                                        <label htmlFor="email" className="block text-sm font-medium text-slate-600 mb-2">Your Email</label>
                                         <input
                                             type="email"
                                             id="email"
                                             value={formData.email}
                                             onChange={handleChange}
                                             placeholder="john@example.com"
-                                            className="w-full bg-black/50 border border-white/10 rounded-xl px-5 py-4 text-white focus:outline-none focus:border-pink-500 focus:bg-white/5 transition-all"
+                                            className="w-full bg-black/50 border border-slate-200 rounded-xl px-5 py-4 text-slate-900 font-bold focus:outline-none focus:border-pink-500 focus:bg-slate-100/50 transition-all"
                                             required
                                         />
                                     </div>
                                 </div>
                                 <div>
-                                    <label htmlFor="message" className="block text-sm font-medium text-zinc-400 mb-2">Message</label>
+                                    <label htmlFor="message" className="block text-sm font-medium text-slate-600 mb-2">Message</label>
                                     <textarea
                                         id="message"
                                         rows={5}
                                         value={formData.message}
                                         onChange={handleChange}
                                         placeholder="Hello, I'd like to collaborate on..."
-                                        className="w-full bg-black/50 border border-white/10 rounded-xl px-5 py-4 text-white focus:outline-none focus:border-pink-500 focus:bg-white/5 transition-all resize-none"
+                                        className="w-full bg-black/50 border border-slate-200 rounded-xl px-5 py-4 text-slate-900 font-bold focus:outline-none focus:border-pink-500 focus:bg-slate-100/50 transition-all resize-none"
                                         required
                                     ></textarea>
                                 </div>

@@ -377,8 +377,8 @@ export default function Certifications() {
                 transition={{ duration: 0.6 }}
             >
                 <div className="flex items-center gap-4 mb-16">
-                    <h2 className="heading-2 m-0 text-white">Certifications & <span className="text-pink-500">Badges.</span></h2>
-                    <div className="flex-1 h-[1px] bg-white/10 hidden md:block"></div>
+                    <h2 className="heading-2 m-0 text-slate-900 font-bold">Certifications & <span className="text-pink-500">Badges.</span></h2>
+                    <div className="flex-1 h-[1px] bg-slate-200/50 hidden md:block"></div>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -416,9 +416,9 @@ export default function Certifications() {
                                         <div className="absolute top-3 right-3 z-20">
                                             <button
                                                 onClick={() => setSelectedCert(cert)}
-                                                className="p-2.5 bg-white/10 backdrop-blur-md rounded-full border border-white/10 hover:bg-pink-500 hover:border-pink-400 transition-all group/btn"
+                                                className="p-2.5 bg-slate-200/50 backdrop-blur-md rounded-full border border-slate-200 hover:bg-pink-500 hover:border-pink-400 transition-all group/btn"
                                             >
-                                                <ZoomIn className="w-4.5 h-4.5 text-white group-hover/btn:scale-110 transition-transform" />
+                                                <ZoomIn className="w-4.5 h-4.5 text-slate-900 font-bold group-hover/btn:scale-110 transition-transform" />
                                             </button>
                                         </div>
                                     </div>
@@ -433,11 +433,11 @@ export default function Certifications() {
                                                     <span className="text-[9px] font-bold uppercase tracking-[0.15em] px-2 py-0.5 bg-pink-500/10 text-pink-400 rounded-md border border-pink-500/20">
                                                         {cert.issuer}
                                                     </span>
-                                                    <span className="text-[9px] font-bold uppercase tracking-[0.15em] text-zinc-500">
+                                                    <span className="text-[9px] font-bold uppercase tracking-[0.15em] text-slate-500">
                                                         {cert.date}
                                                     </span>
                                                 </div>
-                                                <h3 className="text-lg font-bold text-white group-hover:text-pink-400 transition-colors line-clamp-2 leading-tight">
+                                                <h3 className="text-lg font-bold text-slate-900 font-bold group-hover:text-pink-400 transition-colors line-clamp-2 leading-tight">
                                                     {cert.title}
                                                 </h3>
                                             </div>
@@ -447,15 +447,15 @@ export default function Certifications() {
                                             {cert.details.map((detail, i) => (
                                                 <div key={i} className="flex items-start gap-2.5">
                                                     <div className="w-1 h-1 rounded-full bg-pink-500/40 mt-2 flex-shrink-0" />
-                                                    <span className="text-zinc-400 text-xs leading-relaxed group-hover:text-zinc-300 transition-colors">
+                                                    <span className="text-slate-600 text-xs leading-relaxed group-hover:text-slate-700 font-medium transition-colors">
                                                         {detail}
                                                     </span>
                                                 </div>
                                             ))}
                                         </div>
 
-                                        <div className="mt-6 pt-4 border-t border-white/5 flex items-center justify-between">
-                                            <span className="text-[10px] font-semibold text-zinc-500 uppercase tracking-widest flex items-center gap-2">
+                                        <div className="mt-6 pt-4 border-t border-slate-200 flex items-center justify-between">
+                                            <span className="text-[10px] font-semibold text-slate-500 uppercase tracking-widest flex items-center gap-2">
                                                 <ShieldCheck className="w-3.5 h-3.5 text-pink-500/50" />
                                                 Verified
                                             </span>
@@ -477,7 +477,7 @@ export default function Certifications() {
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
                             onClick={() => setShowAll(!showAll)}
-                            className="group relative px-6 py-3 bg-white/5 border border-white/10 rounded-xl flex items-center gap-3 text-white font-bold hover:bg-pink-500 transition-all hover:border-pink-400 overflow-hidden"
+                            className="group relative px-6 py-3 bg-slate-100/50 border border-slate-200 rounded-xl flex items-center gap-3 text-slate-900 font-bold font-bold hover:bg-pink-500 transition-all hover:border-pink-400 overflow-hidden"
                         >
                             <div className="absolute inset-0 bg-gradient-to-r from-pink-600/20 to-pink-/20 opacity-0 group-hover:opacity-100 transition-opacity" />
                             <span className="relative z-10 text-xs tracking-widest uppercase">
@@ -510,13 +510,13 @@ export default function Certifications() {
                             animate={{ scale: 1, opacity: 1, y: 0 }}
                             exit={{ scale: 0.9, opacity: 0, y: 20 }}
                             onClick={(e) => e.stopPropagation()}
-                            className="relative max-w-5xl w-full bg-slate-900 rounded-[2rem] border border-white/10 shadow-2xl overflow-hidden"
+                            className="relative max-w-5xl w-full bg-slate-900 rounded-[2rem] border border-slate-200 shadow-2xl overflow-hidden"
                         >
                             <button
                                 onClick={() => setSelectedCert(null)}
-                                className="absolute top-6 right-6 z-50 p-2 bg-white/5 hover:bg-white/10 rounded-full border border-white/10 transition-colors group"
+                                className="absolute top-6 right-6 z-50 p-2 bg-slate-100/50 hover:bg-slate-200/50 rounded-full border border-slate-200 transition-colors group"
                             >
-                                <X className="w-6 h-6 text-white group-hover:rotate-90 transition-transform" />
+                                <X className="w-6 h-6 text-slate-900 font-bold group-hover:rotate-90 transition-transform" />
                             </button>
 
                             <div className="flex flex-col lg:flex-row h-full">
@@ -530,28 +530,28 @@ export default function Certifications() {
                                         }}
                                     />
                                 </div>
-                                <div className="lg:w-1/3 p-8 md:p-12 border-l border-white/10 bg-gradient-to-br from-slate-900 to-slate-950 flex flex-col">
+                                <div className="lg:w-1/3 p-8 md:p-12 border-l border-slate-200 bg-gradient-to-br from-slate-900 to-slate-950 flex flex-col">
                                     <div className="mb-8">
                                         <span className="text-xs font-bold uppercase tracking-[0.3em] px-3 py-1 bg-pink-500/10 text-pink-400 rounded-full border border-pink-500/20 mb-6 inline-block">
                                             {selectedCert.issuer}
                                         </span>
-                                        <h2 className="text-3xl md:text-4xl font-black text-white leading-tight mb-4">
+                                        <h2 className="text-3xl md:text-4xl font-black text-slate-900 font-bold leading-tight mb-4">
                                             {selectedCert.title}
                                         </h2>
-                                        <p className="text-zinc-500 font-medium tracking-wide">
-                                            Issued: <span className="text-zinc-300">{selectedCert.date}</span>
+                                        <p className="text-slate-500 font-medium tracking-wide">
+                                            Issued: <span className="text-slate-700 font-medium">{selectedCert.date}</span>
                                         </p>
                                     </div>
 
                                     <div className="space-y-6 flex-1">
-                                        <h4 className="text-xs font-bold text-zinc-500 uppercase tracking-widest">About this Certification</h4>
+                                        <h4 className="text-xs font-bold text-slate-500 uppercase tracking-widest">About this Certification</h4>
                                         <div className="space-y-4">
                                             {selectedCert.details.map((detail: string, i: number) => (
                                                 <div key={i} className="flex gap-4">
                                                     <div className="w-6 h-6 rounded-full bg-pink-500/10 flex items-center justify-center shrink-0">
                                                         <ShieldCheck className="w-3.5 h-3.5 text-pink-400" />
                                                     </div>
-                                                    <p className="text-zinc-400 leading-relaxed text-sm">
+                                                    <p className="text-slate-600 leading-relaxed text-sm">
                                                         {detail}
                                                     </p>
                                                 </div>
@@ -560,12 +560,12 @@ export default function Certifications() {
                                     </div>
 
                                     <div className="mt-12">
-                                        <div className="p-6 rounded-2xl bg-white/5 border border-white/5">
+                                        <div className="p-6 rounded-2xl bg-slate-100/50 border border-slate-200">
                                             <div className="flex items-center gap-4 mb-2">
                                                 <Award className="w-5 h-5 text-pink-400" />
-                                                <span className="text-sm font-bold text-white">Verified Credential</span>
+                                                <span className="text-sm font-bold text-slate-900 font-bold">Verified Credential</span>
                                             </div>
-                                            <p className="text-xs text-zinc-500 leading-relaxed">
+                                            <p className="text-xs text-slate-500 leading-relaxed">
                                                 This certification represents authentic technical validation of skills and knowledge.
                                             </p>
                                         </div>

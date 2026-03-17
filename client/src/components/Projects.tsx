@@ -75,7 +75,7 @@ export default function Projects() {
             >
                 <div className="flex items-center gap-4 mb-16">
                     <h2 className="heading-2 m-0">Featured Projects<span className="text-pink-500">.</span></h2>
-                    <div className="flex-1 h-[1px] bg-white/10 hidden md:block"></div>
+                    <div className="flex-1 h-[1px] bg-slate-200/50 hidden md:block"></div>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -108,10 +108,10 @@ export default function Projects() {
                                                 className="w-full h-full object-cover transition-transform duration-700 group-hover/img:scale-110"
                                             />
                                             <div className="absolute inset-0 bg-pink-900/40 opacity-0 group-hover/img:opacity-100 transition-opacity flex flex-col items-center justify-center gap-3 backdrop-blur-[2px]">
-                                                <div className="p-4 bg-white/10 backdrop-blur-md rounded-full text-white shadow-2xl transform scale-90 group-hover/img:scale-100 transition-all duration-300">
+                                                <div className="p-4 bg-slate-200/50 backdrop-blur-md rounded-full text-slate-900 font-bold shadow-2xl transform scale-90 group-hover/img:scale-100 transition-all duration-300">
                                                     <Info className="w-8 h-8" />
                                                 </div>
-                                                <span className="text-white font-bold tracking-wider text-sm translate-y-4 group-hover/img:translate-y-0 opacity-0 group-hover/img:opacity-100 transition-all duration-300">
+                                                <span className="text-slate-900 font-bold font-bold tracking-wider text-sm translate-y-4 group-hover/img:translate-y-0 opacity-0 group-hover/img:opacity-100 transition-all duration-300">
                                                     View Details
                                                 </span>
                                             </div>
@@ -122,7 +122,7 @@ export default function Projects() {
                                                     e.stopPropagation();
                                                     setSelectedImage(project.image);
                                                 }}
-                                                className="absolute top-4 right-4 p-2.5 bg-black/40 hover:bg-black/60 backdrop-blur-md rounded-full text-white/80 hover:text-white transition-all opacity-0 group-hover/img:opacity-100 z-10"
+                                                className="absolute top-4 right-4 p-2.5 bg-white/90 shadow-md hover:bg-black/60 backdrop-blur-md rounded-full text-slate-900 font-bold/80 hover:text-slate-900 font-bold transition-all opacity-0 group-hover/img:opacity-100 z-10"
                                                 title="Zoom Image"
                                             >
                                                 <ZoomIn className="w-5 h-5" />
@@ -138,7 +138,7 @@ export default function Projects() {
                                             </h3>
                                             
                                             <div className="mb-6 flex-1">
-                                                <p className="text-zinc-400 text-sm leading-relaxed line-clamp-3 inline">
+                                                <p className="text-slate-600 text-sm leading-relaxed line-clamp-3 inline">
                                                     {project.description}
                                                 </p>
                                                 <button 
@@ -151,20 +151,20 @@ export default function Projects() {
 
                                         <div className="flex flex-wrap gap-2 mb-8">
                                             {project.tech.map((t, i) => (
-                                                <span key={i} className="text-[10px] font-mono font-medium text-zinc-500 bg-white/5 border border-white/5 px-2.5 py-1 rounded-full">
+                                                <span key={i} className="text-[10px] font-mono font-medium text-slate-500 bg-slate-100/50 border border-slate-200 px-2.5 py-1 rounded-full">
                                                     {t}
                                                 </span>
                                             ))}
                                         </div>
 
                                         {/* Action Bar - LinkedIn Style */}
-                                            <div className="flex items-center gap-3 mt-auto pt-6 border-t border-white/5">
+                                            <div className="flex items-center gap-3 mt-auto pt-6 border-t border-slate-200">
                                                 {project.github && (
                                                     <a 
                                                         href={project.github} 
                                                         target="_blank" 
                                                         rel="noopener noreferrer" 
-                                                        className="flex-1 flex items-center justify-center gap-2 py-2.5 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all text-xs font-bold text-zinc-300 hover:text-white"
+                                                        className="flex-1 flex items-center justify-center gap-2 py-2.5 rounded-xl bg-slate-100/50 border border-slate-200 hover:bg-slate-200/50 hover:border-white/20 transition-all text-xs font-bold text-slate-700 font-medium hover:text-slate-900 font-bold"
                                                     >
                                                         <Github className="w-4 h-4" /> Code
                                                     </a>
@@ -194,7 +194,7 @@ export default function Projects() {
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
                             onClick={() => setShowAll(!showAll)}
-                            className="group relative px-8 py-4 bg-white/5 border border-white/10 rounded-2xl flex items-center gap-3 text-white font-bold hover:bg-pink-500 transition-all hover:border-pink-400 overflow-hidden shadow-2xl"
+                            className="group relative px-8 py-4 bg-slate-100/50 border border-slate-200 rounded-2xl flex items-center gap-3 text-slate-900 font-bold font-bold hover:bg-pink-500 transition-all hover:border-pink-400 overflow-hidden shadow-2xl"
                         >
                             <div className="absolute inset-0 bg-gradient-to-r from-pink-600/20 to-pink-/20 opacity-0 group-hover:opacity-100 transition-opacity" />
                             <span className="relative z-10 text-sm tracking-widest uppercase">
@@ -225,17 +225,17 @@ export default function Projects() {
                             animate={{ scale: 1, opacity: 1, y: 0 }}
                             exit={{ scale: 0.95, opacity: 0, y: 20 }}
                             onClick={(e) => e.stopPropagation()}
-                            className="relative w-full max-w-3xl max-h-[90vh] overflow-y-auto bg-[#0a0a0a] border border-white/10 rounded-3xl shadow-2xl p-6 sm:p-10 hide-scrollbar"
+                            className="relative w-full max-w-3xl max-h-[90vh] overflow-y-auto bg-[#0a0a0a] border border-slate-200 rounded-3xl shadow-2xl p-6 sm:p-10 hide-scrollbar"
                             style={{ msOverflowStyle: 'none', scrollbarWidth: 'none' }}
                         >
                             <button
-                                className="absolute top-6 right-6 p-2 bg-white/5 hover:bg-white/10 rounded-full text-white transition-colors z-10"
+                                className="absolute top-6 right-6 p-2 bg-slate-100/50 hover:bg-slate-200/50 rounded-full text-slate-900 font-bold transition-colors z-10"
                                 onClick={() => setSelectedProject(null)}
                             >
                                 <X className="w-6 h-6" />
                             </button>
 
-                            <div className="w-full h-48 sm:h-80 rounded-2xl overflow-hidden mb-8 relative border border-white/10">
+                            <div className="w-full h-48 sm:h-80 rounded-2xl overflow-hidden mb-8 relative border border-slate-200">
                                 <img
                                     src={selectedProject.image}
                                     alt={selectedProject.title}
@@ -243,7 +243,7 @@ export default function Projects() {
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
                                 <div className="absolute bottom-6 left-6 right-6">
-                                    <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4 leading-tight">{selectedProject.title}</h2>
+                                    <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 font-bold mb-4 leading-tight">{selectedProject.title}</h2>
                                     <div className="flex flex-wrap gap-2">
                                         {selectedProject.tech.map((t: string, i: number) => (
                                             <span key={i} className="text-[10px] sm:text-xs font-mono font-medium text-pink-300 bg-pink-900/30 border border-pink-500/30 px-3 py-1.5 rounded-full backdrop-blur-md">
@@ -255,21 +255,21 @@ export default function Projects() {
                             </div>
 
                             <div className="prose prose-invert max-w-none">
-                                <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
+                                <h3 className="text-xl font-bold text-slate-900 font-bold mb-4 flex items-center gap-2">
                                     <BookOpen className="w-5 h-5 text-pink-400" /> About Project
                                 </h3>
-                                <div className="text-zinc-300 leading-relaxed text-sm sm:text-base space-y-4 whitespace-pre-line">
+                                <div className="text-slate-700 font-medium leading-relaxed text-sm sm:text-base space-y-4 whitespace-pre-line">
                                     {selectedProject.description}
                                 </div>
                             </div>
 
-                            <div className="mt-10 flex flex-wrap items-center gap-4 pt-6 border-t border-white/10">
+                            <div className="mt-10 flex flex-wrap items-center gap-4 pt-6 border-t border-slate-200">
                                 {selectedProject.github && (
                                     <a
                                         href={selectedProject.github}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="flex-1 min-w-[140px] flex items-center justify-center gap-2 py-3.5 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all text-sm font-bold text-white group"
+                                        className="flex-1 min-w-[140px] flex items-center justify-center gap-2 py-3.5 rounded-xl bg-slate-100/50 border border-slate-200 hover:bg-slate-200/50 hover:border-white/20 transition-all text-sm font-bold text-slate-900 font-bold group"
                                     >
                                         <Github className="w-5 h-5 group-hover:scale-110 transition-transform" /> View Source
                                     </a>
@@ -279,7 +279,7 @@ export default function Projects() {
                                         href={selectedProject.live}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="flex-1 min-w-[140px] flex items-center justify-center gap-2 py-3.5 rounded-xl bg-pink-600 border border-pink-500 hover:bg-pink-500 transition-all text-sm font-bold text-white group shadow-[0_0_20px_rgba(37,99,235,0.3)] hover:shadow-[0_0_30px_rgba(37,99,235,0.5)]"
+                                        className="flex-1 min-w-[140px] flex items-center justify-center gap-2 py-3.5 rounded-xl bg-pink-600 border border-pink-500 hover:bg-pink-500 transition-all text-sm font-bold text-slate-900 font-bold group shadow-[0_0_20px_rgba(37,99,235,0.3)] hover:shadow-[0_0_30px_rgba(37,99,235,0.5)]"
                                     >
                                         <ExternalLink className="w-5 h-5 group-hover:scale-110 transition-transform" /> Live Demo
                                     </a>
@@ -301,7 +301,7 @@ export default function Projects() {
                         onClick={() => setSelectedImage(null)}
                     >
                         <motion.button
-                            className="absolute top-8 right-8 p-3 bg-white/10 hover:bg-white/20 rounded-full text-white transition-colors"
+                            className="absolute top-8 right-8 p-3 bg-slate-200/50 hover:bg-white/20 rounded-full text-slate-900 font-bold transition-colors"
                             whileHover={{ scale: 1.1, rotate: 90 }}
                             whileTap={{ scale: 0.9 }}
                         >
@@ -314,7 +314,7 @@ export default function Projects() {
                             exit={{ scale: 0.9, opacity: 0 }}
                             src={selectedImage}
                             alt="Project Preview"
-                            className="max-w-full max-h-[85vh] rounded-2xl shadow-2xl border border-white/10 object-contain"
+                            className="max-w-full max-h-[85vh] rounded-2xl shadow-2xl border border-slate-200 object-contain"
                             onClick={(e) => e.stopPropagation()}
                         />
                     </motion.div>

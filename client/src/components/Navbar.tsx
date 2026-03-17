@@ -30,10 +30,10 @@ export default function Navbar() {
     ];
 
     return (
-        <nav className={`fixed top-0 w-full z-[100] transition-all duration-300 ${scrolled ? "bg-black/40 backdrop-blur-xl border-b border-white/5 py-3 shadow-2xl" : "bg-transparent py-6"}`}>
+        <nav className={`fixed top-0 w-full z-[100] transition-all duration-300 ${scrolled ? "bg-white/90 shadow-md backdrop-blur-xl border-b border-slate-200 py-3 shadow-2xl" : "bg-transparent py-6"}`}>
             <div className="max-w-7xl mx-auto px-4 md:px-8 flex items-center justify-between relative h-12">
                 <Link to="/" className="text-2xl font-black tracking-tighter hover:text-pink-400 transition-colors flex items-center gap-1 group z-50">
-                    <span className="text-white group-hover:text-zinc-200 transition-colors">Sanmaya M B</span>
+                    <span className="text-slate-900 font-bold group-hover:text-slate-800 font-bold transition-colors">Sanmaya M B</span>
                     <span className="w-1.5 h-1.5 rounded-full bg-pink-500 mt-2"></span>
                 </Link>
 
@@ -42,8 +42,8 @@ export default function Navbar() {
                         {isHome ? (
                             <TubelightNavbar items={navLinks} />
                         ) : (
-                            <div className="bg-white/5 border border-white/10 px-6 py-2 rounded-full backdrop-blur-md">
-                                <Link to="/" className="text-sm font-semibold text-zinc-400 hover:text-white transition-colors">
+                            <div className="bg-slate-100/50 border border-slate-200 px-6 py-2 rounded-full backdrop-blur-md">
+                                <Link to="/" className="text-sm font-semibold text-slate-600 hover:text-slate-900 font-bold transition-colors">
                                     Back to Portfolio
                                 </Link>
                             </div>
@@ -58,7 +58,7 @@ export default function Navbar() {
                 </div>
 
                 {/* Mobile menu toggle */}
-                <button className="md:hidden text-white p-2" onClick={() => setIsOpen(!isOpen)}>
+                <button className="md:hidden text-slate-900 font-bold p-2" onClick={() => setIsOpen(!isOpen)}>
                     {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
                 </button>
 
@@ -70,7 +70,7 @@ export default function Navbar() {
                             animate={{ opacity: 1, scale: 1, y: 0 }}
                             exit={{ opacity: 0, scale: 0.95, y: -20 }}
                             transition={{ duration: 0.2 }}
-                            className="absolute top-full left-4 right-4 bg-zinc-900 border border-white/10 rounded-3xl flex flex-col items-center py-8 gap-6 md:hidden shadow-2xl backdrop-blur-xl"
+                            className="absolute top-full left-4 right-4 bg-white shadow-xl border border-slate-200 rounded-3xl flex flex-col items-center py-8 gap-6 md:hidden shadow-2xl backdrop-blur-xl"
                         >
                             {isHome ? (
                                 navLinks.map((link) => (
@@ -83,13 +83,13 @@ export default function Navbar() {
                                         duration={500}
                                         onSetActive={() => {}} // Could be used if we had mobile active state
                                         onClick={() => setIsOpen(false)}
-                                        className="text-lg font-bold text-zinc-400 hover:text-white cursor-pointer transition-colors"
+                                        className="text-lg font-bold text-slate-600 hover:text-slate-900 font-bold cursor-pointer transition-colors"
                                     >
                                         {link.name}
                                     </ScrollLink>
                                 ))
                             ) : (
-                                <Link to="/" onClick={() => setIsOpen(false)} className="text-lg font-bold text-zinc-400 hover:text-white transition-colors">
+                                <Link to="/" onClick={() => setIsOpen(false)} className="text-lg font-bold text-slate-600 hover:text-slate-900 font-bold transition-colors">
                                     Back to Portfolio
                                 </Link>
                             )}
