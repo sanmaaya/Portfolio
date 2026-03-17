@@ -37,7 +37,7 @@ export default function Education() {
                 </div>
 
                 <div className="relative border-l-2 border-zinc-800 ml-4 md:ml-0 md:pl-0">
-                    <div className="space-y-12">
+                    <div className="space-y-6">
                         {education.map((item, idx) => (
                             <motion.div
                                 key={idx}
@@ -48,28 +48,28 @@ export default function Education() {
                                 className="relative pl-8 md:pl-12"
                             >
                                 {/* Timeline Dot */}
-                                <div className="absolute w-4 h-4 rounded-full border-4 border-background -left-[9px] top-6 bg-blue-500 animate-pulse" />
+                                <div className="absolute w-3 h-3 rounded-full border-[3px] border-background -left-[6.5px] top-6 bg-blue-500 animate-pulse" />
 
-                                <div className="glass-panel p-8 rounded-3xl hover:border-blue-500/30 transition-all flex flex-col gap-6">
+                                <div className="glass-panel p-5 md:p-6 rounded-3xl hover:border-blue-500/30 transition-all flex flex-col gap-4">
                                     <div>
-                                        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
-                                            <div className="flex items-center gap-3 text-sm font-mono text-blue-400 uppercase tracking-widest">
-                                                <GraduationCap className="w-5 h-5" />
+                                        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-2">
+                                            <div className="flex items-center gap-2 text-xs font-mono text-blue-400 uppercase tracking-widest">
+                                                <GraduationCap className="w-4 h-4" />
                                                 Academic Background
                                             </div>
-                                            <div className="text-sm font-mono text-zinc-500 tracking-wider">
+                                            <div className="text-xs font-mono text-zinc-500 tracking-wider">
                                                 {item.date}
                                             </div>
                                         </div>
-                                        <h3 className="text-2xl font-bold mb-3 text-white">{item.degree}</h3>
-                                        <div className="text-xl text-zinc-400 font-medium">{item.institution}</div>
+                                        <h3 className="text-xl font-bold mb-1.5 text-white">{item.degree}</h3>
+                                        <div className="text-base text-zinc-400 font-medium">{item.institution}</div>
                                     </div>
 
-                                    <div className="mt-4 pt-6 border-t border-white/10">
-                                        <h4 className="text-sm font-medium text-zinc-500 mb-4 uppercase tracking-wider">Relevant Focus Areas</h4>
-                                        <div className="flex flex-wrap gap-3">
+                                    <div className="mt-2 pt-4 border-t border-white/10">
+                                        <h4 className="text-xs font-medium text-zinc-500 mb-3 uppercase tracking-wider">Relevant Focus Areas</h4>
+                                        <div className="flex flex-wrap gap-2">
                                             {item.focus.map((f, i) => (
-                                                <span key={i} className="px-5 py-2.5 bg-white/5 rounded-full text-sm font-medium text-zinc-300 border border-white/5 hover:bg-white/10 transition-colors cursor-default">
+                                                <span key={i} className="px-3 py-1.5 bg-white/5 rounded-full text-xs font-medium text-zinc-300 border border-white/5 hover:bg-white/10 transition-colors cursor-default">
                                                     {f}
                                                 </span>
                                             ))}

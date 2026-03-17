@@ -22,6 +22,7 @@ export default function Navbar() {
     const navLinks = [
         { name: "About", url: "about", icon: User },
         { name: "Skills", url: "skills", icon: Sparkles },
+        { name: "Experience", url: "experience", icon: Briefcase },
         { name: "Projects", url: "projects", icon: Briefcase },
         { name: "Education", url: "education", icon: GraduationCap },
         { name: "Achievements", url: "achievements", icon: Award },

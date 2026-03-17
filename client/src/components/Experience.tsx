@@ -12,7 +12,20 @@ export default function Experience() {
                 "Constructed RESTful microservices utilizing Java and Dropwizard, ensuring structured API endpoints via YAML configuration.",
                 "Developed a modular Android application in Kotlin by integrating Backpack UI components and React.js features.",
                 "Translated Figma UI designs into technical specifications while managing project tasks through JIRA user stories."
-            ]
+            ],
+            certificate: "/certifications/skyscanner-swe virtual.png"
+        },
+        {
+            role: "Solutions Architecture Job Simulation",
+            company: "AWS | Forage",
+            location: "Remote",
+            date: "Feb 2026",
+            points: [
+                "Practical task-based cloud infrastructure simulation focused on AWS.",
+                "Designed simple, scalable, and highly-available hosting architectures.",
+                "Implemented AWS best practices for availability and reliability."
+            ],
+            certificate: "/certifications/aws job simulation.png"
         }
     ];
 
@@ -26,7 +39,7 @@ export default function Experience() {
             >
                 <div className="flex items-center gap-4 mb-16">
                     <div className="flex-1 h-[1px] bg-white/10 hidden md:block"></div>
-                    <h2 className="heading-2 m-0 text-right">Professional Experience<span className="text-blue-500">.</span></h2>
+                    <h2 className="heading-2 m-0 text-right">Virtual Experience & Internships<span className="text-blue-500">.</span></h2>
                 </div>
 
                 <div className="relative border-l border-zinc-800 ml-4 md:ml-0 md:pl-8 space-y-12">
@@ -57,16 +70,29 @@ export default function Experience() {
                                             <h3 className="text-2xl font-bold">{exp.role}</h3>
                                             <div className="text-blue-400 font-medium text-lg mt-1">{exp.company}</div>
                                         </div>
-                                        <div className="text-zinc-500 text-sm font-mono mt-2 md:mt-0 tracking-wide">
-                                            {exp.date} • {exp.location}
+                                        <div className="text-zinc-500 text-sm font-mono mt-2 md:mt-0 tracking-wide flex flex-col items-start md:items-end">
+                                            <span>{exp.date} • {exp.location}</span>
                                         </div>
                                     </div>
 
-                                    <ul className="list-disc list-outside ml-4 mt-6 text-zinc-400 space-y-3 leading-relaxed">
-                                        {exp.points.map((point, i) => (
-                                            <li key={i}>{point}</li>
-                                        ))}
-                                    </ul>
+                                    <div className="flex flex-col lg:flex-row gap-8 mt-4">
+                                        <ul className="list-disc list-outside ml-4 mt-2 text-zinc-400 space-y-3 leading-relaxed flex-1">
+                                            {exp.points.map((point, i) => (
+                                                <li key={i}>{point}</li>
+                                            ))}
+                                        </ul>
+
+                                        {exp.certificate && (
+                                            <div className="relative group/cert rounded-xl overflow-hidden border border-white/10 w-full lg:w-80 shadow-2xl shrink-0 self-start">
+                                                <div className="absolute inset-0 bg-blue-500/10 opacity-0 group-hover/cert:opacity-100 transition-opacity z-10 pointer-events-none" />
+                                                <img 
+                                                    src={exp.certificate} 
+                                                    alt={`${exp.role} Certificate`} 
+                                                    className="w-full h-auto object-cover transform group-hover/cert:scale-105 transition-transform duration-500"
+                                                />
+                                            </div>
+                                        )}
+                                    </div>
                                 </div>
                             </div>
                         </motion.div>

@@ -9,18 +9,32 @@ export default function Certifications() {
 
     const certs = [
         {
-            title: "Solutions Architecture Job Simulation",
-            issuer: "AWS (Forage)",
+            title: "JavaScript (Basic)",
+            issuer: "HackerRank",
             date: "Feb 2026",
             details: [
-                "Practical task-based cloud infrastructure simulation",
-                "Designing simple, scalable, and hosting architectures",
-                "Implementation of AWS best practices for availability",
-                "Verified experiential learning via Forage"
+                "Tested fundamental knowledge of JavaScript",
+                "Functions, Objects, Arrays, and Error Handling",
+                "Verified experiential learning via HackerRank assessments",
+                "Credential ID: 21BEEA1C1FDA"
+            ],
+            icon: <Star className="w-8 h-8" />,
+            color: "blue",
+            image: "/certifications/javascript.png"
+        },
+        {
+            title: "CSS (Basic)",
+            issuer: "HackerRank",
+            date: "Feb 2026",
+            details: [
+                "Tested fundamental knowledge of CSS styling",
+                "Selectors, Box Model, Flexbox, Layouts",
+                "Verified experiential learning via HackerRank assessments",
+                "Credential ID: 237C4C76A442"
             ],
             icon: <ShieldCheck className="w-8 h-8" />,
-            color: "blue",
-            image: "/certifications/aws job simulation.png"
+            color: "emerald",
+            image: "/certifications/css basics.png"
         },
         {
             title: "The Science of Well-Being",
@@ -35,6 +49,48 @@ export default function Certifications() {
             icon: <Star className="w-8 h-8" />,
             color: "blue",
             image: "/certifications/yale- coursera science of well being.png"
+        },
+        {
+            title: "Computational Theory: Turing, Transducers, & Complexity",
+            issuer: "Skillsoft",
+            date: "Dec 2025",
+            details: [
+                "Advanced computational theory and complexity classes",
+                "Exploration of Turing machines and transducers",
+                "Verified experiential learning via Skillsoft",
+                "Professional course completion"
+            ],
+            icon: <BookOpen className="w-8 h-8" />,
+            color: "emerald",
+            image: "/badges/skillsoft-turing.png"
+        },
+        {
+            title: "Computational Theory: Language Principle & Automata",
+            issuer: "Skillsoft",
+            date: "Nov 2025",
+            details: [
+                "Foundations of finite automata theory",
+                "Language principles and formal grammar",
+                "Verified experiential learning via Skillsoft",
+                "Professional course completion"
+            ],
+            icon: <BookOpen className="w-8 h-8" />,
+            color: "emerald",
+            image: "/badges/skillsoft-automata.png"
+        },
+        {
+            title: "Building Neural Networks: Development Principles",
+            issuer: "Skillsoft",
+            date: "Nov 2025",
+            details: [
+                "Core principles of neural network development",
+                "Deep learning foundations and architectures",
+                "Verified experiential learning via Skillsoft",
+                "Professional course completion"
+            ],
+            icon: <BookOpen className="w-8 h-8" />,
+            color: "emerald",
+            image: "/badges/skillsoft-neural-networks.png"
         },
         {
             title: "Cloud Computing (NPTEL Elite)",
@@ -93,20 +149,6 @@ export default function Certifications() {
             image: "/certifications/udemy-chatgpt made easy.png"
         },
         {
-            title: "Mastering DSA using C and C++",
-            issuer: "Udemy (Abdul Bari)",
-            date: "Jan 2025",
-            details: [
-                "58.5 hours of master-level DSA training",
-                "In-depth complexity analysis and optimization",
-                "Core implementation of advanced algorithms",
-                "Renowned training by Abdul Bari"
-            ],
-            icon: <BookOpen className="w-8 h-8" />,
-            color: "blue",
-            image: "/certifications/udemy-mastering dsa using c and cpp.png"
-        },
-        {
             title: "From Data to Decisions: Data Science",
             issuer: "Lovely Professional University",
             date: "Aug 2025",
@@ -119,6 +161,20 @@ export default function Certifications() {
             icon: <Star className="w-8 h-8" />,
             color: "blue",
             image: "/certifications/summer training - data to decisions.png"
+        },
+        {
+            title: "Mastering DSA using C and C++",
+            issuer: "Udemy (Abdul Bari)",
+            date: "Jan 2025",
+            details: [
+                "58.5 hours of master-level DSA training",
+                "In-depth complexity analysis and optimization",
+                "Core implementation of advanced algorithms",
+                "Renowned training by Abdul Bari"
+            ],
+            icon: <BookOpen className="w-8 h-8" />,
+            color: "blue",
+            image: "/certifications/udemy-mastering dsa using c and cpp.png"
         },
         {
             title: "Object Oriented Programming",
@@ -177,6 +233,45 @@ export default function Certifications() {
             image: "/certifications/courserafuntamentals of network.png"
         },
         {
+            title: "Peer-to-Peer Protocols and Local Area Networks",
+            issuer: "University of Colorado (Coursera)",
+            date: "Sep 2024",
+            details: [
+                "Authorized professional training by CU System",
+                "Study of peer-to-peer protocols and LAN architecture",
+                "Verified technical credential from Coursera"
+            ],
+            icon: <BookOpen className="w-8 h-8" />,
+            color: "blue",
+            image: "/certifications/peer to peer coursera.png"
+        },
+        {
+            title: "The Bits and Bytes of Computer Networking",
+            issuer: "Google (Coursera)",
+            date: "Sep 2024",
+            details: [
+                "Authorized Google IT Support professional training",
+                "In-depth study of computer networking components and protocols",
+                "Verified technical credential from Coursera"
+            ],
+            icon: <ShieldCheck className="w-8 h-8" />,
+            color: "indigo",
+            image: "/certifications/coursera-google bits and bytes of computerr networks.png"
+        },
+        {
+            title: "Packet Switching Networks and Algorithms",
+            issuer: "University of Colorado (Coursera)",
+            date: "Sep 2024",
+            details: [
+                "Authorized professional training by CU System",
+                "Detailed study of packet switching networks and routing algorithms",
+                "Verified technical credential from Coursera"
+            ],
+            icon: <ShieldCheck className="w-8 h-8" />,
+            color: "blue",
+            image: "/certifications/coursera-packet switching networks and algo.png"
+        },
+        {
             title: "Introduction to Hardware and Operating Systems",
             issuer: "IBM (Coursera)",
             date: "Aug 2024",
@@ -189,6 +284,32 @@ export default function Certifications() {
             icon: <ShieldCheck className="w-8 h-8" />,
             color: "indigo",
             image: "/certifications/intro hardware operations IBM coursera.png"
+        },
+        {
+            title: "Certificate of Appreciation (Community Support)",
+            issuer: "DevTown",
+            date: "July 2024",
+            details: [
+                "Recognition for community growth contributions",
+                "Leadership in peer-to-peer technical support",
+                "Exceptional dedication to community building"
+            ],
+            icon: <Award className="w-8 h-8" />,
+            color: "blue",
+            image: "/certifications/appriciation dewtown.png"
+        },
+        {
+            title: "Backend Web Development (NodeJS & Express)",
+            issuer: "DevTown (GDSC Giet)",
+            date: "June 2024",
+            details: [
+                "7-Day intensive server-side development bootcamp",
+                "Building RESTful APIs and middleware logic",
+                "Database integration and async architecture"
+            ],
+            icon: <BookOpen className="w-8 h-8" />,
+            color: "emerald",
+            image: "/certifications/devtown backend.png"
         },
         {
             title: "Responsive Web Design Developer",
@@ -205,20 +326,6 @@ export default function Certifications() {
             image: "/certifications/freecodecamp-responsive web design.png"
         },
         {
-            title: "BinaryBlitz Web Hackathon",
-            issuer: "Certificate of Appreciation",
-            date: "2024",
-            details: [
-                "Outstanding innovation in web technologies",
-                "Exceptional team collaboration and leadership",
-                "Rapid prototyping and problem-solving excellence",
-                "Contributed significantly to project success"
-            ],
-            icon: <Award className="w-8 h-8" />,
-            color: "blue",
-            image: "/certifications/binary bits hackathon.png"
-        },
-        {
             title: "Advanced Excel, Tableau and Power BI",
             issuer: "LPU (Centre for Professional Enhancement)",
             date: "Dec 2023",
@@ -231,19 +338,6 @@ export default function Certifications() {
             icon: <Star className="w-8 h-8" />,
             color: "blue",
             image: "/certifications/Excel, powerbi.png"
-        },
-        {
-            title: "Backend Web Development (NodeJS & Express)",
-            issuer: "DevTown (GDSC Giet)",
-            date: "June 2024",
-            details: [
-                "7-Day intensive server-side development bootcamp",
-                "Building RESTful APIs and middleware logic",
-                "Database integration and async architecture"
-            ],
-            icon: <BookOpen className="w-8 h-8" />,
-            color: "emerald",
-            image: "/certifications/devtown backend.png"
         },
         {
             title: "Human Resource Beginner Course",
@@ -259,17 +353,18 @@ export default function Certifications() {
             image: "/certifications/human resoursce beginner infosys.png"
         },
         {
-            title: "Certificate of Appreciation (Community Support)",
-            issuer: "DevTown",
-            date: "July 2024",
+            title: "BinaryBlitz Web Hackathon",
+            issuer: "Certificate of Appreciation",
+            date: "2024",
             details: [
-                "Recognition for community growth contributions",
-                "Leadership in peer-to-peer technical support",
-                "Exceptional dedication to community building"
+                "Outstanding innovation in web technologies",
+                "Exceptional team collaboration and leadership",
+                "Rapid prototyping and problem-solving excellence",
+                "Contributed significantly to project success"
             ],
             icon: <Award className="w-8 h-8" />,
             color: "blue",
-            image: "/certifications/appriciation dewtown.png"
+            image: "/certifications/binary bits hackathon.png"
         }
     ];
 
@@ -397,6 +492,8 @@ export default function Certifications() {
                     </div>
                 )}
             </motion.div>
+
+
 
             {/* Lightbox / Modal */}
             <AnimatePresence>
