@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Code2, Cpu, Globe2, Sparkles } from "lucide-react";
+import { GlowingEffect } from "./ui/glowing-effect";
 
 export default function About() {
     const cards = [
@@ -62,13 +63,23 @@ export default function About() {
                                 whileInView={{ opacity: 1, scale: 1 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.5, delay: idx * 0.1 }}
-                                className="glass-panel p-6 rounded-2xl hover:bg-white/5 transition-colors group cursor-default"
+                                className="relative p-[2px] rounded-2xl group transition-all"
                             >
-                                <div className="w-12 h-12 bg-white/5 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                                    {card.icon}
+                                <GlowingEffect
+                                    spread={40}
+                                    glow={true}
+                                    disabled={false}
+                                    proximity={64}
+                                    inactiveZone={0.01}
+                                    borderWidth={3}
+                                />
+                                <div className="relative h-full w-full glass-panel p-6 rounded-2xl hover:bg-white/5 transition-colors cursor-default">
+                                    <div className="w-12 h-12 bg-white/5 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                                        {card.icon}
+                                    </div>
+                                    <h3 className="text-xl font-semibold mb-2">{card.title}</h3>
+                                    <p className="text-sm text-zinc-400 leading-relaxed">{card.desc}</p>
                                 </div>
-                                <h3 className="text-xl font-semibold mb-2">{card.title}</h3>
-                                <p className="text-sm text-zinc-400 leading-relaxed">{card.desc}</p>
                             </motion.div>
                         ))}
                     </div>

@@ -8,6 +8,7 @@ import {
 import { FaJava, FaHtml5, FaCss3Alt, FaDatabase } from "react-icons/fa";
 import { IoStatsChart } from "react-icons/io5";
 import { VscVscode } from "react-icons/vsc";
+import { GlowingEffect } from "./ui/glowing-effect";
 
 export default function Skills() {
     const categories = [
@@ -69,7 +70,7 @@ export default function Skills() {
             >
                 <div className="flex items-center gap-4 mb-16">
                     <div className="flex-1 h-[1px] bg-white/10 hidden md:block"></div>
-                    <h2 className="heading-2 m-0 text-right">Technical Arsenal<span className="text-blue-500">.</span></h2>
+                    <h2 className="heading-2 m-0 text-right">Technical Skills<span className="text-blue-500">.</span></h2>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -80,16 +81,26 @@ export default function Skills() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.5, delay: idx * 0.1 }}
-                            className="glass-panel p-8 rounded-3xl group hover:border-blue-500/30 transition-all box-border"
+                            className="relative p-[2px] rounded-3xl group transition-all"
                         >
-                            <h3 className="text-xl font-bold mb-6 text-zinc-200 group-hover:text-blue-400 transition-colors">{cat.title}</h3>
-                            <div className="flex flex-wrap gap-4">
-                                {cat.skills.map((skill, i) => (
-                                    <div key={i} className="flex items-center gap-2 bg-white/5 border border-white/10 px-4 py-2.5 rounded-full hover:bg-white/10 hover:border-white/20 hover:scale-105 transition-all shadow-sm">
-                                        <span className="text-xl flex items-center justify-center w-6 h-6">{skill.icon}</span>
-                                        <span className="text-sm font-medium text-zinc-300">{skill.name}</span>
-                                    </div>
-                                ))}
+                            <GlowingEffect
+                                spread={40}
+                                glow={true}
+                                disabled={false}
+                                proximity={64}
+                                inactiveZone={0.01}
+                                borderWidth={3}
+                            />
+                            <div className="relative h-full w-full glass-panel p-8 rounded-3xl hover:bg-white/5 transition-colors overflow-hidden">
+                                <h3 className="text-xl font-bold mb-6 text-zinc-200 group-hover:text-blue-400 transition-colors">{cat.title}</h3>
+                                <div className="flex flex-wrap gap-4">
+                                    {cat.skills.map((skill, i) => (
+                                        <div key={i} className="flex items-center gap-2 bg-white/5 border border-white/10 px-4 py-2.5 rounded-full hover:bg-white/10 hover:border-white/20 hover:scale-105 transition-all shadow-sm">
+                                            <span className="text-xl flex items-center justify-center w-6 h-6">{skill.icon}</span>
+                                            <span className="text-sm font-medium text-zinc-300">{skill.name}</span>
+                                        </div>
+                                    ))}
+                                </div>
                             </div>
                         </motion.div>
                     ))}

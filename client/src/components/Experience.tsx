@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { GlowingEffect } from "./ui/glowing-effect";
 
 export default function Experience() {
     const experiences = [
@@ -41,21 +42,33 @@ export default function Experience() {
                             {/* Timeline dot */}
                             <div className="absolute w-4 h-4 rounded-full bg-blue-500 border-4 border-background -left-[1.35rem] md:-left-[2.5rem] mt-1.5 z-10" />
 
-                            <div className="flex flex-col md:flex-row md:items-baseline md:justify-between mb-4">
-                                <div>
-                                    <h3 className="text-2xl font-bold">{exp.role}</h3>
-                                    <div className="text-blue-400 font-medium text-lg mt-1">{exp.company}</div>
-                                </div>
-                                <div className="text-zinc-500 text-sm font-mono mt-2 md:mt-0 tracking-wide">
-                                    {exp.date} • {exp.location}
+                            <div className="relative p-[2px] rounded-3xl group">
+                                <GlowingEffect
+                                    spread={40}
+                                    glow={true}
+                                    disabled={false}
+                                    proximity={64}
+                                    inactiveZone={0.01}
+                                    borderWidth={3}
+                                />
+                                <div className="relative glass-panel p-8 rounded-3xl hover:bg-white/[0.02] transition-colors">
+                                    <div className="flex flex-col md:flex-row md:items-baseline md:justify-between mb-4">
+                                        <div>
+                                            <h3 className="text-2xl font-bold">{exp.role}</h3>
+                                            <div className="text-blue-400 font-medium text-lg mt-1">{exp.company}</div>
+                                        </div>
+                                        <div className="text-zinc-500 text-sm font-mono mt-2 md:mt-0 tracking-wide">
+                                            {exp.date} • {exp.location}
+                                        </div>
+                                    </div>
+
+                                    <ul className="list-disc list-outside ml-4 mt-6 text-zinc-400 space-y-3 leading-relaxed">
+                                        {exp.points.map((point, i) => (
+                                            <li key={i}>{point}</li>
+                                        ))}
+                                    </ul>
                                 </div>
                             </div>
-
-                            <ul className="list-disc list-outside ml-4 mt-6 text-zinc-400 space-y-3 leading-relaxed">
-                                {exp.points.map((point, i) => (
-                                    <li key={i}>{point}</li>
-                                ))}
-                            </ul>
                         </motion.div>
                     ))}
                 </div>

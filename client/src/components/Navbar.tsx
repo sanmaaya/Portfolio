@@ -2,7 +2,8 @@ import { useState, useEffect } from "react";
 import { Link as ScrollLink } from "react-scroll";
 import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Home, User, Briefcase, GraduationCap, Award, MessageSquare, Sparkles } from "lucide-react";
+import { NavBar as TubelightNavbar } from "./ui/tubelight-navbar";
 
 export default function Navbar() {
     const [scrolled, setScrolled] = useState(false);
@@ -19,47 +20,37 @@ export default function Navbar() {
     }, []);
 
     const navLinks = [
-        { name: "About", to: "about" },
-        { name: "Skills", to: "skills" },
-        { name: "Projects", to: "projects" },
-        { name: "Education", to: "education" },
-        { name: "Achievements", to: "achievements" },
-        { name: "Contact", to: "contact" },
+        { name: "About", url: "about", icon: User },
+        { name: "Skills", url: "skills", icon: Sparkles },
+        { name: "Projects", url: "projects", icon: Briefcase },
+        { name: "Education", url: "education", icon: GraduationCap },
+        { name: "Achievements", url: "achievements", icon: Award },
+        { name: "Contact", url: "contact", icon: MessageSquare },
     ];
 
     return (
-        <nav className={`fixed top-0 w-full z-[100] transition-all duration-300 ${scrolled ? "bg-black/80 backdrop-blur-xl border-b border-white/5 py-4 shadow-2xl" : "bg-transparent py-6"}`}>
-            <div className="max-w-7xl mx-auto px-4 md:px-8 flex items-center justify-between">
-                <Link to="/" className="text-2xl font-black tracking-tighter hover:text-blue-400 transition-colors flex items-center gap-1 group">
+        <nav className={`fixed top-0 w-full z-[100] transition-all duration-300 ${scrolled ? "bg-black/40 backdrop-blur-xl border-b border-white/5 py-3 shadow-2xl" : "bg-transparent py-6"}`}>
+            <div className="max-w-7xl mx-auto px-4 md:px-8 flex items-center justify-between relative h-12">
+                <Link to="/" className="text-2xl font-black tracking-tighter hover:text-blue-400 transition-colors flex items-center gap-1 group z-50">
                     <span className="text-white group-hover:text-zinc-200 transition-colors">Sanmaya M B</span>
                     <span className="w-1.5 h-1.5 rounded-full bg-blue-500 mt-2"></span>
                 </Link>
-                <div className="hidden md:flex items-center gap-8 bg-white/5 border border-white/10 px-6 py-2 rounded-full backdrop-blur-md">
-                    {isHome ? (
-                        <div className="flex gap-6 items-center">
-                            {navLinks.map((link) => (
-                                <ScrollLink
-                                    key={link.name}
-                                    to={link.to}
-                                    spy={true}
-                                    smooth={true}
-                                    offset={-100}
-                                    duration={500}
-                                    className="text-sm font-semibold text-zinc-400 hover:text-white cursor-pointer transition-colors"
-                                    activeClass="text-blue-400 font-bold"
-                                >
-                                    {link.name}
-                                </ScrollLink>
-                            ))}
-                        </div>
-                    ) : (
-                        <Link to="/" className="text-sm font-semibold text-zinc-400 hover:text-white transition-colors">
-                            Back to Portfolio
-                        </Link>
-                    )}
+
+                <div className="hidden md:flex flex-1 justify-center pointer-events-none">
+                    <div className="pointer-events-auto">
+                        {isHome ? (
+                            <TubelightNavbar items={navLinks} />
+                        ) : (
+                            <div className="bg-white/5 border border-white/10 px-6 py-2 rounded-full backdrop-blur-md">
+                                <Link to="/" className="text-sm font-semibold text-zinc-400 hover:text-white transition-colors">
+                                    Back to Portfolio
+                                </Link>
+                            </div>
+                        )}
+                    </div>
                 </div>
 
-                <div className="hidden md:flex">
+                <div className="hidden md:flex z-50">
                     <Link to="/resume" className="text-sm font-bold bg-white text-black hover:bg-zinc-200 px-6 py-2.5 rounded-full transition-colors shadow-[0_0_15px_rgba(255,255,255,0.15)]">
                         Resume
                     </Link>
@@ -84,7 +75,7 @@ export default function Navbar() {
                                 navLinks.map((link) => (
                                     <ScrollLink
                                         key={link.name}
-                                        to={link.to}
+                                        to={link.url}
                                         spy={true}
                                         smooth={true}
                                         offset={-100}

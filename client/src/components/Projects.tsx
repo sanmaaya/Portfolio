@@ -1,12 +1,18 @@
-import { motion } from "framer-motion";
-import { ExternalLink, Github, Folder } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { BookOpen, Award, Star, ShieldCheck, Github, ExternalLink, X, ZoomIn, ChevronDown, ChevronUp, Folder } from "lucide-react";
+import { useState } from "react";
+import { GlowingEffect } from "./ui/glowing-effect";
 
 export default function Projects() {
+    const [showAll, setShowAll] = useState(false);
+    const [selectedImage, setSelectedImage] = useState<string | null>(null);
+
     const projects = [
         {
             title: "WORK Balance – Premium Employee & Team Management",
             description: "Architected a full-stack real-time management system with Role-Based Access Control (RBAC). Spearheaded the integration of Socket.io for peer-to-peer instant messaging and designed an operational command center including a Risk Monitor.",
             tech: ["React.js", "Node.js", "Express.js", "MongoDB", "Socket.io", "Tailwind CSS"],
+            image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800",
             github: "https://github.com/sanmaaya",
             live: ""
         },
@@ -14,18 +20,21 @@ export default function Projects() {
             title: "Paise Bachaaoo – Premium Financial Command Centre",
             description: "Engineered a high-end finance tracker that tracks real-time global market benchmarks. Implemented a 'Sync to Vault' architecture using Firebase Firestore to maintain data integrity and crafted a premium Glassmorphic UI.",
             tech: ["React 18", "Firebase", "Recharts", "JavaScript", "Tailwind CSS"],
+            image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&q=80&w=800",
             github: "https://github.com/sanmaaya",
         },
         {
             title: "Electrosystem – Hybrid Renewable Energy Platform",
             description: "Architected a full-stack web platform to simulate and evaluate hybrid renewable energy systems. Engineered complex energy-flow logic and designed modular simulation workflows that enable data-driven analysis.",
             tech: ["Node.js", "Express.js", "MongoDB", "JavaScript", "HTML", "CSS"],
+            image: "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&q=80&w=800",
             github: "https://github.com/sanmaaya",
         },
         {
             title: "SOHAM – Pranic Healing & Meditation (Client Project)",
             description: "Architected a professional, client-ready web platform using PHP and MySQL to manage official guidelines. Engineered a custom registration workflow with automated email notifications.",
             tech: ["PHP", "MySQL", "JavaScript", "HTML", "CSS"],
+            image: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&q=80&w=800",
             github: "https://github.com/sanmaaya",
             live: ""
         },
@@ -33,6 +42,7 @@ export default function Projects() {
             title: "TechnoGrowX – Smart Agriculture Support Platform",
             description: "Developed a robust three-tier architecture featuring specialized portals for Farmers, Experts, and Admins. Implemented a report-submission engine and integrated a secure Node.js authentication system.",
             tech: ["Node.js", "MySQL", "Tailwind CSS", "JavaScript", "HTML", "CSS"],
+            image: "https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?auto=format&fit=crop&q=80&w=800",
             github: "https://github.com/sanmaaya",
         }
     ];
@@ -51,48 +61,133 @@ export default function Projects() {
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {projects.map((project, idx) => (
-                        <motion.div
-                            key={idx}
-                            initial={{ opacity: 0, scale: 0.95 }}
-                            whileInView={{ opacity: 1, scale: 1 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.5, delay: idx * 0.1 }}
-                            whileHover={{ y: -10 }}
-                            className="glass-panel p-8 rounded-3xl flex flex-col group transition-all hover:shadow-[0_0_30px_rgba(59,130,246,0.15)] hover:border-blue-500/30"
-                        >
-                            <div className="flex justify-between items-start mb-8">
-                                <div className="p-3 bg-blue-500/10 rounded-2xl text-blue-400 group-hover:bg-blue-500/20 group-hover:scale-110 transition-all">
-                                    <Folder className="w-8 h-8" strokeWidth={1.5} />
-                                </div>
-                                <div className="flex items-center gap-3">
-                                    {project.github && (
-                                        <a href={project.github} target="_blank" rel="noopener noreferrer" className="p-2 text-zinc-400 hover:text-white hover:bg-white/10 rounded-full transition-colors z-10 relative">
-                                            <Github className="w-5 h-5" />
-                                        </a>
-                                    )}
-                                    {project.live && (
-                                        <a href={project.live} target="_blank" rel="noopener noreferrer" className="p-2 text-zinc-400 hover:text-white hover:bg-white/10 rounded-full transition-colors z-10 relative">
-                                            <ExternalLink className="w-5 h-5" />
-                                        </a>
-                                    )}
-                                </div>
-                            </div>
+                    <AnimatePresence mode="popLayout">
+                        {projects.slice(0, showAll ? projects.length : 3).map((project, idx) => (
+                            <motion.div
+                                key={project.title}
+                                initial={{ opacity: 0, scale: 0.95 }}
+                                animate={{ opacity: 1, scale: 1 }}
+                                exit={{ opacity: 0, scale: 0.9 }}
+                                transition={{ duration: 0.5, delay: idx * 0.05 }}
+                                layout
+                                whileHover={{ y: -10 }}
+                                className="glass-panel p-[2px] rounded-3xl group transition-all relative"
+                            >
+                                <GlowingEffect
+                                    spread={40}
+                                    glow={true}
+                                    disabled={false}
+                                    proximity={64}
+                                    inactiveZone={0.01}
+                                    borderWidth={3}
+                                />
+                                <div className="relative h-full w-full glass-panel overflow-hidden rounded-3xl flex flex-col group transition-all hover:bg-white/[0.03]">
+                                    {/* Project Preview Image */}
+                                    <div className="relative h-48 w-full overflow-hidden group/img">
+                                        <img
+                                            src={project.image}
+                                            alt={project.title}
+                                            className="w-full h-full object-cover transition-transform duration-700 group-hover/img:scale-110"
+                                        />
+                                        <div className="absolute inset-0 bg-black/40 opacity-0 group-hover/img:opacity-100 transition-opacity flex items-center justify-center gap-4">
+                                            <button
+                                                onClick={() => setSelectedImage(project.image)}
+                                                className="p-3 bg-white/10 backdrop-blur-md rounded-full text-white hover:bg-white/20 transition-all scale-90 group-hover/img:scale-100"
+                                            >
+                                                <ZoomIn className="w-6 h-6" />
+                                            </button>
+                                        </div>
+                                    </div>
 
-                            <h3 className="text-2xl font-bold mb-4 group-hover:text-blue-400 transition-colors leading-snug">{project.title}</h3>
-                            <p className="text-zinc-400 leading-relaxed mb-8 flex-1">{project.description}</p>
+                                    <div className="p-8 flex flex-col flex-1">
+                                        <div className="flex justify-between items-start mb-6">
+                                            <div className="p-2.5 bg-blue-500/10 rounded-xl text-blue-400 group-hover:bg-blue-500/20 transition-all">
+                                                <Folder className="w-6 h-6" strokeWidth={1.5} />
+                                            </div>
+                                            <div className="flex items-center gap-3">
+                                                {project.github && (
+                                                    <a href={project.github} target="_blank" rel="noopener noreferrer" className="p-2 text-zinc-400 hover:text-white hover:bg-white/10 rounded-full transition-colors z-10 relative">
+                                                        <Github className="w-5 h-5" />
+                                                    </a>
+                                                )}
+                                                {project.live && (
+                                                    <a href={project.live} target="_blank" rel="noopener noreferrer" className="p-2 text-zinc-400 hover:text-white hover:bg-white/10 rounded-full transition-colors z-10 relative">
+                                                        <ExternalLink className="w-5 h-5" />
+                                                    </a>
+                                                )}
+                                            </div>
+                                        </div>
 
-                            <div className="flex flex-wrap gap-2 mt-auto">
-                                {project.tech.map((t, i) => (
-                                    <span key={i} className="text-xs font-mono font-medium text-zinc-300 bg-black/40 border border-white/5 px-3 py-1.5 rounded-full">
-                                        {t}
-                                    </span>
-                                ))}
-                            </div>
-                        </motion.div>
-                    ))}
+                                        <h3 className="text-xl font-bold mb-3 group-hover:text-blue-400 transition-colors leading-tight">{project.title}</h3>
+                                        <p className="text-zinc-400 text-sm leading-relaxed mb-6 flex-1 line-clamp-3 group-hover:line-clamp-none transition-all duration-300">{project.description}</p>
+
+                                        <div className="flex flex-wrap gap-2 mt-auto">
+                                            {project.tech.map((t, i) => (
+                                                <span key={i} className="text-[10px] font-mono font-medium text-zinc-400 bg-white/5 border border-white/5 px-2.5 py-1 rounded-full">
+                                                    {t}
+                                                </span>
+                                            ))}
+                                        </div>
+                                    </div>
+                                </div>
+                            </motion.div>
+                        ))}
+                    </AnimatePresence>
                 </div>
+
+                {/* See More Toggle Button */}
+                {projects.length > 3 && (
+                    <div className="mt-16 flex justify-center">
+                        <motion.button
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.95 }}
+                            onClick={() => setShowAll(!showAll)}
+                            className="group relative px-8 py-4 bg-white/5 border border-white/10 rounded-2xl flex items-center gap-3 text-white font-bold hover:bg-blue-500 transition-all hover:border-blue-400 overflow-hidden shadow-2xl"
+                        >
+                            <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-indigo-600/20 opacity-0 group-hover:opacity-100 transition-opacity" />
+                            <span className="relative z-10 text-sm tracking-widest uppercase">
+                                {showAll ? "Show Less" : "See More Projects"}
+                            </span>
+                            {showAll ? (
+                                <ChevronUp className="w-5 h-5 relative z-10 group-hover:translate-y-[-2px] transition-transform" />
+                            ) : (
+                                <ChevronDown className="w-5 h-5 relative z-10 animate-transition group-hover:animate-none" />
+                            )}
+                        </motion.button>
+                    </div>
+                )}
             </motion.div>
+
+            {/* Image Zoom Modal */}
+            <AnimatePresence>
+                {selectedImage && (
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        className="fixed inset-0 z-[200] flex items-center justify-center p-4 bg-black/95 backdrop-blur-xl"
+                        onClick={() => setSelectedImage(null)}
+                    >
+                        <motion.button
+                            className="absolute top-8 right-8 p-3 bg-white/10 hover:bg-white/20 rounded-full text-white transition-colors"
+                            whileHover={{ scale: 1.1, rotate: 90 }}
+                            whileTap={{ scale: 0.9 }}
+                        >
+                            <X className="w-8 h-8" />
+                        </motion.button>
+
+                        <motion.img
+                            initial={{ scale: 0.9, opacity: 0 }}
+                            animate={{ scale: 1, opacity: 1 }}
+                            exit={{ scale: 0.9, opacity: 0 }}
+                            src={selectedImage}
+                            alt="Project Preview"
+                            className="max-w-full max-h-[85vh] rounded-2xl shadow-2xl border border-white/10 object-contain"
+                            onClick={(e) => e.stopPropagation()}
+                        />
+                    </motion.div>
+                )}
+            </AnimatePresence>
         </section>
     );
 }
