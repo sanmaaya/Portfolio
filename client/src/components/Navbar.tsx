@@ -7,17 +7,33 @@ import { NavBar as TubelightNavbar } from "./ui/tubelight-navbar";
 
 export default function Navbar() {
     const [scrolled, setScrolled] = useState(false);
+    const [visible, setVisible] = useState(true);
+    const [lastScrollY, setLastScrollY] = useState(0);
     const [isOpen, setIsOpen] = useState(false);
     const location = useLocation();
     const isHome = location.pathname === "/";
 
     useEffect(() => {
         const handleScroll = () => {
-            setScrolled(window.scrollY > 50);
+            const currentScrollY = window.scrollY;
+            
+            // Set background opacity/padding
+            setScrolled(currentScrollY > 50);
+
+            // Hide/Show logic
+            if (currentScrollY > lastScrollY && currentScrollY > 100) {
+                // Scrolling down - hide
+                setVisible(false);
+            } else {
+                // Scrolling up - show
+                setVisible(true);
+            }
+            
+            setLastScrollY(currentScrollY);
         };
-        window.addEventListener("scroll", handleScroll);
+        window.addEventListener("scroll", handleScroll, { passive: true });
         return () => window.removeEventListener("scroll", handleScroll);
-    }, []);
+    }, [lastScrollY]);
 
     const navLinks = [
         { name: "About", url: "about", icon: User },
@@ -29,7 +45,7 @@ export default function Navbar() {
     ];
 
     return (
-        <nav className={`fixed top-0 w-full z-[100] transition-all duration-300 ${scrolled ? "bg-black/40 backdrop-blur-xl border-b border-white/5 py-3 shadow-2xl" : "bg-transparent py-6"}`}>
+        <nav className={`fixed top-0 w-full z-[100] transition-all duration-500 ${visible ? "translate-y-0" : "-translate-y-full"} ${scrolled ? "bg-black/40 backdrop-blur-xl border-b border-white/5 py-3 shadow-2xl" : "bg-transparent py-6"}`}>
             <div className="max-w-7xl mx-auto px-4 md:px-8 flex items-center justify-between relative h-12">
                 <Link to="/" className="text-2xl font-black tracking-tighter hover:text-blue-400 transition-colors flex items-center gap-1 group z-50">
                     <span className="text-white group-hover:text-zinc-200 transition-colors">Sanmaya M B</span>
@@ -80,6 +96,7 @@ export default function Navbar() {
                                         smooth={true}
                                         offset={-100}
                                         duration={500}
+                                        onSetActive={() => {}} // Could be used if we had mobile active state
                                         onClick={() => setIsOpen(false)}
                                         className="text-lg font-bold text-zinc-400 hover:text-white cursor-pointer transition-colors"
                                     >

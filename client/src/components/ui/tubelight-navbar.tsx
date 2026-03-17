@@ -51,6 +51,7 @@ export function NavBar({ items, className }: NavBarProps) {
                             smooth={true}
                             offset={-100}
                             duration={500}
+                            onSetActive={() => setActiveTab(item.name)}
                             onClick={() => setActiveTab(item.name)}
                             className={cn(
                                 "relative cursor-pointer text-xs sm:text-sm font-semibold px-4 sm:px-6 py-2 rounded-full transition-colors whitespace-nowrap",
