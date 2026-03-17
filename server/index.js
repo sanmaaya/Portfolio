@@ -15,7 +15,6 @@ app.get("/", (req, res) => {
     res.send("Portfolio API Running");
 });
 
-app.use("/api/projects", require("./routes/projectRoutes"));
 app.use("/api/contact", require("./routes/contactRoutes"));
 
 const PORT = process.env.PORT || 5000;
