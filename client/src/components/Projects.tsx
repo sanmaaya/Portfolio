@@ -12,7 +12,7 @@ export default function Projects() {
             title: "WORK Balance – Premium Employee & Team Management",
             description: "Architected a full-stack real-time management system with Role-Based Access Control (RBAC). Spearheaded the integration of Socket.io for peer-to-peer instant messaging and designed an operational command center including a Risk Monitor.",
             tech: ["React.js", "Node.js", "Express.js", "MongoDB", "Socket.io", "Tailwind CSS"],
-            image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800",
+            image: "/projects/smart-study planner.png",
             github: "https://github.com/sanmaaya",
             live: ""
         },
@@ -20,7 +20,7 @@ export default function Projects() {
             title: "Paise Bachaaoo – Premium Financial Command Centre",
             description: "Engineered a high-end finance tracker that tracks real-time global market benchmarks. Implemented a 'Sync to Vault' architecture using Firebase Firestore to maintain data integrity and crafted a premium Glassmorphic UI.",
             tech: ["React 18", "Firebase", "Recharts", "JavaScript", "Tailwind CSS"],
-            image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&q=80&w=800",
+            image: "/projects/finace-tracker.png",
             github: "https://github.com/sanmaaya",
         },
         {
@@ -34,7 +34,7 @@ export default function Projects() {
             title: "SOHAM – Pranic Healing & Meditation (Client Project)",
             description: "Architected a professional, client-ready web platform using PHP and MySQL to manage official guidelines. Engineered a custom registration workflow with automated email notifications.",
             tech: ["PHP", "MySQL", "JavaScript", "HTML", "CSS"],
-            image: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&q=80&w=800",
+            image: "/projects/soham.png",
             github: "https://github.com/sanmaaya",
             live: ""
         },
