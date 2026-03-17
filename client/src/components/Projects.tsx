@@ -10,39 +10,39 @@ export default function Projects() {
     const projects = [
         {
             title: "WORK Balance – Premium Employee & Team Management",
-            description: "A full-stack workforce management platform with Role-Based Access Control (RBAC) and real-time Socket.io messaging. Features an Operational Command Center with Risk Monitoring and a synchronized company Leave Calendar.",
-            tech: ["React.js", "Node.js", "Express.js", "MongoDB", "Socket.io", "REST APIs"],
+            description: "Full-stack workforce management platform designed to streamline team coordination, task monitoring, and internal communication in organizations. Developed a real-time employee management system implementing Role-Based Access Control (RBAC) for Admin, Manager, and Employee roles. Built peer-to-peer instant messaging using Socket.io with live user presence indicators and unread message counters. Designed a centralized Operational Command Center including a Risk Monitor for overdue tasks and a synchronized company-wide Leave Calendar. Implemented scalable REST APIs and modular backend architecture for efficient data handling and real-time updates. Delivered a modern responsive UI with smooth animations and optimized component structure.",
+            tech: ["React.js", "Node.js", "Express.js", "MongoDB", "Socket.io", "REST APIs", "Full-Stack Development"],
             image: "/Projects/smart-study planner.png",
             github: "https://github.com/sanmaaya", 
             live: ""
         },
         {
             title: "Paise Bachaaoo – Premium Financial Command Centre",
-            description: "Advanced financial dashboard integrating global market benchmarks like DXY and EUR/USD. Uses Firebase Firestore for multi-session data sync and features premium kinetic Glassmorphic UI.",
-            tech: ["React.js", "Firebase", "Recharts", "JavaScript", "Tailwind CSS"],
+            description: "Advanced financial management and market-tracking dashboard designed to help users monitor personal finances alongside global financial indicators. Built a real-time financial tracking platform integrating global market benchmarks such as the DXY Index and EUR/USD exchange rate. Designed a multi-session data synchronization architecture using Firebase Firestore to securely maintain user financial records. Developed interactive analytics dashboards using Recharts for visualizing savings trends, expenses, and financial insights. Engineered a premium glassmorphic UI system with five dynamic themes and proximity-based kinetic animations for enhanced UX. Implemented secure authentication and scalable state management for reliable multi-device usage.",
+            tech: ["React.js", "Firebase", "JavaScript", "Tailwind CSS", "Front-End Development"],
             image: "/Projects/finace-tracker.png",
             github: "https://github.com/sanmaaya/Finance-Tracker",
             live: "https://paisa-lemon.vercel.app/"
         },
         {
             title: "SOHAM – Pranic Healing & Meditation Platform",
-            description: "Structure and accessible space for Pranic Healing learners. Features a calm, intuitive digital environment for healing courses, principles, and seamless registration tools.",
-            tech: ["HTML", "CSS", "JavaScript", "UI/UX Design", "Responsive Design"],
+            description: "Soham is a modern web platform designed to provide a structured and accessible space for Pranic Healing learners and meditation enthusiasts. The aim of the project was to create a calm, intuitive, and visually clean digital environment where users can explore healing courses, understand guidelines, and register for sessions seamlessly. I designed and developed the entire platform from scratch, including the UI layout, page structure, navigation flow, and responsive design. The website features dedicated sections for course listings, healing principles, and registration tools, all crafted to maintain clarity and easy usability. The project reflects my skills in frontend development, UI/UX thinking, and creating real-world, purpose-driven web applications. It combines aesthetic simplicity with functional design to offer a smooth experience aligned with the peaceful nature of meditation practices.",
+            tech: ["HTML", "CSS", "JavaScript", "UI/UX Design", "Responsive Web Design"],
             image: "/Projects/soham.png",
             github: "https://github.com/sanmaaya",
             live: ""
         },
         {
-            title: "Drug Review Sentiment Analysis (ML Project)",
-            description: "Machine Learning system to classify patient drug reviews. Implements NLP pipelines (TF-IDF) and multiple models like Logistic Regression and Random Forest for high-accuracy sentiment prediction.",
-            tech: ["Python", "Scikit-Learn", "NLP", "Machine Learning", "Data Analysis"],
+            title: "Drug Review Sentiment Analysis (Machine Learning Project)",
+            description: "This project focuses on analyzing patient drug reviews to automatically classify their sentiments as positive or negative using Machine Learning techniques. The goal was to understand user experiences, identify patterns in medication feedback, and build a reliable sentiment prediction system. The workflow included dataset preprocessing, handling missing values, cleaning text, and applying NLP techniques such as tokenization, stop-word removal, and TF-IDF vectorization. Multiple machine learning models were trained and compared, including Logistic Regression and Random Forest, to determine the best-performing approach. As the evaluation lead (Member 4), my role involved loading pre-trained .pkl files, testing models on unseen data, generating predictions, and calculating key performance metrics such as accuracy, precision, recall, F1-score, and confusion matrices. I also prepared the final output files containing predictions and performance reports. This project demonstrates practical experience in machine learning pipelines, model evaluation, and real-world text-based sentiment classification.",
+            tech: ["Python", "Machine Learning", "NLP", "Scikit-Learn", "Data Analysis"],
             image: "https://images.unsplash.com/photo-1576086213369-97a306d36557?auto=format&fit=crop&q=80&w=800",
             github: "https://github.com/sanmaaya",
         },
         {
             title: "Hybrid Renewable Energy Generation System",
-            description: "Intelligent energy management system combining solar, wind, and battery storage to ensure uninterrupted sustainable power through smart switching and storage optimization.",
-            tech: ["Renewable Energy", "EMS", "Research & Analysis", "Hardware Simulation"],
+            description: "This project focuses on designing a hybrid renewable energy system that combines solar power, wind energy, and battery storage solutions to improve overall energy efficiency and reliability. The goal is to develop a sustainable system capable of delivering uninterrupted power by intelligently switching between multiple renewable sources based on availability and demand. Our ongoing work includes understanding the energy flow, optimizing power output, designing the hybrid control mechanism, and analyzing battery integration for stable energy storage. The project will also evaluate system performance, cost-effectiveness, and real-world feasibility. This is an active project and is currently in the design and research phase, with more components and technical implementation being developed.",
+            tech: ["Renewable Energy Systems", "Energy Management Systems (EMS)", "Research & Analysis"],
             image: "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&q=80&w=800",
             github: "https://github.com/sanmaaya",
         }
