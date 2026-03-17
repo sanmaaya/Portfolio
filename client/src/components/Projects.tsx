@@ -12,7 +12,7 @@ export default function Projects() {
             title: "WORK Balance – Premium Employee & Team Management",
             description: "Architected a full-stack real-time management system with Role-Based Access Control (RBAC). Spearheaded the integration of Socket.io for peer-to-peer instant messaging and designed an operational command center including a Risk Monitor.",
             tech: ["React.js", "Node.js", "Express.js", "MongoDB", "Socket.io", "Tailwind CSS"],
-            image: "/projects/smart-study planner.png",
+            image: "/Projects/smart-study planner.png",
             github: "https://github.com/sanmaaya",
             live: ""
         },
@@ -20,7 +20,7 @@ export default function Projects() {
             title: "Paise Bachaaoo – Premium Financial Command Centre",
             description: "Engineered a high-end finance tracker that tracks real-time global market benchmarks. Implemented a 'Sync to Vault' architecture using Firebase Firestore to maintain data integrity and crafted a premium Glassmorphic UI.",
             tech: ["React 18", "Firebase", "Recharts", "JavaScript", "Tailwind CSS"],
-            image: "/projects/finace-tracker.png",
+            image: "/Projects/finace-tracker.png",
             github: "https://github.com/sanmaaya",
         },
         {
@@ -34,7 +34,7 @@ export default function Projects() {
             title: "SOHAM – Pranic Healing & Meditation (Client Project)",
             description: "Architected a professional, client-ready web platform using PHP and MySQL to manage official guidelines. Engineered a custom registration workflow with automated email notifications.",
             tech: ["PHP", "MySQL", "JavaScript", "HTML", "CSS"],
-            image: "/projects/soham.png",
+            image: "/Projects/soham.png",
             github: "https://github.com/sanmaaya",
             live: ""
         },
@@ -81,7 +81,7 @@ export default function Projects() {
                                     inactiveZone={0.01}
                                     borderWidth={3}
                                 />
-                                <div className="relative h-full w-full glass-panel overflow-hidden rounded-3xl flex flex-col group transition-all hover:bg-white/[0.03]">
+                                <div className="relative h-full w-full glass-panel overflow-hidden rounded-3xl flex flex-col group transition-all hover:bg-white/[0.04]">
                                     {/* Project Preview Image */}
                                     <div className="relative h-48 w-full overflow-hidden group/img">
                                         <img
@@ -99,34 +99,40 @@ export default function Projects() {
                                         </div>
                                     </div>
 
-                                    <div className="p-8 flex flex-col flex-1">
-                                        <div className="flex justify-between items-start mb-6">
-                                            <div className="p-2.5 bg-blue-500/10 rounded-xl text-blue-400 group-hover:bg-blue-500/20 transition-all">
-                                                <Folder className="w-6 h-6" strokeWidth={1.5} />
-                                            </div>
-                                            <div className="flex items-center gap-3">
-                                                {project.github && (
-                                                    <a href={project.github} target="_blank" rel="noopener noreferrer" className="p-2 text-zinc-400 hover:text-white hover:bg-white/10 rounded-full transition-colors z-10 relative">
-                                                        <Github className="w-5 h-5" />
-                                                    </a>
-                                                )}
-                                                {project.live && (
-                                                    <a href={project.live} target="_blank" rel="noopener noreferrer" className="p-2 text-zinc-400 hover:text-white hover:bg-white/10 rounded-full transition-colors z-10 relative">
-                                                        <ExternalLink className="w-5 h-5" />
-                                                    </a>
-                                                )}
-                                            </div>
-                                        </div>
-
+                                    <div className="p-7 flex flex-col flex-1">
                                         <h3 className="text-xl font-bold mb-3 group-hover:text-blue-400 transition-colors leading-tight">{project.title}</h3>
-                                        <p className="text-zinc-400 text-sm leading-relaxed mb-6 flex-1 line-clamp-3 group-hover:line-clamp-none transition-all duration-300">{project.description}</p>
+                                        <p className="text-zinc-400 text-sm leading-relaxed mb-6 flex-1 line-clamp-2 group-hover:line-clamp-none transition-all duration-300">{project.description}</p>
 
-                                        <div className="flex flex-wrap gap-2 mt-auto">
+                                        <div className="flex flex-wrap gap-2 mb-8">
                                             {project.tech.map((t, i) => (
-                                                <span key={i} className="text-[10px] font-mono font-medium text-zinc-400 bg-white/5 border border-white/5 px-2.5 py-1 rounded-full">
+                                                <span key={i} className="text-[10px] font-mono font-medium text-zinc-500 bg-white/5 border border-white/5 px-2.5 py-1 rounded-full">
                                                     {t}
                                                 </span>
                                             ))}
+                                        </div>
+
+                                        {/* Action Bar - LinkedIn Style */}
+                                        <div className="flex items-center gap-3 mt-auto pt-6 border-t border-white/5">
+                                            {project.github && (
+                                                <a 
+                                                    href={project.github} 
+                                                    target="_blank" 
+                                                    rel="noopener noreferrer" 
+                                                    className="flex-1 flex items-center justify-center gap-2 py-2.5 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all text-xs font-bold text-zinc-300 hover:text-white"
+                                                >
+                                                    <Github className="w-4 h-4" /> Code
+                                                </a>
+                                            )}
+                                            {project.live && (
+                                                <a 
+                                                    href={project.live} 
+                                                    target="_blank" 
+                                                    rel="noopener noreferrer" 
+                                                    className="flex-1 flex items-center justify-center gap-2 py-2.5 rounded-xl bg-blue-600/10 border border-blue-500/20 hover:bg-blue-600/20 hover:border-blue-500/40 transition-all text-xs font-bold text-blue-400 hover:text-blue-300"
+                                                >
+                                                    <ExternalLink className="w-4 h-4" /> Live Demo
+                                                </a>
+                                            )}
                                         </div>
                                     </div>
                                 </div>
