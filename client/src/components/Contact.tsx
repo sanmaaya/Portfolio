@@ -60,7 +60,7 @@ export default function Contact() {
                 className="w-full"
             >
                 <div className="flex items-center gap-4 mb-16 text-center justify-center flex-col">
-                    <h2 className="text-4xl md:text-5xl lg:text-6xl font-black mb-6 tracking-tight">Let's Create Together<span className="text-blue-500">.</span></h2>
+                    <h2 className="text-4xl md:text-5xl lg:text-6xl font-black mb-6 tracking-tight">Let's Create Together<span className="text-pink-500">.</span></h2>
                     <p className="text-zinc-400 max-w-2xl text-lg leading-relaxed">
                         If you are interested in collaborating, discussing projects, or offering internship opportunities, feel free to reach out.
                     </p>
@@ -71,8 +71,8 @@ export default function Contact() {
                         <div className="glass-panel p-8 lg:p-10 rounded-3xl h-full">
                             <h3 className="text-2xl font-bold mb-8 text-white">Contact Info</h3>
                             <div className="space-y-8">
-                                <a href="mailto:your-email@example.com" className="flex items-center gap-5 text-zinc-400 hover:text-blue-400 transition-colors group">
-                                    <div className="w-14 h-14 bg-white/5 rounded-2xl flex items-center justify-center group-hover:bg-blue-500/10 group-hover:shadow-[0_0_15px_rgba(59,130,246,0.2)] transition-all">
+                                <a href="mailto:your-email@example.com" className="flex items-center gap-5 text-zinc-400 hover:text-pink-400 transition-colors group">
+                                    <div className="w-14 h-14 bg-white/5 rounded-2xl flex items-center justify-center group-hover:bg-pink-500/10 group-hover:shadow-[0_0_15px_rgba(59,130,246,0.2)] transition-all">
                                         <Mail className="w-6 h-6" />
                                     </div>
                                     <span className="font-medium text-lg">Email Me</span>
@@ -96,14 +96,14 @@ export default function Contact() {
                     <form onSubmit={handleSubmit} className="glass-panel p-8 md:p-12 rounded-3xl space-y-6 lg:col-span-3">
                         {submitted ? (
                             <div className="text-center py-12">
-                                <div className="text-blue-500 mb-4 flex justify-center">
+                                <div className="text-pink-500 mb-4 flex justify-center">
                                     <ShieldCheck className="w-16 h-16" />
                                 </div>
                                 <h3 className="text-2xl font-bold text-white mb-2">Message Received!</h3>
                                 <p className="text-zinc-400">Thanks for reaching out. I'll get back to you soon.</p>
                                 <button
                                     onClick={() => setSubmitted(false)}
-                                    className="mt-8 text-blue-400 hover:underline"
+                                    className="mt-8 text-pink-400 hover:underline"
                                 >
                                     Send another message
                                 </button>
@@ -119,7 +119,7 @@ export default function Contact() {
                                             value={formData.name}
                                             onChange={handleChange}
                                             placeholder="John Doe"
-                                            className="w-full bg-black/50 border border-white/10 rounded-xl px-5 py-4 text-white focus:outline-none focus:border-blue-500 focus:bg-white/5 transition-all"
+                                            className="w-full bg-black/50 border border-white/10 rounded-xl px-5 py-4 text-white focus:outline-none focus:border-pink-500 focus:bg-white/5 transition-all"
                                             required
                                         />
                                     </div>
@@ -131,7 +131,7 @@ export default function Contact() {
                                             value={formData.email}
                                             onChange={handleChange}
                                             placeholder="john@example.com"
-                                            className="w-full bg-black/50 border border-white/10 rounded-xl px-5 py-4 text-white focus:outline-none focus:border-blue-500 focus:bg-white/5 transition-all"
+                                            className="w-full bg-black/50 border border-white/10 rounded-xl px-5 py-4 text-white focus:outline-none focus:border-pink-500 focus:bg-white/5 transition-all"
                                             required
                                         />
                                     </div>
@@ -144,7 +144,7 @@ export default function Contact() {
                                         value={formData.message}
                                         onChange={handleChange}
                                         placeholder="Hello, I'd like to collaborate on..."
-                                        className="w-full bg-black/50 border border-white/10 rounded-xl px-5 py-4 text-white focus:outline-none focus:border-blue-500 focus:bg-white/5 transition-all resize-none"
+                                        className="w-full bg-black/50 border border-white/10 rounded-xl px-5 py-4 text-white focus:outline-none focus:border-pink-500 focus:bg-white/5 transition-all resize-none"
                                         required
                                     ></textarea>
                                 </div>

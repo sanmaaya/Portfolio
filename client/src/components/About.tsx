@@ -5,7 +5,7 @@ import { GlowingEffect } from "./ui/glowing-effect";
 export default function About() {
     const cards = [
         {
-            icon: <Globe2 className="w-6 h-6 text-blue-400" />,
+            icon: <Globe2 className="w-6 h-6 text-pink-400" />,
             title: "End-to-End Applications",
             desc: "From designing responsive user interfaces to implementing backend APIs and databases."
         },
@@ -35,7 +35,7 @@ export default function About() {
                 transition={{ duration: 0.6 }}
             >
                 <div className="flex items-center gap-4 mb-12">
-                    <h2 className="heading-2 m-0">About Me<span className="text-blue-500">.</span></h2>
+                    <h2 className="heading-2 m-0">About Me<span className="text-pink-500">.</span></h2>
                     <div className="flex-1 h-[1px] bg-white/10 hidden md:block"></div>
                 </div>
 

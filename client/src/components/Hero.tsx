@@ -15,10 +15,10 @@ export default function Hero() {
                     maxSize={1.4}
                     particleDensity={100}
                     className="w-full h-full"
-                    particleColor="#3b82f6"
+                    particleColor="#ec4899"
                     speed={1}
                 />
-                <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-600/20 rounded-full blur-[128px] animate-pulse"></div>
+                <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-pink-600/20 rounded-full blur-[128px] animate-pulse"></div>
                 <div className="absolute bottom-1/4 right-1/4 w-[28rem] h-[28rem] bg-teal-600/10 rounded-full blur-[128px] animate-pulse" style={{ animationDelay: '2s' }}></div>
             </div>
 
@@ -29,7 +29,7 @@ export default function Hero() {
                     transition={{ duration: 0.8, ease: "easeOut" }}
                     className="mb-8 p-3 bg-white/5 border border-white/10 rounded-2xl backdrop-blur-sm inline-flex items-center gap-3"
                 >
-                    <span className="w-2 h-2 rounded-full bg-blue-500 animate-ping"></span>
+                    <span className="w-2 h-2 rounded-full bg-pink-500 animate-ping"></span>
                     <span className="text-sm font-medium text-zinc-300">Open to new opportunities</span>
                 </motion.div>
 
@@ -86,7 +86,7 @@ export default function Hero() {
                         smooth={true}
                         offset={-100}
                         duration={500}
-                        className="px-8 py-4 bg-blue-600/20 text-blue-400 border border-blue-500/30 rounded-full font-medium flex items-center gap-3 hover:bg-blue-600/30 transition-all cursor-pointer"
+                        className="px-8 py-4 bg-pink-600/20 text-pink-400 border border-pink-500/30 rounded-full font-medium flex items-center gap-3 hover:bg-pink-600/30 transition-all cursor-pointer"
                     >
                         Contact Me
                     </ScrollLink>

@@ -32,9 +32,9 @@ export default function Navbar() {
     return (
         <nav className={`fixed top-0 w-full z-[100] transition-all duration-300 ${scrolled ? "bg-black/40 backdrop-blur-xl border-b border-white/5 py-3 shadow-2xl" : "bg-transparent py-6"}`}>
             <div className="max-w-7xl mx-auto px-4 md:px-8 flex items-center justify-between relative h-12">
-                <Link to="/" className="text-2xl font-black tracking-tighter hover:text-blue-400 transition-colors flex items-center gap-1 group z-50">
+                <Link to="/" className="text-2xl font-black tracking-tighter hover:text-pink-400 transition-colors flex items-center gap-1 group z-50">
                     <span className="text-white group-hover:text-zinc-200 transition-colors">Sanmaya M B</span>
-                    <span className="w-1.5 h-1.5 rounded-full bg-blue-500 mt-2"></span>
+                    <span className="w-1.5 h-1.5 rounded-full bg-pink-500 mt-2"></span>
                 </Link>
 
                 <div className="hidden md:flex flex-1 justify-center pointer-events-none">
