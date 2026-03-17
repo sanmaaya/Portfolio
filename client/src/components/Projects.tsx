@@ -10,39 +10,40 @@ export default function Projects() {
     const projects = [
         {
             title: "WORK Balance – Premium Employee & Team Management",
-            description: "Architected a full-stack real-time management system with Role-Based Access Control (RBAC). Spearheaded the integration of Socket.io for peer-to-peer instant messaging and designed an operational command center including a Risk Monitor.",
-            tech: ["React.js", "Node.js", "Express.js", "MongoDB", "Socket.io", "Tailwind CSS"],
+            description: "A full-stack workforce management platform with Role-Based Access Control (RBAC) and real-time Socket.io messaging. Features an Operational Command Center with Risk Monitoring and a synchronized company Leave Calendar.",
+            tech: ["React.js", "Node.js", "Express.js", "MongoDB", "Socket.io", "REST APIs"],
             image: "/Projects/smart-study planner.png",
-            github: "https://github.com/sanmaaya",
+            github: "https://github.com/sanmaaya", 
             live: ""
         },
         {
             title: "Paise Bachaaoo – Premium Financial Command Centre",
-            description: "Engineered a high-end finance tracker that tracks real-time global market benchmarks. Implemented a 'Sync to Vault' architecture using Firebase Firestore to maintain data integrity and crafted a premium Glassmorphic UI.",
-            tech: ["React 18", "Firebase", "Recharts", "JavaScript", "Tailwind CSS"],
+            description: "Advanced financial dashboard integrating global market benchmarks like DXY and EUR/USD. Uses Firebase Firestore for multi-session data sync and features premium kinetic Glassmorphic UI.",
+            tech: ["React.js", "Firebase", "Recharts", "JavaScript", "Tailwind CSS"],
             image: "/Projects/finace-tracker.png",
-            github: "https://github.com/sanmaaya",
+            github: "https://github.com/sanmaaya/Finance-Tracker",
+            live: "https://paisa-lemon.vercel.app/"
         },
         {
-            title: "Electrosystem – Hybrid Renewable Energy Platform",
-            description: "Architected a full-stack web platform to simulate and evaluate hybrid renewable energy systems. Engineered complex energy-flow logic and designed modular simulation workflows that enable data-driven analysis.",
-            tech: ["Node.js", "Express.js", "MongoDB", "JavaScript", "HTML", "CSS"],
-            image: "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&q=80&w=800",
-            github: "https://github.com/sanmaaya",
-        },
-        {
-            title: "SOHAM – Pranic Healing & Meditation (Client Project)",
-            description: "Architected a professional, client-ready web platform using PHP and MySQL to manage official guidelines. Engineered a custom registration workflow with automated email notifications.",
-            tech: ["PHP", "MySQL", "JavaScript", "HTML", "CSS"],
+            title: "SOHAM – Pranic Healing & Meditation Platform",
+            description: "Structure and accessible space for Pranic Healing learners. Features a calm, intuitive digital environment for healing courses, principles, and seamless registration tools.",
+            tech: ["HTML", "CSS", "JavaScript", "UI/UX Design", "Responsive Design"],
             image: "/Projects/soham.png",
             github: "https://github.com/sanmaaya",
             live: ""
         },
         {
-            title: "TechnoGrowX – Smart Agriculture Support Platform",
-            description: "Developed a robust three-tier architecture featuring specialized portals for Farmers, Experts, and Admins. Implemented a report-submission engine and integrated a secure Node.js authentication system.",
-            tech: ["Node.js", "MySQL", "Tailwind CSS", "JavaScript", "HTML", "CSS"],
-            image: "https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?auto=format&fit=crop&q=80&w=800",
+            title: "Drug Review Sentiment Analysis (ML Project)",
+            description: "Machine Learning system to classify patient drug reviews. Implements NLP pipelines (TF-IDF) and multiple models like Logistic Regression and Random Forest for high-accuracy sentiment prediction.",
+            tech: ["Python", "Scikit-Learn", "NLP", "Machine Learning", "Data Analysis"],
+            image: "https://images.unsplash.com/photo-1576086213369-97a306d36557?auto=format&fit=crop&q=80&w=800",
+            github: "https://github.com/sanmaaya",
+        },
+        {
+            title: "Hybrid Renewable Energy Generation System",
+            description: "Intelligent energy management system combining solar, wind, and battery storage to ensure uninterrupted sustainable power through smart switching and storage optimization.",
+            tech: ["Renewable Energy", "EMS", "Research & Analysis", "Hardware Simulation"],
+            image: "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&q=80&w=800",
             github: "https://github.com/sanmaaya",
         }
     ];
