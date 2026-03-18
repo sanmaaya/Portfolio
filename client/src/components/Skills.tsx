@@ -31,7 +31,7 @@ export default function Skills() {
                 { name: "Firebase", icon: <SiFirebase className="text-[#FFCA28]" /> },
                 { name: "MongoDB", icon: <SiMongodb className="text-[#47A248]" /> },
                 { name: "MySQL", icon: <SiMysql className="text-[#4479A1]" /> },
-                { name: "REST APIs", icon: <span className="font-mono text-pink-400 font-bold px-1">{'{}'}</span> },
+                { name: "REST APIs", icon: <span className="font-mono text-red-500 font-bold px-1">{'{}'}</span> },
             ]
         },
         {
@@ -71,7 +71,7 @@ export default function Skills() {
             >
                 <div className="flex items-center gap-4 mb-16">
                     <div className="flex-1 h-[1px] bg-slate-200/50 hidden md:block"></div>
-                    <h2 className="heading-2 m-0 text-right">Technical Skills<span className="text-pink-500">.</span></h2>
+                    <h2 className="heading-2 m-0 text-right">Technical Skills<span className="text-red-600">.</span></h2>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -93,7 +93,7 @@ export default function Skills() {
                                 borderWidth={3}
                             />
                             <div className="relative h-full w-full glass-panel p-8 rounded-3xl hover:bg-slate-100/50 transition-colors overflow-hidden">
-                                <h3 className="text-xl font-bold mb-6 text-slate-800 font-bold group-hover:text-pink-400 transition-colors">{cat.title}</h3>
+                                <h3 className="text-xl font-bold mb-6 text-slate-800 font-bold group-hover:text-red-500 transition-colors">{cat.title}</h3>
                                 <div className="flex flex-wrap gap-4">
                                     {cat.skills.map((skill, i) => (
                                         <div key={i} className="flex items-center gap-2 bg-slate-100/50 border border-slate-200 px-4 py-2.5 rounded-full hover:bg-slate-200/50 hover:border-white/20 hover:scale-105 transition-all shadow-sm">

@@ -5,7 +5,7 @@ export default function Footer() {
         <footer className="border-t border-slate-200 py-12 bg-black relative z-10 mt-20">
             <div className="max-w-7xl mx-auto px-4 md:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
                 <div className="text-center md:text-left">
-                    <h2 className="text-2xl font-bold tracking-tighter mb-1">Sanmaya M B<span className="text-pink-500">.</span></h2>
+                    <h2 className="text-2xl font-bold tracking-tighter mb-1">Sanmaya M B<span className="text-red-600">.</span></h2>
                     <p className="text-slate-500 text-sm font-medium">Full Stack Developer</p>
                 </div>
 

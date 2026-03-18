@@ -31,7 +31,7 @@ export default function Achievements() {
             >
                 <div className="flex items-center gap-4 mb-16">
                     <div className="flex-1 h-[1px] bg-slate-200/50 hidden md:block"></div>
-                    <h2 className="heading-2 m-0 text-right">Achievements & Highlights<span className="text-pink-500">.</span></h2>
+                    <h2 className="heading-2 m-0 text-right">Achievements & Highlights<span className="text-red-600">.</span></h2>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -53,12 +53,12 @@ export default function Achievements() {
                                 borderWidth={3}
                             />
                             <div className="relative h-full w-full glass-panel p-8 rounded-3xl flex flex-col gap-6 group hover:bg-slate-100/50 transition-all overflow-hidden">
-                                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-pink-500/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                                <div className="bg-gradient-to-br from-pink-500/20 to-pink-/20 p-4 rounded-2xl text-pink-400 group-hover:scale-110 group-hover:from-pink-500/30 group-hover:to-pink-/30 transition-all self-start shadow-inner">
+                                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-red-600/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                                <div className="bg-gradient-to-br from-red-600/20 to-pink-/20 p-4 rounded-2xl text-red-500 group-hover:scale-110 group-hover:from-red-600/30 group-hover:to-pink-/30 transition-all self-start shadow-inner">
                                     {item.icon}
                                 </div>
                                 <div>
-                                    <h3 className="text-2xl font-bold text-slate-900 font-bold mb-3 group-hover:text-pink-400 transition-colors leading-tight">{item.title}</h3>
+                                    <h3 className="text-2xl font-bold text-slate-900 font-bold mb-3 group-hover:text-red-500 transition-colors leading-tight">{item.title}</h3>
                                     <p className="text-slate-600 text-lg leading-relaxed font-medium group-hover:text-slate-700 font-medium transition-colors">{item.desc}</p>
                                 </div>
                             </div>

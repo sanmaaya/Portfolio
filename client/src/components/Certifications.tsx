@@ -377,7 +377,7 @@ export default function Certifications() {
                 transition={{ duration: 0.6 }}
             >
                 <div className="flex items-center gap-4 mb-16">
-                    <h2 className="heading-2 m-0 text-slate-900 font-bold">Certifications & <span className="text-pink-500">Badges.</span></h2>
+                    <h2 className="heading-2 m-0 text-slate-900 font-bold">Certifications & <span className="text-red-600">Badges.</span></h2>
                     <div className="flex-1 h-[1px] bg-slate-200/50 hidden md:block"></div>
                 </div>
 
@@ -416,7 +416,7 @@ export default function Certifications() {
                                         <div className="absolute top-3 right-3 z-20">
                                             <button
                                                 onClick={() => setSelectedCert(cert)}
-                                                className="p-2.5 bg-slate-200/50 backdrop-blur-md rounded-full border border-slate-200 hover:bg-pink-500 hover:border-pink-400 transition-all group/btn"
+                                                className="p-2.5 bg-slate-200/50 backdrop-blur-md rounded-full border border-slate-200 hover:bg-red-600 hover:border-red-500 transition-all group/btn"
                                             >
                                                 <ZoomIn className="w-4.5 h-4.5 text-slate-900 font-bold group-hover/btn:scale-110 transition-transform" />
                                             </button>
@@ -425,19 +425,19 @@ export default function Certifications() {
 
                                     <div className="p-6 flex flex-col flex-1">
                                         <div className="flex items-start gap-4 mb-6 mt-1">
-                                            <div className={`p-3 rounded-xl bg-pink-500/10 text-pink-400 group-hover:scale-110 transition-transform shadow-inner`}>
+                                            <div className={`p-3 rounded-xl bg-red-600/10 text-red-500 group-hover:scale-110 transition-transform shadow-inner`}>
                                                 {cert.icon}
                                             </div>
                                             <div>
                                                 <div className="flex items-center gap-2 mb-1.5">
-                                                    <span className="text-[9px] font-bold uppercase tracking-[0.15em] px-2 py-0.5 bg-pink-500/10 text-pink-400 rounded-md border border-pink-500/20">
+                                                    <span className="text-[9px] font-bold uppercase tracking-[0.15em] px-2 py-0.5 bg-red-600/10 text-red-500 rounded-md border border-red-600/20">
                                                         {cert.issuer}
                                                     </span>
                                                     <span className="text-[9px] font-bold uppercase tracking-[0.15em] text-slate-500">
                                                         {cert.date}
                                                     </span>
                                                 </div>
-                                                <h3 className="text-lg font-bold text-slate-900 font-bold group-hover:text-pink-400 transition-colors line-clamp-2 leading-tight">
+                                                <h3 className="text-lg font-bold text-slate-900 font-bold group-hover:text-red-500 transition-colors line-clamp-2 leading-tight">
                                                     {cert.title}
                                                 </h3>
                                             </div>
@@ -446,7 +446,7 @@ export default function Certifications() {
                                         <div className="space-y-3 flex-1">
                                             {cert.details.map((detail, i) => (
                                                 <div key={i} className="flex items-start gap-2.5">
-                                                    <div className="w-1 h-1 rounded-full bg-pink-500/40 mt-2 flex-shrink-0" />
+                                                    <div className="w-1 h-1 rounded-full bg-red-600/40 mt-2 flex-shrink-0" />
                                                     <span className="text-slate-600 text-xs leading-relaxed group-hover:text-slate-700 font-medium transition-colors">
                                                         {detail}
                                                     </span>
@@ -456,11 +456,11 @@ export default function Certifications() {
 
                                         <div className="mt-6 pt-4 border-t border-slate-200 flex items-center justify-between">
                                             <span className="text-[10px] font-semibold text-slate-500 uppercase tracking-widest flex items-center gap-2">
-                                                <ShieldCheck className="w-3.5 h-3.5 text-pink-500/50" />
+                                                <ShieldCheck className="w-3.5 h-3.5 text-red-600/50" />
                                                 Verified
                                             </span>
-                                            <div className="w-6 h-6 rounded-full bg-pink-500/5 flex items-center justify-center group-hover:bg-pink-500/20 transition-colors">
-                                                <div className="w-1 h-1 rounded-full bg-pink-500" />
+                                            <div className="w-6 h-6 rounded-full bg-red-600/5 flex items-center justify-center group-hover:bg-red-600/20 transition-colors">
+                                                <div className="w-1 h-1 rounded-full bg-red-600" />
                                             </div>
                                         </div>
                                     </div>
@@ -477,9 +477,9 @@ export default function Certifications() {
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
                             onClick={() => setShowAll(!showAll)}
-                            className="group relative px-6 py-3 bg-slate-100/50 border border-slate-200 rounded-xl flex items-center gap-3 text-slate-900 font-bold font-bold hover:bg-pink-500 transition-all hover:border-pink-400 overflow-hidden"
+                            className="group relative px-6 py-3 bg-slate-100/50 border border-slate-200 rounded-xl flex items-center gap-3 text-slate-900 font-bold font-bold hover:bg-red-600 transition-all hover:border-red-500 overflow-hidden"
                         >
-                            <div className="absolute inset-0 bg-gradient-to-r from-pink-600/20 to-pink-/20 opacity-0 group-hover:opacity-100 transition-opacity" />
+                            <div className="absolute inset-0 bg-gradient-to-r from-red-700/20 to-pink-/20 opacity-0 group-hover:opacity-100 transition-opacity" />
                             <span className="relative z-10 text-xs tracking-widest uppercase">
                                 {showAll ? "Show Less" : "See More Certificates"}
                             </span>
@@ -532,7 +532,7 @@ export default function Certifications() {
                                 </div>
                                 <div className="lg:w-1/3 p-8 md:p-12 border-l border-slate-200 bg-gradient-to-br from-slate-900 to-slate-950 flex flex-col">
                                     <div className="mb-8">
-                                        <span className="text-xs font-bold uppercase tracking-[0.3em] px-3 py-1 bg-pink-500/10 text-pink-400 rounded-full border border-pink-500/20 mb-6 inline-block">
+                                        <span className="text-xs font-bold uppercase tracking-[0.3em] px-3 py-1 bg-red-600/10 text-red-500 rounded-full border border-red-600/20 mb-6 inline-block">
                                             {selectedCert.issuer}
                                         </span>
                                         <h2 className="text-3xl md:text-4xl font-black text-slate-900 font-bold leading-tight mb-4">
@@ -548,8 +548,8 @@ export default function Certifications() {
                                         <div className="space-y-4">
                                             {selectedCert.details.map((detail: string, i: number) => (
                                                 <div key={i} className="flex gap-4">
-                                                    <div className="w-6 h-6 rounded-full bg-pink-500/10 flex items-center justify-center shrink-0">
-                                                        <ShieldCheck className="w-3.5 h-3.5 text-pink-400" />
+                                                    <div className="w-6 h-6 rounded-full bg-red-600/10 flex items-center justify-center shrink-0">
+                                                        <ShieldCheck className="w-3.5 h-3.5 text-red-500" />
                                                     </div>
                                                     <p className="text-slate-600 leading-relaxed text-sm">
                                                         {detail}
@@ -562,7 +562,7 @@ export default function Certifications() {
                                     <div className="mt-12">
                                         <div className="p-6 rounded-2xl bg-slate-100/50 border border-slate-200">
                                             <div className="flex items-center gap-4 mb-2">
-                                                <Award className="w-5 h-5 text-pink-400" />
+                                                <Award className="w-5 h-5 text-red-500" />
                                                 <span className="text-sm font-bold text-slate-900 font-bold">Verified Credential</span>
                                             </div>
                                             <p className="text-xs text-slate-500 leading-relaxed">
