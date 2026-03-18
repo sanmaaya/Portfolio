@@ -234,15 +234,30 @@ export default function Projects() {
                                 <X className="w-5 h-5" />
                             </button>
 
-                            {/* Full project screenshot, fully visible */}
-                            <div className="w-full relative bg-zinc-950 rounded-t-[2rem] overflow-hidden flex items-center justify-center p-4 md:p-8" style={{ minHeight: '280px', maxHeight: '55vh' }} onClick={(e) => e.stopPropagation()}>
-                                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#0d0d0d] z-10 pointer-events-none" />
-                                <div className="absolute inset-0 bg-gradient-to-tr from-red-900/10 to-transparent pointer-events-none" />
-                                <img
-                                    src={selectedProject.image}
-                                    alt={selectedProject.title}
-                                    className="max-w-full max-h-full object-contain rounded-xl shadow-2xl border border-white/5 transition-transform duration-700 hover:scale-[1.02]"
-                                />
+                            {/* Full project screenshot — browser chrome mockup, zoomed out */}
+                            <div className="w-full bg-[#111] rounded-t-[2rem] overflow-hidden p-5 md:p-8" onClick={(e) => e.stopPropagation()}>
+                                {/* Fake browser bar */}
+                                <div className="bg-zinc-900 rounded-xl overflow-hidden border border-white/10 shadow-2xl">
+                                    <div className="flex items-center gap-3 px-4 py-3 bg-zinc-800/80 border-b border-white/5">
+                                        <div className="flex gap-1.5">
+                                            <div className="w-2.5 h-2.5 rounded-full bg-red-500/80" />
+                                            <div className="w-2.5 h-2.5 rounded-full bg-yellow-500/80" />
+                                            <div className="w-2.5 h-2.5 rounded-full bg-green-500/80" />
+                                        </div>
+                                        <div className="flex-1 bg-zinc-700/60 rounded-full px-4 py-1 text-[11px] text-zinc-400 text-center truncate">
+                                            {selectedProject.live || "localhost:5173"}
+                                        </div>
+                                    </div>
+                                    {/* Full screenshot zoomed out with object-contain */}
+                                    <div className="relative bg-zinc-950 overflow-hidden" style={{ height: '320px' }}>
+                                        <img
+                                            src={selectedProject.image}
+                                            alt={selectedProject.title}
+                                            className="w-full h-full object-contain object-top"
+                                        />
+                                        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-zinc-950/60 pointer-events-none" />
+                                    </div>
+                                </div>
                             </div>
 
                             {/* Details panel */}
