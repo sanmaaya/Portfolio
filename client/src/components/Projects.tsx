@@ -224,63 +224,56 @@ export default function Projects() {
                             animate={{ scale: 1, opacity: 1, y: 0 }}
                             exit={{ scale: 0.95, opacity: 0, y: 20 }}
                             onClick={(e) => e.stopPropagation()}
-                            className="relative w-full max-w-5xl max-h-[90vh] overflow-y-auto bg-[#0a0a0a] border border-white/10 rounded-[2rem] shadow-2xl flex flex-col md:flex-row hide-scrollbar"
+                         className="relative w-full max-w-4xl max-h-[90vh] overflow-y-auto bg-[#0d0d0d] border border-white/10 rounded-[2rem] shadow-2xl flex flex-col hide-scrollbar"
                             style={{ msOverflowStyle: 'none', scrollbarWidth: 'none' }}
                         >
                             <button
-                                className="absolute top-6 right-6 p-2.5 bg-white/5 hover:bg-red-600 rounded-full text-white transition-all z-50 hover:rotate-90 hidden md:block"
+                                className="absolute top-5 right-5 p-2.5 bg-white/10 hover:bg-red-600 rounded-full text-white transition-all z-50 hover:rotate-90"
                                 onClick={() => setSelectedProject(null)}
                             >
                                 <X className="w-5 h-5" />
                             </button>
-                            
-                            {/* Mobile close button inside image container */}
-                            <button
-                                className="md:hidden absolute top-4 right-4 p-2.5 bg-black/50 hover:bg-red-600 rounded-full text-white transition-all z-50 backdrop-blur-md"
-                                onClick={(e) => { e.stopPropagation(); setSelectedProject(null); }}
-                            >
-                                <X className="w-5 h-5" />
-                            </button>
 
-                            <div className="w-full md:w-1/2 min-h-[250px] md:min-h-full relative overflow-hidden bg-black flex items-center justify-center p-0 md:p-8 lg:p-10 group/modalimg" onClick={(e) => e.stopPropagation()}>
-                                <div className="absolute inset-0 bg-gradient-to-br from-red-900/10 to-transparent opacity-50 hidden md:block"></div>
+                            {/* Full project screenshot, fully visible */}
+                            <div className="w-full relative bg-zinc-950 rounded-t-[2rem] overflow-hidden flex items-center justify-center p-4 md:p-8" style={{ minHeight: '280px', maxHeight: '55vh' }} onClick={(e) => e.stopPropagation()}>
+                                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#0d0d0d] z-10 pointer-events-none" />
+                                <div className="absolute inset-0 bg-gradient-to-tr from-red-900/10 to-transparent pointer-events-none" />
                                 <img
                                     src={selectedProject.image}
                                     alt={selectedProject.title}
-                                    className="w-full h-full object-cover md:rounded-2xl shadow-xl md:border border-white/5 md:scale-105 transition-transform duration-700 md:group-hover/modalimg:scale-100"
+                                    className="max-w-full max-h-full object-contain rounded-xl shadow-2xl border border-white/5 transition-transform duration-700 hover:scale-[1.02]"
                                 />
                             </div>
 
-                            <div className="w-full md:w-1/2 p-6 sm:p-8 md:p-12 flex flex-col justify-center bg-gradient-to-br from-[#0a0a0a] to-[#120505] md:border-l border-white/5">
-                                <div className="mb-6 md:mb-8">
-                                    <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4 sm:mb-6 leading-tight flex items-start gap-3">
-                                        {selectedProject.title}
-                                    </h2>
-                                    <div className="flex flex-wrap gap-2">
-                                        {selectedProject.tech.map((t: string, i: number) => (
-                                            <span key={i} className="text-[10px] sm:text-xs font-mono font-medium text-zinc-300 bg-white/5 border border-white/10 px-3 py-1.5 rounded-full backdrop-blur-md shadow-sm">
-                                                {t}
-                                            </span>
-                                        ))}
-                                    </div>
+                            {/* Details panel */}
+                            <div className="p-6 sm:p-8 md:p-10 flex flex-col bg-gradient-to-b from-[#0d0d0d] to-[#110404]">
+                                <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4 leading-tight">
+                                    {selectedProject.title}
+                                </h2>
+                                <div className="flex flex-wrap gap-2 mb-6">
+                                    {selectedProject.tech.map((t: string, i: number) => (
+                                        <span key={i} className="text-[10px] sm:text-xs font-mono font-medium text-zinc-300 bg-white/5 border border-white/10 px-3 py-1.5 rounded-full">
+                                            {t}
+                                        </span>
+                                    ))}
                                 </div>
 
-                                <div className="prose prose-invert max-w-none flex-1">
-                                    <h3 className="text-xs sm:text-sm font-bold text-red-500 uppercase tracking-widest mb-3 sm:mb-4 flex items-center gap-2">
-                                        <BookOpen className="w-4 h-4 text-red-500" /> About This Project
+                                <div className="mb-8">
+                                    <h3 className="text-[10px] sm:text-xs font-bold text-red-500 uppercase tracking-widest mb-3 flex items-center gap-2">
+                                        <BookOpen className="w-4 h-4" /> About This Project
                                     </h3>
-                                    <div className="text-zinc-300 font-medium leading-relaxed text-sm sm:text-base space-y-4 whitespace-pre-line">
+                                    <p className="text-zinc-300 leading-relaxed text-sm sm:text-base">
                                         {selectedProject.description}
-                                    </div>
+                                    </p>
                                 </div>
 
-                                <div className="mt-8 md:mt-10 flex flex-wrap items-center gap-3 sm:gap-4 pt-6 sm:pt-8 border-t border-white/10">
+                                <div className="flex flex-wrap items-center gap-3 pt-6 border-t border-white/10">
                                     {selectedProject.github && (
                                         <a
                                             href={selectedProject.github}
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className="flex-1 min-w-[130px] flex items-center justify-center gap-2 sm:gap-3 p-3 sm:p-4 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all text-sm font-bold text-white group"
+                                            className="flex-1 min-w-[130px] flex items-center justify-center gap-2 p-3 sm:p-4 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all text-sm font-bold text-white group"
                                         >
                                             <Github className="w-4 h-4 sm:w-5 sm:h-5 group-hover:scale-110 transition-transform" /> Source Code
                                         </a>
@@ -290,7 +283,7 @@ export default function Projects() {
                                             href={selectedProject.live}
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className="flex-1 min-w-[130px] flex items-center justify-center gap-2 sm:gap-3 p-3 sm:p-4 rounded-xl bg-red-700/80 border border-red-600 hover:bg-red-600 transition-all text-sm font-bold text-white group shadow-[0_0_20px_rgba(153,27,27,0.4)] hover:shadow-[0_0_30px_rgba(220,38,38,0.6)]"
+                                            className="flex-1 min-w-[130px] flex items-center justify-center gap-2 p-3 sm:p-4 rounded-xl bg-red-700/80 border border-red-600 hover:bg-red-600 transition-all text-sm font-bold text-white group shadow-[0_0_20px_rgba(153,27,27,0.4)] hover:shadow-[0_0_30px_rgba(220,38,38,0.6)]"
                                         >
                                             <ExternalLink className="w-4 h-4 sm:w-5 sm:h-5 group-hover:-translate-y-1 transition-transform" /> Live Demo
                                         </a>
