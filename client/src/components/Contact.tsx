@@ -78,13 +78,13 @@ export default function Contact() {
                                     </div>
                                     <span className="font-medium text-lg">Email Me</span>
                                 </a>
-                                <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer" className="flex items-center gap-5 text-slate-600 hover:text-red- transition-colors group">
+                                <a href="https://www.linkedin.com/in/sanmaya-m-b-/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-5 text-slate-600 hover:text-red- transition-colors group">
                                     <div className="w-14 h-14 bg-slate-100/50 rounded-2xl flex items-center justify-center group-hover:bg-red-700/10 group-hover:shadow-[0_0_15px_rgba(99,102,241,0.2)] transition-all">
                                         <Linkedin className="w-6 h-6" />
                                     </div>
                                     <span className="font-medium text-lg">LinkedIn</span>
                                 </a>
-                                <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" className="flex items-center gap-5 text-slate-600 hover:text-slate-900 font-bold transition-colors group">
+                                <a href="https://github.com/sanmaaya" target="_blank" rel="noopener noreferrer" className="flex items-center gap-5 text-slate-600 hover:text-slate-900 font-bold transition-colors group">
                                     <div className="w-14 h-14 bg-slate-100/50 rounded-2xl flex items-center justify-center group-hover:bg-slate-200/50 group-hover:shadow-[0_0_15px_rgba(255,255,255,0.1)] transition-all">
                                         <Github className="w-6 h-6" />
                                     </div>

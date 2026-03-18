@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Code2, Cpu, Globe2, Sparkles } from "lucide-react";
+import { Code2, Cpu, Globe2, Sparkles, MapPin, Languages } from "lucide-react";
 import { GlowingEffect } from "./ui/glowing-effect";
 
 export default function About() {
@@ -53,6 +53,21 @@ export default function About() {
                         <p>
                             Currently, I am seeking opportunities to grow as a developer through challenging projects, collaborations, and internships.
                         </p>
+
+                        <div className="flex flex-wrap gap-4 mt-8 pt-6 border-t border-slate-200">
+                            <div className="flex items-center gap-3 bg-red-600/5 px-4 py-2.5 rounded-xl border border-red-600/10 hover:bg-red-600/10 transition-colors">
+                                <div className="p-1.5 bg-red-600/10 rounded-lg">
+                                    <MapPin className="w-4 h-4 text-red-600" />
+                                </div>
+                                <span className="text-sm font-semibold text-slate-700">Kozhikode, Kerala (India)</span>
+                            </div>
+                            <div className="flex items-center gap-3 bg-slate-100/80 px-4 py-2.5 rounded-xl border border-slate-200 hover:bg-slate-200/80 transition-colors">
+                                <div className="p-1.5 bg-slate-200 rounded-lg">
+                                    <Languages className="w-4 h-4 text-slate-700" />
+                                </div>
+                                <span className="text-sm font-semibold text-slate-700">English, Malayalam, Hindi</span>
+                            </div>
+                        </div>
                     </div>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
