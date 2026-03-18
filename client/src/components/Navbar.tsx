@@ -21,11 +21,11 @@ export default function Navbar() {
 
     const navLinks = [
         { name: "About", url: "about", icon: User },
-        { name: "Skills", url: "skills", icon: Sparkles },
-        { name: "Experience", url: "experience", icon: Briefcase },
-        { name: "Projects", url: "projects", icon: Briefcase },
         { name: "Education", url: "education", icon: GraduationCap },
+        { name: "Skills", url: "skills", icon: Sparkles },
+        { name: "Projects", url: "projects", icon: Briefcase },
         { name: "Achievements", url: "achievements", icon: Award },
+        { name: "Experience", url: "experience", icon: Briefcase },
         { name: "Contact", url: "contact", icon: MessageSquare },
     ];
 
@@ -70,7 +70,7 @@ export default function Navbar() {
                             animate={{ opacity: 1, scale: 1, y: 0 }}
                             exit={{ opacity: 0, scale: 0.95, y: -20 }}
                             transition={{ duration: 0.2 }}
-                            className="absolute top-full left-4 right-4 bg-white shadow-xl border border-slate-200 rounded-3xl flex flex-col items-center py-8 gap-6 md:hidden shadow-2xl backdrop-blur-xl"
+                            className="absolute top-full left-4 right-4 bg-white shadow-xl border border-white/10 rounded-3xl flex flex-col items-center py-8 gap-6 md:hidden shadow-2xl backdrop-blur-xl"
                         >
                             {isHome ? (
                                 navLinks.map((link) => (
@@ -83,13 +83,13 @@ export default function Navbar() {
                                         duration={500}
                                         onSetActive={() => {}} // Could be used if we had mobile active state
                                         onClick={() => setIsOpen(false)}
-                                        className="text-lg font-bold text-slate-600 hover:text-slate-900 font-bold cursor-pointer transition-colors"
+                                        className="text-lg font-bold text-zinc-300 hover:text-white font-bold cursor-pointer transition-colors"
                                     >
                                         {link.name}
                                     </ScrollLink>
                                 ))
                             ) : (
-                                <Link to="/" onClick={() => setIsOpen(false)} className="text-lg font-bold text-slate-600 hover:text-slate-900 font-bold transition-colors">
+                                <Link to="/" onClick={() => setIsOpen(false)} className="text-lg font-bold text-zinc-300 hover:text-white font-bold transition-colors">
                                     Back to Portfolio
                                 </Link>
                             )}

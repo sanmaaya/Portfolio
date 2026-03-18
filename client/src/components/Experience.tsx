@@ -38,7 +38,7 @@ export default function Experience() {
                 transition={{ duration: 0.6 }}
             >
                 <div className="flex items-center gap-4 mb-16">
-                    <div className="flex-1 h-[1px] bg-slate-200/50 hidden md:block"></div>
+                    <div className="flex-1 h-[1px] bg-white/10 hidden md:block"></div>
                     <h2 className="heading-2 m-0 text-right">Virtual Experience & Internships<span className="text-red-600">.</span></h2>
                 </div>
 
@@ -70,20 +70,20 @@ export default function Experience() {
                                             <h3 className="text-2xl font-bold">{exp.role}</h3>
                                             <div className="text-red-500 font-medium text-lg mt-1">{exp.company}</div>
                                         </div>
-                                        <div className="text-slate-500 text-sm font-mono mt-2 md:mt-0 tracking-wide flex flex-col items-start md:items-end">
+                                        <div className="text-zinc-400 text-sm font-mono mt-2 md:mt-0 tracking-wide flex flex-col items-start md:items-end">
                                             <span>{exp.date} • {exp.location}</span>
                                         </div>
                                     </div>
 
                                     <div className="flex flex-col lg:flex-row gap-8 mt-4">
-                                        <ul className="list-disc list-outside ml-4 mt-2 text-slate-600 space-y-3 leading-relaxed flex-1">
+                                        <ul className="list-disc list-outside ml-4 mt-2 text-zinc-300 space-y-3 leading-relaxed flex-1">
                                             {exp.points.map((point, i) => (
                                                 <li key={i}>{point}</li>
                                             ))}
                                         </ul>
 
                                         {exp.certificate && (
-                                            <div className="relative group/cert rounded-xl overflow-hidden border border-slate-200 w-full lg:w-80 shadow-2xl shrink-0 self-start">
+                                            <div className="relative group/cert rounded-xl overflow-hidden border border-white/10 w-full lg:w-80 shadow-2xl shrink-0 self-start">
                                                 <div className="absolute inset-0 bg-red-600/10 opacity-0 group-hover/cert:opacity-100 transition-opacity z-10 pointer-events-none" />
                                                 <img 
                                                     src={exp.certificate} 

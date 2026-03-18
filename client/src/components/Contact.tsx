@@ -62,7 +62,7 @@ export default function Contact() {
             >
                 <div className="flex items-center gap-4 mb-16 text-center justify-center flex-col">
                     <h2 className="text-4xl md:text-5xl lg:text-6xl font-black mb-6 tracking-tight">Let's Create Together<span className="text-red-600">.</span></h2>
-                    <p className="text-slate-600 max-w-2xl text-lg leading-relaxed">
+                    <p className="text-zinc-300 max-w-2xl text-lg leading-relaxed">
                         If you are interested in collaborating, discussing projects, or offering internship opportunities, feel free to reach out.
                     </p>
                 </div>
@@ -70,48 +70,48 @@ export default function Contact() {
                 <div className="grid grid-cols-1 lg:grid-cols-5 gap-16 items-start">
                     <div className="space-y-8 lg:col-span-2">
                         <div className="glass-panel p-8 lg:p-10 rounded-3xl h-full">
-                            <h3 className="text-2xl font-bold mb-8 text-slate-900 font-bold">Contact Info</h3>
+                            <h3 className="text-2xl font-bold mb-8 text-white font-bold">Contact Info</h3>
                             <div className="space-y-8">
-                                <a href="mailto:your-email@example.com" className="flex items-center gap-5 text-slate-600 hover:text-red-500 transition-colors group">
-                                    <div className="w-14 h-14 bg-slate-100/50 rounded-2xl flex items-center justify-center group-hover:bg-red-600/10 group-hover:shadow-[0_0_15px_rgba(59,130,246,0.2)] transition-all">
+                                <a href="mailto:your-email@example.com" className="flex items-center gap-5 text-zinc-300 hover:text-red-500 transition-colors group">
+                                    <div className="w-14 h-14 bg-white/5 rounded-2xl flex items-center justify-center group-hover:bg-red-600/10 group-hover:shadow-[0_0_15px_rgba(59,130,246,0.2)] transition-all">
                                         <Mail className="w-6 h-6" />
                                     </div>
                                     <span className="font-medium text-lg">Email Me</span>
                                 </a>
-                                <a href="https://www.linkedin.com/in/sanmaya-m-b-/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-5 text-slate-600 hover:text-red- transition-colors group">
-                                    <div className="w-14 h-14 bg-slate-100/50 rounded-2xl flex items-center justify-center group-hover:bg-red-700/10 group-hover:shadow-[0_0_15px_rgba(99,102,241,0.2)] transition-all">
+                                <a href="https://www.linkedin.com/in/sanmaya-m-b-/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-5 text-zinc-300 hover:text-red- transition-colors group">
+                                    <div className="w-14 h-14 bg-white/5 rounded-2xl flex items-center justify-center group-hover:bg-red-700/10 group-hover:shadow-[0_0_15px_rgba(99,102,241,0.2)] transition-all">
                                         <Linkedin className="w-6 h-6" />
                                     </div>
                                     <span className="font-medium text-lg">LinkedIn</span>
                                 </a>
-                                <a href="https://github.com/sanmaaya" target="_blank" rel="noopener noreferrer" className="flex items-center gap-5 text-slate-600 hover:text-slate-900 font-bold transition-colors group">
-                                    <div className="w-14 h-14 bg-slate-100/50 rounded-2xl flex items-center justify-center group-hover:bg-slate-200/50 group-hover:shadow-[0_0_15px_rgba(255,255,255,0.1)] transition-all">
+                                <a href="https://github.com/sanmaaya" target="_blank" rel="noopener noreferrer" className="flex items-center gap-5 text-zinc-300 hover:text-white font-bold transition-colors group">
+                                    <div className="w-14 h-14 bg-white/5 rounded-2xl flex items-center justify-center group-hover:bg-white/10 group-hover:shadow-[0_0_15px_rgba(255,255,255,0.1)] transition-all">
                                         <Github className="w-6 h-6" />
                                     </div>
                                     <span className="font-medium text-lg">GitHub</span>
                                 </a>
                             </div>
 
-                            <div className="mt-12 pt-8 border-t border-slate-200">
-                                <h3 className="text-xl font-bold mb-6 text-slate-900">Coding Profiles</h3>
+                            <div className="mt-12 pt-8 border-t border-white/10">
+                                <h3 className="text-xl font-bold mb-6 text-white">Coding Profiles</h3>
                                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-4">
-                                    <a href="https://leetcode.com/u/sanmayabimal/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 p-4 bg-slate-100/50 rounded-2xl hover:bg-slate-200/50 transition-colors group">
+                                    <a href="https://leetcode.com/u/sanmayabimal/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 p-4 bg-white/5 rounded-2xl hover:bg-white/10 transition-colors group">
                                         <div className="text-[#FFA116] group-hover:scale-110 transition-transform">
                                             <SiLeetcode className="w-6 h-6" />
                                         </div>
-                                        <span className="font-medium text-slate-700">LeetCode</span>
+                                        <span className="font-medium text-zinc-200">LeetCode</span>
                                     </a>
-                                    <a href="https://www.hackerrank.com/profile/sanmayabimal" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 p-4 bg-slate-100/50 rounded-2xl hover:bg-slate-200/50 transition-colors group">
+                                    <a href="https://www.hackerrank.com/profile/sanmayabimal" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 p-4 bg-white/5 rounded-2xl hover:bg-white/10 transition-colors group">
                                         <div className="text-[#00EA64] group-hover:scale-110 transition-transform">
                                             <SiHackerrank className="w-6 h-6" />
                                         </div>
-                                        <span className="font-medium text-slate-700">HackerRank</span>
+                                        <span className="font-medium text-zinc-200">HackerRank</span>
                                     </a>
-                                    <a href="https://www.geeksforgeeks.org/profile/sanmaya05qi" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 p-4 bg-slate-100/50 rounded-2xl hover:bg-slate-200/50 transition-colors group">
+                                    <a href="https://www.geeksforgeeks.org/profile/sanmaya05qi" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 p-4 bg-white/5 rounded-2xl hover:bg-white/10 transition-colors group">
                                         <div className="text-[#2F8D46] group-hover:scale-110 transition-transform">
                                             <SiGeeksforgeeks className="w-6 h-6" />
                                         </div>
-                                        <span className="font-medium text-slate-700">GeeksforGeeks</span>
+                                        <span className="font-medium text-zinc-200">GeeksforGeeks</span>
                                     </a>
                                 </div>
                             </div>
@@ -124,8 +124,8 @@ export default function Contact() {
                                 <div className="text-red-600 mb-4 flex justify-center">
                                     <ShieldCheck className="w-16 h-16" />
                                 </div>
-                                <h3 className="text-2xl font-bold text-slate-900 font-bold mb-2">Message Received!</h3>
-                                <p className="text-slate-600">Thanks for reaching out. I'll get back to you soon.</p>
+                                <h3 className="text-2xl font-bold text-white font-bold mb-2">Message Received!</h3>
+                                <p className="text-zinc-300">Thanks for reaching out. I'll get back to you soon.</p>
                                 <button
                                     onClick={() => setSubmitted(false)}
                                     className="mt-8 text-red-500 hover:underline"
@@ -137,39 +137,39 @@ export default function Contact() {
                             <>
                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                                     <div>
-                                        <label htmlFor="name" className="block text-sm font-medium text-slate-600 mb-2">Your Name</label>
+                                        <label htmlFor="name" className="block text-sm font-medium text-zinc-300 mb-2">Your Name</label>
                                         <input
                                             type="text"
                                             id="name"
                                             value={formData.name}
                                             onChange={handleChange}
                                             placeholder="John Doe"
-                                            className="w-full bg-black/50 border border-slate-200 rounded-xl px-5 py-4 text-slate-900 font-bold focus:outline-none focus:border-red-600 focus:bg-slate-100/50 transition-all"
+                                            className="w-full bg-black/50 border border-white/10 rounded-xl px-5 py-4 text-white font-bold focus:outline-none focus:border-red-600 focus:bg-white/5 transition-all"
                                             required
                                         />
                                     </div>
                                     <div>
-                                        <label htmlFor="email" className="block text-sm font-medium text-slate-600 mb-2">Your Email</label>
+                                        <label htmlFor="email" className="block text-sm font-medium text-zinc-300 mb-2">Your Email</label>
                                         <input
                                             type="email"
                                             id="email"
                                             value={formData.email}
                                             onChange={handleChange}
                                             placeholder="john@example.com"
-                                            className="w-full bg-black/50 border border-slate-200 rounded-xl px-5 py-4 text-slate-900 font-bold focus:outline-none focus:border-red-600 focus:bg-slate-100/50 transition-all"
+                                            className="w-full bg-black/50 border border-white/10 rounded-xl px-5 py-4 text-white font-bold focus:outline-none focus:border-red-600 focus:bg-white/5 transition-all"
                                             required
                                         />
                                     </div>
                                 </div>
                                 <div>
-                                    <label htmlFor="message" className="block text-sm font-medium text-slate-600 mb-2">Message</label>
+                                    <label htmlFor="message" className="block text-sm font-medium text-zinc-300 mb-2">Message</label>
                                     <textarea
                                         id="message"
                                         rows={5}
                                         value={formData.message}
                                         onChange={handleChange}
                                         placeholder="Hello, I'd like to collaborate on..."
-                                        className="w-full bg-black/50 border border-slate-200 rounded-xl px-5 py-4 text-slate-900 font-bold focus:outline-none focus:border-red-600 focus:bg-slate-100/50 transition-all resize-none"
+                                        className="w-full bg-black/50 border border-white/10 rounded-xl px-5 py-4 text-white font-bold focus:outline-none focus:border-red-600 focus:bg-white/5 transition-all resize-none"
                                         required
                                     ></textarea>
                                 </div>

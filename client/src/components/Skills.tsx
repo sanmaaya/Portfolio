@@ -27,7 +27,7 @@ export default function Skills() {
             title: "Backend & Databases",
             skills: [
                 { name: "Node.js", icon: <SiNodedotjs className="text-[#339933]" /> },
-                { name: "Express.js", icon: <SiExpress className="text-slate-900 font-bold" /> },
+                { name: "Express.js", icon: <SiExpress className="text-white font-bold" /> },
                 { name: "Firebase", icon: <SiFirebase className="text-[#FFCA28]" /> },
                 { name: "MongoDB", icon: <SiMongodb className="text-[#47A248]" /> },
                 { name: "MySQL", icon: <SiMysql className="text-[#4479A1]" /> },
@@ -42,7 +42,7 @@ export default function Skills() {
                 { name: "C++", icon: <SiCplusplus className="text-[#00599C]" /> },
                 { name: "C", icon: <SiC className="text-[#A8B9CC]" /> },
                 { name: "SQL", icon: <FaDatabase className="text-slate-400" /> },
-                { name: "Git & GitHub", icon: <SiGithub className="text-slate-900 font-bold" /> },
+                { name: "Git & GitHub", icon: <SiGithub className="text-white font-bold" /> },
                 { name: "VS Code", icon: <VscVscode className="text-[#007ACC]" /> },
                 { name: "Figma", icon: <SiFigma className="text-[#F24E1E]" /> },
                 { name: "Jupyter", icon: <SiJupyter className="text-[#F37626]" /> },
@@ -70,7 +70,7 @@ export default function Skills() {
                 transition={{ duration: 0.6 }}
             >
                 <div className="flex items-center gap-4 mb-16">
-                    <div className="flex-1 h-[1px] bg-slate-200/50 hidden md:block"></div>
+                    <div className="flex-1 h-[1px] bg-white/10 hidden md:block"></div>
                     <h2 className="heading-2 m-0 text-right">Technical Skills<span className="text-red-600">.</span></h2>
                 </div>
 
@@ -92,13 +92,13 @@ export default function Skills() {
                                 inactiveZone={0.01}
                                 borderWidth={3}
                             />
-                            <div className="relative h-full w-full glass-panel p-8 rounded-3xl hover:bg-slate-100/50 transition-colors overflow-hidden">
-                                <h3 className="text-xl font-bold mb-6 text-slate-800 font-bold group-hover:text-red-500 transition-colors">{cat.title}</h3>
+                            <div className="relative h-full w-full glass-panel p-8 rounded-3xl hover:bg-white/5 transition-colors overflow-hidden">
+                                <h3 className="text-xl font-bold mb-6 text-zinc-100 font-bold group-hover:text-red-500 transition-colors">{cat.title}</h3>
                                 <div className="flex flex-wrap gap-4">
                                     {cat.skills.map((skill, i) => (
-                                        <div key={i} className="flex items-center gap-2 bg-slate-100/50 border border-slate-200 px-4 py-2.5 rounded-full hover:bg-slate-200/50 hover:border-white/20 hover:scale-105 transition-all shadow-sm">
+                                        <div key={i} className="flex items-center gap-2 bg-white/5 border border-white/10 px-4 py-2.5 rounded-full hover:bg-white/10 hover:border-white/20 hover:scale-105 transition-all shadow-sm">
                                             <span className="text-xl flex items-center justify-center w-6 h-6">{skill.icon}</span>
-                                            <span className="text-sm font-medium text-slate-700 font-medium">{skill.name}</span>
+                                            <span className="text-sm font-medium text-zinc-200 font-medium">{skill.name}</span>
                                         </div>
                                     ))}
                                 </div>
