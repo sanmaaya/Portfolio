@@ -82,11 +82,11 @@ export default function Achievements() {
 
                 <div className="flex flex-wrap justify-center gap-6 md:gap-10">
                     {[
-                        { title: "C++", subtitle: "CPP", stars: 4, color: "bg-[#dce0e5] text-zinc-100", isJava: false },
-                        { title: "Java", subtitle: "Java", stars: 1, color: "bg-[#ffcba4] text-white", isJava: true },
-                        { title: "30", subtitle: "Days of Code", stars: 2, color: "bg-[#ffcba4] text-white", isJava: false },
-                        { title: "10", subtitle: "Days of JS", stars: 1, color: "bg-[#ffcba4] text-white", isJava: false },
-                        { title: "C", subtitle: "C language", stars: 2, color: "bg-[#ffcba4] text-white", isJava: false },
+                        { title: "C++", subtitle: "CPP", stars: 4, color: "bg-[#2ec866] text-white", isJava: false },
+                        { title: "Java", subtitle: "Java", stars: 1, color: "bg-[#e76f51] text-white", isJava: true },
+                        { title: "30", subtitle: "Days of Code", stars: 2, color: "bg-[#2a9d8f] text-white", isJava: false },
+                        { title: "10", subtitle: "Days of JS", stars: 1, color: "bg-[#f4a261] text-white", isJava: false },
+                        { title: "C", subtitle: "C language", stars: 2, color: "bg-[#264653] text-white", isJava: false },
                     ].map((badge, idx) => (
                         <motion.div
                             key={badge.subtitle}

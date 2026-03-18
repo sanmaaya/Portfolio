@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from "framer-motion";
-import { BookOpen, Award, Star, ShieldCheck, ExternalLink, X, ZoomIn, ChevronDown, ChevronUp } from "lucide-react";
+import { BookOpen, Award, Star, ShieldCheck, ExternalLink, X, ZoomIn, ChevronDown, ChevronUp, Info } from "lucide-react";
 import { useState } from "react";
 import { GlowingEffect } from "./ui/glowing-effect";
 
@@ -403,19 +403,27 @@ export default function Certifications() {
                                 />
                                 <div className="relative h-full w-full glass-panel rounded-[calc(2rem-2px)] group flex flex-col overflow-hidden bg-slate-950/40 hover:bg-white/[0.02] transition-colors">
                                     {/* Certificate Image Preview Header */}
-                                    <div className="relative h-44 overflow-hidden bg-slate-950/50 p-4">
+                                    <div className="relative h-44 overflow-hidden bg-slate-950/50 p-6 group/certimg cursor-pointer" onClick={() => setSelectedCert(cert)}>
                                         <div className="absolute inset-0 bg-gradient-to-t from-slate-950/20 via-transparent to-transparent z-10 pointer-events-none" />
                                         <img
                                             src={cert.image}
                                             alt={cert.title}
-                                            className="w-full h-full object-contain opacity-70 group-hover:opacity-100 transition-all duration-700"
+                                            className="w-full h-full object-contain opacity-70 scale-110 group-hover:opacity-100 group-hover:scale-100 transition-all duration-700"
                                             onError={(e) => {
                                                 (e.target as HTMLImageElement).src = `https://placehold.co/600x400/1e293b/3b82f6?text=${cert.issuer}+Certificate`;
                                             }}
                                         />
+                                        <div className="absolute inset-0 bg-red-900/10 opacity-0 group-hover/certimg:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-[1px]">
+                                            <div className="p-3 bg-white/10 backdrop-blur-md rounded-full shadow-2xl scale-90 group-hover/certimg:scale-100 transition-all duration-500">
+                                                <Info className="w-6 h-6 text-white" />
+                                            </div>
+                                        </div>
                                         <div className="absolute top-3 right-3 z-20">
                                             <button
-                                                onClick={() => setSelectedCert(cert)}
+                                                onClick={(e) => {
+                                                    e.stopPropagation();
+                                                    setSelectedCert(cert);
+                                                }}
                                                 className="p-2.5 bg-white/10 backdrop-blur-md rounded-full border border-white/10 hover:bg-red-600 hover:border-red-500 transition-all group/btn"
                                             >
                                                 <ZoomIn className="w-4.5 h-4.5 text-white font-bold group-hover/btn:scale-110 transition-transform" />
@@ -506,70 +514,87 @@ export default function Certifications() {
                         className="fixed inset-0 z-[100] bg-slate-950/90 backdrop-blur-xl flex items-center justify-center p-4 md:p-8"
                     >
                         <motion.div
-                            initial={{ scale: 0.9, opacity: 0, y: 20 }}
+                            initial={{ scale: 0.95, opacity: 0, y: 20 }}
                             animate={{ scale: 1, opacity: 1, y: 0 }}
-                            exit={{ scale: 0.9, opacity: 0, y: 20 }}
+                            exit={{ scale: 0.95, opacity: 0, y: 20 }}
                             onClick={(e) => e.stopPropagation()}
-                            className="relative max-w-5xl w-full bg-slate-900 rounded-[2rem] border border-white/10 shadow-2xl overflow-hidden"
+                            className="relative max-w-5xl w-full bg-[#0a0a0a] rounded-[2rem] border border-white/10 shadow-2xl overflow-hidden flex flex-col md:flex-row max-h-[90vh] hide-scrollbar"
+                            style={{ msOverflowStyle: 'none', scrollbarWidth: 'none' }}
                         >
                             <button
                                 onClick={() => setSelectedCert(null)}
-                                className="absolute top-6 right-6 z-50 p-2 bg-white/5 hover:bg-white/10 rounded-full border border-white/10 transition-colors group"
+                                className="absolute top-6 right-6 z-50 p-2.5 bg-white/5 hover:bg-red-600 rounded-full border border-white/10 transition-all group/close hover:rotate-90 hidden md:block"
                             >
-                                <X className="w-6 h-6 text-white font-bold group-hover:rotate-90 transition-transform" />
+                                <X className="w-5 h-5 text-white font-bold animate-transition" />
+                            </button>
+                            
+                            {/* Mobile close button */}
+                            <button
+                                className="md:hidden absolute top-4 right-4 p-2.5 bg-black/50 hover:bg-red-600 rounded-full text-white transition-all z-50 backdrop-blur-md"
+                                onClick={(e) => { e.stopPropagation(); setSelectedCert(null); }}
+                            >
+                                <X className="w-5 h-5 text-white" />
                             </button>
 
-                            <div className="flex flex-col lg:flex-row h-full">
-                                <div className="lg:w-2/3 bg-black flex items-center justify-center p-4 min-h-[300px] lg:min-h-[500px]">
-                                    <img
-                                        src={selectedCert.image}
-                                        alt={selectedCert.title}
-                                        className="max-w-full max-h-full object-contain shadow-2xl"
-                                        onError={(e) => {
-                                            (e.target as HTMLImageElement).src = `https://placehold.co/1200x800/111827/3b82f6?text=${selectedCert.title}+Full+View`;
-                                        }}
-                                    />
+                            <div className="w-full md:w-1/2 bg-black flex items-center justify-center p-4 min-h-[300px] md:min-h-full relative group/modalimg">
+                                <div className="absolute inset-0 bg-gradient-to-br from-red-900/10 to-transparent opacity-50"></div>
+                                <img
+                                    src={selectedCert.image}
+                                    alt={selectedCert.title}
+                                    className="max-w-full max-h-full object-contain shadow-2xl rounded-lg scale-[1.15] md:scale-125 transition-transform duration-1000 group-hover/modalimg:scale-100"
+                                    onError={(e) => {
+                                        (e.target as HTMLImageElement).src = `https://placehold.co/1200x800/111827/3b82f6?text=${selectedCert.title}+Full+View`;
+                                    }}
+                                />
+                            </div>
+                            
+                            <div className="w-full md:w-1/2 p-6 sm:p-10 md:p-14 border-l border-white/5 bg-gradient-to-br from-[#0a0a0a] to-[#120505] flex flex-col overflow-y-auto hide-scrollbar">
+                                <div className="mb-8 md:mb-12">
+                                    <span className="text-[10px] font-bold uppercase tracking-[0.3em] px-3 py-1 bg-red-600/10 text-red-500 rounded-full border border-red-600/20 mb-6 inline-block">
+                                        {selectedCert.issuer}
+                                    </span>
+                                    <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-white leading-tight mb-4 sm:mb-6">
+                                        {selectedCert.title}
+                                    </h2>
+                                    <div className="flex items-center gap-2 text-zinc-400 font-medium">
+                                        <Award className="w-4 h-4 text-red-600/70" />
+                                        <span>Issued: <span className="text-zinc-200">{selectedCert.date}</span></span>
+                                    </div>
                                 </div>
-                                <div className="lg:w-1/3 p-8 md:p-12 border-l border-white/10 bg-gradient-to-br from-slate-900 to-slate-950 flex flex-col">
-                                    <div className="mb-8">
-                                        <span className="text-xs font-bold uppercase tracking-[0.3em] px-3 py-1 bg-red-600/10 text-red-500 rounded-full border border-red-600/20 mb-6 inline-block">
-                                            {selectedCert.issuer}
-                                        </span>
-                                        <h2 className="text-3xl md:text-4xl font-black text-white font-bold leading-tight mb-4">
-                                            {selectedCert.title}
-                                        </h2>
-                                        <p className="text-zinc-400 font-medium tracking-wide">
-                                            Issued: <span className="text-zinc-200 font-medium">{selectedCert.date}</span>
+
+                                <div className="space-y-6 md:space-y-8 flex-1">
+                                    <h4 className="text-[10px] sm:text-xs font-bold text-red-500 uppercase tracking-widest flex items-center gap-2">
+                                        <BookOpen className="w-4 h-4" /> Certification Highlights
+                                    </h4>
+                                    <div className="space-y-4 md:space-y-5">
+                                        {selectedCert.details.map((detail: string, i: number) => (
+                                            <div key={i} className="flex gap-4 group/item">
+                                                <div className="w-6 h-6 rounded-full bg-white/5 border border-white/10 flex items-center justify-center shrink-0 group-hover/item:border-red-600/50 transition-colors">
+                                                    <ShieldCheck className="w-3.5 h-3.5 text-red-500" />
+                                                </div>
+                                                <p className="text-zinc-300 leading-relaxed text-sm group-hover:text-white transition-colors">
+                                                    {detail}
+                                                </p>
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
+
+                                <div className="mt-10 md:mt-14 pt-8 md:pt-10 border-t border-white/10 flex flex-col gap-4">
+                                    <div className="p-4 rounded-xl bg-white/5 border border-white/10 flex items-start gap-4">
+                                        <div className="w-10 h-10 rounded-xl bg-red-600/10 flex items-center justify-center shrink-0">
+                                            <ShieldCheck className="w-5 h-5 text-red-500" />
+                                        </div>
+                                        <p className="text-xs text-zinc-400 leading-relaxed italic">
+                                            "Verified technical validation of skills and fundamental industry expertise."
                                         </p>
                                     </div>
-
-                                    <div className="space-y-6 flex-1">
-                                        <h4 className="text-xs font-bold text-zinc-400 uppercase tracking-widest">About this Certification</h4>
-                                        <div className="space-y-4">
-                                            {selectedCert.details.map((detail: string, i: number) => (
-                                                <div key={i} className="flex gap-4">
-                                                    <div className="w-6 h-6 rounded-full bg-red-600/10 flex items-center justify-center shrink-0">
-                                                        <ShieldCheck className="w-3.5 h-3.5 text-red-500" />
-                                                    </div>
-                                                    <p className="text-zinc-300 leading-relaxed text-sm">
-                                                        {detail}
-                                                    </p>
-                                                </div>
-                                            ))}
-                                        </div>
-                                    </div>
-
-                                    <div className="mt-12">
-                                        <div className="p-6 rounded-2xl bg-white/5 border border-white/10">
-                                            <div className="flex items-center gap-4 mb-2">
-                                                <Award className="w-5 h-5 text-red-500" />
-                                                <span className="text-sm font-bold text-white font-bold">Verified Credential</span>
-                                            </div>
-                                            <p className="text-xs text-zinc-400 leading-relaxed">
-                                                This certification represents authentic technical validation of skills and knowledge.
-                                            </p>
-                                        </div>
-                                    </div>
+                                    <button 
+                                        onClick={() => setSelectedCert(null)}
+                                        className="w-full py-4 rounded-xl bg-red-600 text-white font-bold text-sm tracking-widest uppercase hover:bg-red-500 transition-all shadow-[0_0_20px_rgba(220,38,38,0.3)] hover:scale-[1.02] active:scale-[0.98]"
+                                    >
+                                        Close Preview
+                                    </button>
                                 </div>
                             </div>
                         </motion.div>
