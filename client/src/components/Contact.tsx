@@ -3,6 +3,7 @@ import { Send, Mail, Linkedin, Github, Loader2, ShieldCheck } from "lucide-react
 import { useState } from "react";
 import { rtdb } from "../firebase";
 import { ref, push, serverTimestamp } from "firebase/database";
+import { SiLeetcode, SiHackerrank, SiGeeksforgeeks } from "react-icons/si";
 
 export default function Contact() {
     const [formData, setFormData] = useState({
@@ -89,6 +90,30 @@ export default function Contact() {
                                     </div>
                                     <span className="font-medium text-lg">GitHub</span>
                                 </a>
+                            </div>
+
+                            <div className="mt-12 pt-8 border-t border-slate-200">
+                                <h3 className="text-xl font-bold mb-6 text-slate-900">Coding Profiles</h3>
+                                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-4">
+                                    <a href="https://leetcode.com/u/sanmayabimal/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 p-4 bg-slate-100/50 rounded-2xl hover:bg-slate-200/50 transition-colors group">
+                                        <div className="text-[#FFA116] group-hover:scale-110 transition-transform">
+                                            <SiLeetcode className="w-6 h-6" />
+                                        </div>
+                                        <span className="font-medium text-slate-700">LeetCode</span>
+                                    </a>
+                                    <a href="https://www.hackerrank.com/profile/sanmayabimal" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 p-4 bg-slate-100/50 rounded-2xl hover:bg-slate-200/50 transition-colors group">
+                                        <div className="text-[#00EA64] group-hover:scale-110 transition-transform">
+                                            <SiHackerrank className="w-6 h-6" />
+                                        </div>
+                                        <span className="font-medium text-slate-700">HackerRank</span>
+                                    </a>
+                                    <a href="https://www.geeksforgeeks.org/profile/sanmaya05qi" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 p-4 bg-slate-100/50 rounded-2xl hover:bg-slate-200/50 transition-colors group">
+                                        <div className="text-[#2F8D46] group-hover:scale-110 transition-transform">
+                                            <SiGeeksforgeeks className="w-6 h-6" />
+                                        </div>
+                                        <span className="font-medium text-slate-700">GeeksforGeeks</span>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
