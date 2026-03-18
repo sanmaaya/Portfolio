@@ -541,7 +541,7 @@ export default function Certifications() {
                                 <img
                                     src={selectedCert.image}
                                     alt={selectedCert.title}
-                                    className="max-w-full max-h-full object-contain shadow-2xl rounded-lg scale-[1.15] md:scale-125 transition-transform duration-1000 group-hover/modalimg:scale-100"
+                                    className="max-w-full max-h-full object-contain shadow-2xl rounded-lg"
                                     onError={(e) => {
                                         (e.target as HTMLImageElement).src = `https://placehold.co/1200x800/111827/3b82f6?text=${selectedCert.title}+Full+View`;
                                     }}
