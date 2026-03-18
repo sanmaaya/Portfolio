@@ -7,8 +7,6 @@ import Projects from "../components/Projects";
 import Certifications from "../components/Certifications";
 import Achievements from "../components/Achievements";
 import Experience from "../components/Experience";
-import Hackathons from "../components/Hackathons";
-import Research from "../components/Research";
 import Contact from "../components/Contact";
 
 export default function Home() {
@@ -23,8 +21,6 @@ export default function Home() {
             <Certifications />
             <Achievements />
             <Experience />
-            <Hackathons />
-            <Research />
             <Contact />
         </>
     );
