@@ -224,73 +224,67 @@ export default function Projects() {
                             animate={{ scale: 1, opacity: 1, y: 0 }}
                             exit={{ scale: 0.95, opacity: 0, y: 20 }}
                             onClick={(e) => e.stopPropagation()}
-                         className="relative w-full max-w-4xl max-h-[90vh] overflow-y-auto bg-[#0d0d0d] border border-white/10 rounded-[2rem] shadow-2xl flex flex-col hide-scrollbar"
+                            className="relative max-w-5xl w-full bg-[#0a0a0a] rounded-[2rem] border border-white/10 shadow-2xl overflow-hidden flex flex-col md:flex-row max-h-[90vh] hide-scrollbar"
                             style={{ msOverflowStyle: 'none', scrollbarWidth: 'none' }}
                         >
                             <button
-                                className="absolute top-5 right-5 p-2.5 bg-white/10 hover:bg-red-600 rounded-full text-white transition-all z-50 hover:rotate-90"
                                 onClick={() => setSelectedProject(null)}
+                                className="absolute top-6 right-6 z-50 p-2.5 bg-white/5 hover:bg-red-600 rounded-full border border-white/10 transition-all hover:rotate-90 hidden md:block"
                             >
-                                <X className="w-5 h-5" />
+                                <X className="w-5 h-5 text-white" />
                             </button>
 
-                            {/* Full project screenshot — browser chrome mockup, zoomed out */}
-                            <div className="w-full bg-[#111] rounded-t-[2rem] overflow-hidden p-5 md:p-8" onClick={(e) => e.stopPropagation()}>
-                                {/* Fake browser bar */}
-                                <div className="bg-zinc-900 rounded-xl overflow-hidden border border-white/10 shadow-2xl">
-                                    <div className="flex items-center gap-3 px-4 py-3 bg-zinc-800/80 border-b border-white/5">
-                                        <div className="flex gap-1.5">
-                                            <div className="w-2.5 h-2.5 rounded-full bg-red-500/80" />
-                                            <div className="w-2.5 h-2.5 rounded-full bg-yellow-500/80" />
-                                            <div className="w-2.5 h-2.5 rounded-full bg-green-500/80" />
-                                        </div>
-                                        <div className="flex-1 bg-zinc-700/60 rounded-full px-4 py-1 text-[11px] text-zinc-400 text-center truncate">
-                                            {selectedProject.live || "localhost:5173"}
-                                        </div>
-                                    </div>
-                                    {/* Full screenshot zoomed out with object-contain */}
-                                    <div className="relative bg-zinc-950 overflow-hidden" style={{ height: '320px' }}>
-                                        <img
-                                            src={selectedProject.image}
-                                            alt={selectedProject.title}
-                                            className="w-full h-full object-contain object-top"
-                                        />
-                                        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-zinc-950/60 pointer-events-none" />
-                                    </div>
-                                </div>
+                            {/* Mobile close button */}
+                            <button
+                                className="md:hidden absolute top-4 right-4 p-2.5 bg-black/50 hover:bg-red-600 rounded-full text-white transition-all z-50 backdrop-blur-md"
+                                onClick={(e) => { e.stopPropagation(); setSelectedProject(null); }}
+                            >
+                                <X className="w-5 h-5 text-white" />
+                            </button>
+
+                            {/* Left: Full screenshot, zoomed out, object-contain */}
+                            <div className="w-full md:w-1/2 bg-black flex items-center justify-center p-4 min-h-[300px] md:min-h-full relative">
+                                <div className="absolute inset-0 bg-gradient-to-br from-red-900/10 to-transparent opacity-50" />
+                                <img
+                                    src={selectedProject.image}
+                                    alt={selectedProject.title}
+                                    className="max-w-full max-h-full object-contain shadow-2xl rounded-lg"
+                                />
                             </div>
 
-                            {/* Details panel */}
-                            <div className="p-6 sm:p-8 md:p-10 flex flex-col bg-gradient-to-b from-[#0d0d0d] to-[#110404]">
-                                <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4 leading-tight">
-                                    {selectedProject.title}
-                                </h2>
-                                <div className="flex flex-wrap gap-2 mb-6">
-                                    {selectedProject.tech.map((t: string, i: number) => (
-                                        <span key={i} className="text-[10px] sm:text-xs font-mono font-medium text-zinc-300 bg-white/5 border border-white/10 px-3 py-1.5 rounded-full">
-                                            {t}
-                                        </span>
-                                    ))}
+                            {/* Right: Details */}
+                            <div className="w-full md:w-1/2 p-6 sm:p-10 md:p-14 border-l border-white/5 bg-gradient-to-br from-[#0a0a0a] to-[#120505] flex flex-col overflow-y-auto hide-scrollbar">
+                                <div className="mb-8 md:mb-10">
+                                    <div className="flex flex-wrap gap-2 mb-6">
+                                        {selectedProject.tech.map((t: string, i: number) => (
+                                            <span key={i} className="text-[10px] font-bold uppercase tracking-[0.15em] px-3 py-1 bg-red-600/10 text-red-500 rounded-full border border-red-600/20">
+                                                {t}
+                                            </span>
+                                        ))}
+                                    </div>
+                                    <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-white leading-tight mb-4 sm:mb-6">
+                                        {selectedProject.title}
+                                    </h2>
                                 </div>
 
-                                <div className="mb-8">
-                                    <h3 className="text-[10px] sm:text-xs font-bold text-red-500 uppercase tracking-widest mb-3 flex items-center gap-2">
+                                <div className="space-y-6 flex-1">
+                                    <h4 className="text-[10px] sm:text-xs font-bold text-red-500 uppercase tracking-widest flex items-center gap-2">
                                         <BookOpen className="w-4 h-4" /> About This Project
-                                    </h3>
+                                    </h4>
                                     <p className="text-zinc-300 leading-relaxed text-sm sm:text-base">
                                         {selectedProject.description}
                                     </p>
                                 </div>
 
-                                <div className="flex flex-wrap items-center gap-3 pt-6 border-t border-white/10">
+                                <div className="mt-10 md:mt-14 pt-8 border-t border-white/10 flex flex-col gap-3">
                                     {selectedProject.github && (
                                         <a
                                             href={selectedProject.github}
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className="flex-1 min-w-[130px] flex items-center justify-center gap-2 p-3 sm:p-4 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all text-sm font-bold text-white group"
+                                            className="w-full flex items-center justify-center gap-3 p-4 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all text-sm font-bold text-white group"
                                         >
-                                            <Github className="w-4 h-4 sm:w-5 sm:h-5 group-hover:scale-110 transition-transform" /> Source Code
+                                            <Github className="w-5 h-5 group-hover:scale-110 transition-transform" /> Source Code
                                         </a>
                                     )}
                                     {selectedProject.live && (
@@ -298,11 +292,17 @@ export default function Projects() {
                                             href={selectedProject.live}
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className="flex-1 min-w-[130px] flex items-center justify-center gap-2 p-3 sm:p-4 rounded-xl bg-red-700/80 border border-red-600 hover:bg-red-600 transition-all text-sm font-bold text-white group shadow-[0_0_20px_rgba(153,27,27,0.4)] hover:shadow-[0_0_30px_rgba(220,38,38,0.6)]"
+                                            className="w-full flex items-center justify-center gap-3 p-4 rounded-xl bg-red-700/80 border border-red-600 hover:bg-red-600 transition-all text-sm font-bold text-white group shadow-[0_0_20px_rgba(153,27,27,0.4)] hover:shadow-[0_0_30px_rgba(220,38,38,0.6)]"
                                         >
-                                            <ExternalLink className="w-4 h-4 sm:w-5 sm:h-5 group-hover:-translate-y-1 transition-transform" /> Live Demo
+                                            <ExternalLink className="w-5 h-5 group-hover:-translate-y-1 transition-transform" /> Live Demo
                                         </a>
                                     )}
+                                    <button
+                                        onClick={() => setSelectedProject(null)}
+                                        className="w-full py-4 rounded-xl bg-red-600 text-white font-bold text-sm tracking-widest uppercase hover:bg-red-500 transition-all shadow-[0_0_20px_rgba(220,38,38,0.3)] hover:scale-[1.02] active:scale-[0.98]"
+                                    >
+                                        Close Preview
+                                    </button>
                                 </div>
                             </div>
                         </motion.div>
