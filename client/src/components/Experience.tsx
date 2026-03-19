@@ -13,7 +13,7 @@ export default function Experience() {
                 "Developed a modular Android application in Kotlin by integrating Backpack UI components and React.js features.",
                 "Translated Figma UI designs into technical specifications while managing project tasks through JIRA user stories."
             ],
-            certificate: "/certifications/skyscanner-swe virtual.png"
+            certificate: "/experience-internship/skyscanner-swe virtual.png"
         },
         {
             role: "Solutions Architecture Job Simulation",
@@ -25,7 +25,19 @@ export default function Experience() {
                 "Designed simple, scalable, and highly-available hosting architectures.",
                 "Implemented AWS best practices for availability and reliability."
             ],
-            certificate: "/certifications/aws job simulation.png"
+            certificate: "/experience-internship/aws job simulation.png"
+        },
+        {
+            role: "Software Engineering Lite Job Simulation",
+            company: "J.P. Morgan Chase & Co. | Forage",
+            location: "Remote",
+            date: "Feb 2026",
+            points: [
+                "Completed a simulation focused on internal software development workflows.",
+                "Interfaced with an financial data feed to process and react to stock price fluctuations.",
+                "Utilized JPMC's Perspective tool to visualize data for real-time trader analysis."
+            ],
+            certificate: "/experience-internship/jp morgan swe job.png"
         }
     ];
 
