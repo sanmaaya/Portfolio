@@ -1,0 +1,61 @@
+{
+  "name": "Sanmaya M B",
+  "title": "Full Stack Developer | Building Scalable and User-Focused Web Applications",
+  "location": "Kozhikode, Kerala (India)",
+  "contact": {
+    "email": "sanmayamb@gmail.com",
+    "phone": "+91-XXXXXXXXXX",
+    "linkedin": "sanmaya-m-b-",
+    "github": "sanmaaya"
+  },
+  "roles": [
+    "Full Stack Developer",
+    "Open to new opportunities"
+  ],
+  "about": {
+    "greeting": "Hi, I'm Sanmaya M B",
+    "description": "I am a developer who loves building practical, scalable, and user-focused applications. My journey spans the full stack, from crafting smooth front-end interfaces to engineering backend APIs and managing cloud pipelines. I enjoy solving complex engineering challenges and am always exploring new tech to build better software solutions.",
+    "languages": "English, Malayalam, Hindi",
+    "status_pill": "exploring Full Stack, DevOps & Cloud",
+    "current_role": "🎓 B.Tech Computer Science Student",
+    "education": "🏫 Lovely Professional University, Punjab",
+    "specialization": "💡 Focus on Full Stack, DevOps, and Cloud Systems",
+    "competitive_programming": "🌐 Fluent in English, Malayalam, and Hindi"
+  },
+  "statistics": {
+    "coding_questions": "200+",
+    "projects": "15",
+    "industry_certifications": "23"
+  },
+  "languages": [
+    { "name": "English", "level": "Professional Working" },
+    { "name": "Malayalam", "level": "Native" },
+    { "name": "Hindi", "level": "Professional" }
+  ],
+  "social_profiles": [
+    {
+      "id": 1,
+      "name": "LinkedIn",
+      "link": "https://www.linkedin.com/in/sanmaya-m-b-/",
+      "icon": "BsLinkedin"
+    },
+    {
+      "id": 2,
+      "name": "GitHub",
+      "link": "https://github.com/sanmaaya",
+      "icon": "FaGithub"
+    }
+  ],
+  "site": {
+    "counter_namespace": "sanmaya-portfolio",
+    "tech_stack": [
+      "React",
+      "Vite",
+      "Tailwind CSS",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Firebase"
+    ]
+  }
+}

@@ -1,0 +1,377 @@
+{
+  "certifications": [
+    {
+      "id": 1,
+      "name": "JavaScript (Basic)",
+      "type": "HackerRank Certification",
+      "issuer": "HackerRank",
+      "issueDate": "2026-02",
+      "badgeId": "hr-js-basic",
+      "badgeUrl": "https://www.hackerrank.com/certificates/21beealc1fda",
+      "level": "Foundational",
+      "imageUrl": "/certifications/javascript.png"
+    },
+    {
+      "id": 2,
+      "name": "CSS (Basic)",
+      "type": "HackerRank Certification",
+      "issuer": "HackerRank",
+      "issueDate": "2026-02",
+      "badgeId": "hr-css-basic",
+      "badgeUrl": "https://www.hackerrank.com/certificates/237c4c76a442",
+      "level": "Foundational",
+      "imageUrl": "/certifications/css basics.png"
+    },
+    {
+      "id": 3,
+      "name": "The Science of Well-Being",
+      "type": "Course Certificate",
+      "issuer": "Yale University (Coursera)",
+      "issueDate": "2026-02",
+      "badgeId": "yale-well-being",
+      "badgeUrl": "https://coursera.org",
+      "level": "Foundational",
+      "imageUrl": "/certifications/yale- coursera science of well being.png"
+    },
+    {
+      "id": 4,
+      "name": "Cloud Computing (Elite)",
+      "type": "NPTEL Certification",
+      "issuer": "NPTEL (IIT Kharagpur)",
+      "issueDate": "2025-10",
+      "badgeId": "nptel-cloud-computing",
+      "badgeUrl": "https://nptel.ac.in",
+      "level": "Associate",
+      "imageUrl": "/certifications/nptel-cloud computing.png"
+    },
+    {
+      "id": 5,
+      "name": "Master Generative AI & AI Tools",
+      "type": "Course Certificate",
+      "issuer": "Udemy",
+      "issueDate": "2025-08",
+      "badgeId": "udemy-genai",
+      "badgeUrl": "https://udemy.com",
+      "level": "Associate",
+      "imageUrl": "/certifications/udemy-master generative ai and generative ai tools(chatgpt more).png"
+    },
+    {
+      "id": 6,
+      "name": "Build Generative AI Apps (No-Code)",
+      "type": "Course Certificate",
+      "issuer": "Udemy",
+      "issueDate": "2025-08",
+      "badgeId": "udemy-nocode-genai",
+      "badgeUrl": "https://udemy.com",
+      "level": "Foundational",
+      "imageUrl": "/certifications/udemy-build generative ae apps and soln.png"
+    },
+    {
+      "id": 7,
+      "name": "ChatGPT Made Easy: AI Essentials",
+      "type": "Course Certificate",
+      "issuer": "Udemy",
+      "issueDate": "2025-08",
+      "badgeId": "udemy-chatgpt-easy",
+      "badgeUrl": "https://udemy.com",
+      "level": "Foundational",
+      "imageUrl": "/certifications/udemy-chatgpt made easy.png"
+    },
+    {
+      "id": 8,
+      "name": "From Data to Decisions: Data Science",
+      "type": "Academic Certificate",
+      "issuer": "Lovely Professional University",
+      "issueDate": "2025-08",
+      "badgeId": "lpu-data-decisions",
+      "badgeUrl": "https://lpu.in",
+      "level": "Associate",
+      "imageUrl": "/certifications/summer training - data to decisions.png"
+    },
+    {
+      "id": 9,
+      "name": "Mastering DSA using C and C++",
+      "type": "Course Certificate",
+      "issuer": "Udemy (Abdul Bari)",
+      "issueDate": "2025-01",
+      "badgeId": "udemy-dsa-abdul-bari",
+      "badgeUrl": "https://udemy.com",
+      "level": "Associate",
+      "imageUrl": "/certifications/udemy-mastering dsa using c and cpp.png"
+    },
+    {
+      "id": 10,
+      "name": "Object Oriented Programming",
+      "type": "Academic Certificate",
+      "issuer": "Lovely Professional University (iamneo)",
+      "issueDate": "2024-12",
+      "badgeId": "lpu-oops",
+      "badgeUrl": "https://lpu.in",
+      "level": "Associate",
+      "imageUrl": "/certifications/lpu-opject operating programing.png"
+    },
+    {
+      "id": 11,
+      "name": "Data Structures and Algorithm",
+      "type": "Academic Certificate",
+      "issuer": "Lovely Professional University (iamneo)",
+      "issueDate": "2024-12",
+      "badgeId": "lpu-dsa",
+      "badgeUrl": "https://lpu.in",
+      "level": "Associate",
+      "imageUrl": "/certifications/dsa lpu.png"
+    },
+    {
+      "id": 12,
+      "name": "Computer Communications Specialization",
+      "type": "Specialization Certificate",
+      "issuer": "University of Colorado (Coursera)",
+      "issueDate": "2024-09",
+      "badgeId": "coursera-computer-comm",
+      "badgeUrl": "https://coursera.org",
+      "level": "Associate",
+      "imageUrl": "/certifications/computer communication-coursera.png"
+    },
+    {
+      "id": 13,
+      "name": "Fundamentals of Network Communication",
+      "type": "Course Certificate",
+      "issuer": "University of Colorado (Coursera)",
+      "issueDate": "2024-09",
+      "badgeId": "coursera-net-comm",
+      "badgeUrl": "https://coursera.org",
+      "level": "Foundational",
+      "imageUrl": "/certifications/courserafuntamentals of network.png"
+    },
+    {
+      "id": 14,
+      "name": "Peer-to-Peer Protocols and Local Area Networks",
+      "type": "Course Certificate",
+      "issuer": "University of Colorado (Coursera)",
+      "issueDate": "2024-09",
+      "badgeId": "coursera-p2p",
+      "badgeUrl": "https://coursera.org",
+      "level": "Foundational",
+      "imageUrl": "/certifications/peer to peer coursera.png"
+    },
+    {
+      "id": 15,
+      "name": "The Bits and Bytes of Computer Networking",
+      "type": "Course Certificate",
+      "issuer": "Google (Coursera)",
+      "issueDate": "2024-09",
+      "badgeId": "google-networking",
+      "badgeUrl": "https://coursera.org",
+      "level": "Foundational",
+      "imageUrl": "/certifications/coursera-google bits and bytes of computerr networks.png"
+    },
+    {
+      "id": 16,
+      "name": "Packet Switching Networks and Algorithms",
+      "type": "Course Certificate",
+      "issuer": "University of Colorado (Coursera)",
+      "issueDate": "2024-09",
+      "badgeId": "coursera-packet-switching",
+      "badgeUrl": "https://coursera.org",
+      "level": "Foundational",
+      "imageUrl": "/certifications/coursera-packet switching networks and algo.png"
+    },
+    {
+      "id": 17,
+      "name": "Introduction to Hardware and Operating Systems",
+      "type": "Course Certificate",
+      "issuer": "IBM (Coursera)",
+      "issueDate": "2024-08",
+      "badgeId": "ibm-hardware-os",
+      "badgeUrl": "https://coursera.org",
+      "level": "Foundational",
+      "imageUrl": "/certifications/intro hardware operations IBM coursera.png"
+    },
+    {
+      "id": 18,
+      "name": "Backend Web Development (NodeJS & Express)",
+      "type": "Course Certificate",
+      "issuer": "DevTown (GDSC Giet)",
+      "issueDate": "2024-06",
+      "badgeId": "devtown-backend",
+      "badgeUrl": "https://devtown.in",
+      "level": "Associate",
+      "imageUrl": "/certifications/devtown backend.png"
+    },
+    {
+      "id": 19,
+      "name": "Certificate of Appreciation (Community Support)",
+      "type": "Community Certificate",
+      "issuer": "DevTown",
+      "issueDate": "2024-07",
+      "badgeId": "devtown-appreciation",
+      "badgeUrl": "https://devtown.in",
+      "level": "Foundational",
+      "imageUrl": "/certifications/appriciation dewtown.png"
+    },
+    {
+      "id": 20,
+      "name": "Responsive Web Design Developer",
+      "type": "Developer Certification",
+      "issuer": "freeCodeCamp",
+      "issueDate": "2023-12",
+      "badgeId": "fcc-responsive-web",
+      "badgeUrl": "https://freecodecamp.org",
+      "level": "Associate",
+      "imageUrl": "/certifications/freecodecamp-responsive web design.png"
+    },
+    {
+      "id": 21,
+      "name": "Advanced Excel, Tableau and Power BI",
+      "type": "Academic Certificate",
+      "issuer": "LPU (Centre for Professional Enhancement)",
+      "issueDate": "2023-12",
+      "badgeId": "lpu-cpe-excel",
+      "badgeUrl": "https://lpu.in",
+      "level": "Associate",
+      "imageUrl": "/certifications/Excel, powerbi.png"
+    },
+    {
+      "id": 22,
+      "name": "Human Resource Beginner Course",
+      "type": "Course Certificate",
+      "issuer": "Infosys Springboard",
+      "issueDate": "2023-11",
+      "badgeId": "infosys-hr-beginner",
+      "badgeUrl": "https://infosys.com",
+      "level": "Foundational",
+      "imageUrl": "/certifications/human resoursce beginner infosys.png"
+    },
+    {
+      "id": 23,
+      "name": "BinaryBlitz Web Hackathon Appreciation",
+      "type": "Hackathon Certificate",
+      "issuer": "BinaryBlitz",
+      "issueDate": "2024",
+      "badgeId": "binaryblitz-hackathon",
+      "badgeUrl": "https://binaryblitz.in",
+      "level": "Associate",
+      "imageUrl": "/certifications/binary bits hackathon.png"
+    }
+  ],
+  "learning_badges": [
+    {
+      "id": 1,
+      "name": "Computational Theory: Turing, Transducers, & Complexity",
+      "type": "Knowledge Badge",
+      "issuer": "Skillsoft",
+      "issueDate": "2025-12",
+      "badgeId": "skillsoft-turing",
+      "badgeUrl": "https://skillsoft.com",
+      "imageUrl": "/badges/skillsoft-turing.png"
+    },
+    {
+      "id": 2,
+      "name": "Computational Theory: Language Principle & Automata",
+      "type": "Knowledge Badge",
+      "issuer": "Skillsoft",
+      "issueDate": "2025-11",
+      "badgeId": "skillsoft-automata",
+      "badgeUrl": "https://skillsoft.com",
+      "imageUrl": "/badges/skillsoft-automata.png"
+    },
+    {
+      "id": 3,
+      "name": "Building Neural Networks: Development Principles",
+      "type": "Knowledge Badge",
+      "issuer": "Skillsoft",
+      "issueDate": "2025-11",
+      "badgeId": "skillsoft-neural-networks",
+      "badgeUrl": "https://skillsoft.com",
+      "imageUrl": "/badges/skillsoft-neural-networks.png"
+    },
+    {
+      "id": 4,
+      "name": "HackerRank C++ Star",
+      "type": "Skill Badge",
+      "issuer": "HackerRank",
+      "issueDate": "2025",
+      "badgeId": "hr-badge-cpp",
+      "badgeUrl": "https://hackerrank.com",
+      "imageUrl": "/badges/hackerrank-cpp.png"
+    },
+    {
+      "id": 5,
+      "name": "HackerRank Java Star",
+      "type": "Skill Badge",
+      "issuer": "HackerRank",
+      "issueDate": "2025",
+      "badgeId": "hr-badge-java",
+      "badgeUrl": "https://hackerrank.com",
+      "imageUrl": "/badges/hackerrank-java.png"
+    },
+    {
+      "id": 6,
+      "name": "HackerRank C Star",
+      "type": "Skill Badge",
+      "issuer": "HackerRank",
+      "issueDate": "2025",
+      "badgeId": "hr-badge-c",
+      "badgeUrl": "https://hackerrank.com",
+      "imageUrl": "/badges/hackerrank-c.png"
+    },
+    {
+      "id": 7,
+      "name": "HackerRank 10 Days of JS",
+      "type": "Skill Badge",
+      "issuer": "HackerRank",
+      "issueDate": "2025",
+      "badgeId": "hr-badge-10js",
+      "badgeUrl": "https://hackerrank.com",
+      "imageUrl": "/badges/hackerrank-10daysjs.png"
+    },
+    {
+      "id": 8,
+      "name": "HackerRank 30 Days of Code",
+      "type": "Skill Badge",
+      "issuer": "HackerRank",
+      "issueDate": "2025",
+      "badgeId": "hr-badge-30days",
+      "badgeUrl": "https://hackerrank.com",
+      "imageUrl": "/badges/hackerrank-30days.png"
+    }
+  ],
+  "achievements": [
+    {
+      "id": 1,
+      "title": "Global Rank 22,861 on Codolio",
+      "organizer": "Codolio",
+      "date": "2025",
+      "type": "Competitive Programming"
+    },
+    {
+      "id": 2,
+      "title": "Solved 200+ Coding Problems across LeetCode & HackerRank",
+      "organizer": "Self",
+      "date": "Ongoing",
+      "type": "Problem Solving"
+    },
+    {
+      "id": 3,
+      "title": "Participated in BinaryBlitz Web Hackathon",
+      "organizer": "BinaryBlitz",
+      "date": "2024",
+      "type": "Hackathon"
+    }
+  ],
+  "coding_platform_stats": {
+    "leetcode": {
+      "username": "sanmayabimal",
+      "problems_solved": "200+",
+      "url": "https://leetcode.com/u/sanmayabimal/"
+    },
+    "hackerrank": {
+      "username": "sanmayabimal",
+      "url": "https://www.hackerrank.com/profile/sanmayabimal"
+    },
+    "geeksforgeeks": {
+      "username": "sanmaya05qi",
+      "url": "https://www.geeksforgeeks.org/profile/sanmaya05qi"
+    }
+  }
+}

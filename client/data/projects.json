@@ -1,0 +1,230 @@
+{
+  "featured_projects": [
+    {
+      "id": 1,
+      "title": "AasaMedChem – AI-Powered Medical Chemistry Platform",
+      "description": "A modern healthcare and medicinal chemistry platform designed to provide intelligent insights, interactive user experiences, and streamlined access to medical chemistry information.",
+      "date": "June 2026",
+      "tools_tech": ["Next.js", "React", "Tailwind CSS", "AI Integration"],
+      "features": [
+        "AI-powered medical chemistry insights",
+        "Modern healthcare dashboard and data visualization",
+        "Streamlined access to medicinal chemistry information",
+        "Interactive user experience and responsive layouts"
+      ],
+      "github": "https://github.com/sanmaaya/AasaMedChem",
+      "live": "https://aasa-med-chem-olive.vercel.app/"
+    },
+    {
+      "id": 2,
+      "title": "Spreetail – Modern E-Commerce Platform",
+      "description": "A responsive e-commerce application featuring product discovery, modern UI design, optimized user experience, and scalable frontend architecture.",
+      "date": "June 2026",
+      "tools_tech": ["React", "JavaScript", "Tailwind CSS"],
+      "features": [
+        "Product discovery with advanced searching and filtering",
+        "Modern glassmorphic UI design and smooth page transitions",
+        "Scalable frontend architecture with React components",
+        "Optimized page load speed and client-side performance"
+      ],
+      "github": "https://github.com/sanmaaya/Spreetail",
+      "live": "https://spreetail-navy.vercel.app/"
+    },
+    {
+      "id": 3,
+      "title": "WorkBalance – Employee & Team Management System",
+      "description": "Full-stack employee and team management platform supporting organizational workflows, employee coordination, and productivity management.",
+      "date": "February 2026",
+      "tools_tech": ["Node.js", "Express.js", "MongoDB", "JavaScript"],
+      "features": [
+        "Full-stack team management and workflow orchestration",
+        "Role-Based Access Control (RBAC) and security middleware",
+        "Real-time coordination and productivity tracking dashboard",
+        "RESTful API design with Express.js and MongoDB database"
+      ],
+      "github": "https://github.com/sanmaaya/Company",
+      "live": ""
+    },
+    {
+      "id": 4,
+      "title": "Paisa Bachao – Finance Tracker",
+      "description": "Personal finance management application for tracking expenses, budgeting, and monitoring financial habits with interactive analytics.",
+      "date": "October 2025",
+      "tools_tech": ["JavaScript", "Firebase", "Tailwind CSS"],
+      "features": [
+        "Expense tracking and personal budgeting categories",
+        "Interactive analytics and data charts",
+        "Multi-session data sync and persistence",
+        "Clean responsive Tailwind interface"
+      ],
+      "github": "https://github.com/sanmaaya/Finance-Tracker",
+      "live": "https://paisa-lemon.vercel.app/"
+    }
+  ],
+  "collaborative_projects": [
+    {
+      "id": 5,
+      "title": "Travelscape – AI Travel Planning Platform",
+      "description": "Travel platform integrating destination discovery, hotel recommendations, itinerary planning, and travel booking functionality.",
+      "date": "May 2026",
+      "tools_tech": ["Laravel", "PHP", "MySQL", "JavaScript"],
+      "features": [
+        "AI-driven destination discovery and hotel matching",
+        "Dynamic itinerary planning assistant",
+        "Travel booking workflow integration",
+        "Backend system in Laravel with MySQL database"
+      ],
+      "github": "https://github.com/ishantpradhan2601/travel",
+      "live": "",
+      "team": "Travelscape Team",
+      "contributors": ["sanmaaya", "ishantpradhan2601"]
+    },
+    {
+      "id": 6,
+      "title": "Electrosystem – Hybrid Renewable Energy Platform",
+      "description": "Platform focused on renewable energy management, hybrid system modeling, and sustainable energy solutions combining wind, solar, and battery storage.",
+      "date": "September 2025",
+      "tools_tech": ["JavaScript", "HTML5", "CSS3", "Web Technologies"],
+      "features": [
+        "Hybrid renewable energy generation modeling (solar/wind)",
+        "Intelligent flow management simulation",
+        "Sustainable energy cost analysis tool"
+      ],
+      "github": "https://github.com/sengoku70/electrosystems.github.io",
+      "live": "https://sengoku70.github.io/electrosystems.github.io/",
+      "team": "Renewable Tech Team",
+      "contributors": ["sanmaaya", "sengoku70"]
+    }
+  ],
+  "other_projects": [
+    {
+      "id": 7,
+      "title": "TechnoGrowX – Smart Agriculture Support Platform",
+      "description": "Agriculture assistance platform providing structured backend functionality, responsive design, and farmer-centric digital solutions.",
+      "date": "July 2025",
+      "tools_tech": ["Node.js", "MySQL", "Tailwind CSS"],
+      "features": [
+        "Farmer-expert communication portal for disease tracking",
+        "Soil health and crop diagnostic analytics dashboard",
+        "Responsive Tailwind CSS UI with MySQL storage"
+      ],
+      "github": "https://github.com/sanmaaya/TechnoGrowX",
+      "live": ""
+    },
+    {
+      "id": 8,
+      "title": "Drug Review Sentiment Analysis",
+      "description": "Machine learning project that analyzes drug reviews and performs sentiment classification using natural language processing techniques.",
+      "date": "June 2025",
+      "tools_tech": ["Python", "Pandas", "Scikit-learn", "NLP"],
+      "features": [
+        "Text preprocessing and TF-IDF vectorization",
+        "Sentiment classification modeling using Random Forest",
+        "Scikit-learn pipeline optimization for medicine reviews"
+      ],
+      "github": "https://github.com/sanmaaya/drug-review-sentiment-analysis",
+      "live": ""
+    },
+    {
+      "id": 9,
+      "title": "Smart Study Planner",
+      "description": "Productivity application for study planning, progress tracking, and performance analytics visualization.",
+      "date": "May 2025",
+      "tools_tech": ["JavaScript", "Chart.js", "LocalStorage"],
+      "features": [
+        "Kanban study task management and focus timers",
+        "Study progress tracking with streak multipliers",
+        "Chart.js performance analytics visualization"
+      ],
+      "github": "https://github.com/sanmaaya/Smart-Study-Planner",
+      "live": "https://smart-study-planner-beryl.vercel.app/"
+    },
+    {
+      "id": 10,
+      "title": "Expense Report Generator with Chatbot",
+      "description": "Expense reporting platform with chatbot-assisted interactions for generating and managing expense reports efficiently.",
+      "date": "December 2025",
+      "tools_tech": ["JavaScript", "AI Integration", "HTML5", "CSS3"],
+      "features": [
+        "Chatbot-assisted automated expense entry",
+        "Expense report generation and formatting",
+        "Interactive AI dialogue flows"
+      ],
+      "github": "https://github.com/sanmaaya/Expense-Report-Generator-with-Chatbot",
+      "live": ""
+    },
+    {
+      "id": 11,
+      "title": "SOHAM – Wellness & Meditation Website",
+      "description": "A wellness-focused website providing information and services related to meditation, mindfulness, and healthy living.",
+      "date": "April 2025",
+      "tools_tech": ["HTML5", "CSS3", "Bootstrap", "JavaScript"],
+      "features": [
+        "Meditation course directories and registration portals",
+        "Pranic healing principles and guided session lists",
+        "Calm, responsive design using Bootstrap styling"
+      ],
+      "github": "https://github.com/sanmaaya/soham",
+      "live": "https://schoolofhealingandmeditation.com/"
+    },
+    {
+      "id": 12,
+      "title": "Docker + AWS EC2 Deployment – Glassmorphism Calculator",
+      "description": "Containerized calculator application deployed on AWS EC2, demonstrating Docker image creation, DockerHub integration, and cloud deployment practices.",
+      "date": "November 2025",
+      "tools_tech": ["Docker", "AWS EC2", "DockerHub", "HTML/CSS/JS"],
+      "features": [
+        "Containerized static web calculator in Docker",
+        "Deployed container instance on AWS EC2 node",
+        "DockerHub image versioning pipeline"
+      ],
+      "github": "https://github.com/sanmaaya/docker",
+      "live": ""
+    },
+    {
+      "id": 13,
+      "title": "Jenkins Local Setup using Docker",
+      "description": "One-click Jenkins setup using Docker Compose with persistent storage, networking configuration, and complete setup documentation.",
+      "date": "October 2025",
+      "tools_tech": ["Docker", "Docker Compose", "Jenkins"],
+      "features": [
+        "Docker Compose configuration for one-click deployment",
+        "Volume mounts for persistent Jenkins build workspace configurations",
+        "Isolated virtual bridge network setup"
+      ],
+      "github": "https://github.com/sanmaaya/Jenkins-Local-Setup-using-Docker",
+      "live": ""
+    },
+    {
+      "id": 14,
+      "title": "CI/CD Automation – Jenkins + Docker + AWS EC2",
+      "description": "Automated CI/CD pipeline for an Aviation Blog application including source checkout, image build, deployment, health checks, and cleanup stages.",
+      "date": "November 2025",
+      "tools_tech": ["Jenkins", "Docker", "AWS EC2", "Nginx"],
+      "features": [
+        "Automated Jenkins pipeline execution on code push webhooks",
+        "Nginx reverse proxy routing and container orchestration",
+        "Health checks and container cleanup stages"
+      ],
+      "github": "https://github.com/sanmaaya/cicd-automation-jenkins-docker-ec2",
+      "live": ""
+    },
+    {
+      "id": 15,
+      "title": "CI/CD Pipeline using GitHub + Jenkins + Docker",
+      "description": "Continuous Integration and Continuous Deployment workflow integrating GitHub webhooks with Jenkins-driven Docker deployments.",
+      "date": "December 2025",
+      "tools_tech": ["GitHub Webhooks", "Jenkins", "Docker"],
+      "features": [
+        "GitHub webhook event listeners to trigger Jenkins runs",
+        "Docker container rebuilding pipeline",
+        "Zero-downtime container swaps"
+      ],
+      "github": "https://github.com/sanmaaya/CI-CD-Pipeline-using-GitHub-Jenkins-and-Docker",
+      "live": ""
+    }
+  ],
+  "community_projects": [],
+  "open_source_contributions": [],
+  "community_discussions": []
+}

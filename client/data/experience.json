@@ -1,0 +1,50 @@
+{
+  "professional_experience": [
+    {
+      "id": 1,
+      "date": "January 2026 - February 2026",
+      "title": "Software Engineering Virtual Experience",
+      "position": "Virtual Experience",
+      "company": "Skyscanner",
+      "location": "Remote",
+      "summary": "Completed practical task-based simulation covering back-end and mobile developer workflows. Code: https://github.com/sanmaaya/Skyscanner-Forage",
+      "description": {
+        "1": "Constructed RESTful microservices utilizing Java and Dropwizard, ensuring structured API endpoints via YAML configuration.",
+        "2": "Developed a modular Android application in Kotlin by integrating Backpack UI components and React.js features.",
+        "3": "Translated Figma UI designs into technical specifications while managing project tasks through JIRA user stories."
+      },
+      "skills": ["Java", "Dropwizard", "RESTful APIs", "Kotlin", "Android Development", "React.js", "Figma", "JIRA"]
+    },
+    {
+      "id": 2,
+      "date": "February 2026",
+      "title": "Solutions Architecture Job Simulation",
+      "company": "Amazon Web Services (AWS)",
+      "position": "Virtual Simulation",
+      "location": "Remote",
+      "summary": "Completed a simulation focused on internal software development workflows and cloud solutions design.",
+      "description": {
+        "1": "Practical task-based cloud infrastructure simulation focused on AWS.",
+        "2": "Designed simple, scalable, and highly-available hosting architectures.",
+        "3": "Implemented AWS best practices for availability, reliability, and security compliance."
+      },
+      "skills": ["AWS", "Cloud Infrastructure", "Solutions Architecture", "Scalability", "High Availability"]
+    },
+    {
+      "id": 3,
+      "date": "February 2026",
+      "title": "Software Engineering Lite Job Simulation",
+      "company": "J.P. Morgan Chase & Co.",
+      "position": "Virtual Simulation",
+      "location": "Remote",
+      "summary": "Completed a simulation focused on internal software development workflows. Code: https://github.com/sanmaaya/JP-Morgan---Virtual-Internship",
+      "description": {
+        "1": "Completed a simulation focused on internal software development workflows.",
+        "2": "Interfaced with a financial data feed to process and react to stock price fluctuations.",
+        "3": "Utilized JPMC's Perspective tool to visualize data for real-time trader analysis."
+      },
+      "skills": ["Python", "Financial Data", "Perspective", "Data Visualization", "Software Development Workflow"]
+    }
+  ],
+  "positions_of_responsibility": []
+}

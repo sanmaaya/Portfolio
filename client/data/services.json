@@ -1,0 +1,43 @@
+[
+  {
+    "id": 1,
+    "title": "Full-Stack Development",
+    "list": [
+      "Frontend & Backend Engineering",
+      "API Design & Integration",
+      "Database Architecture",
+      "Responsive Web Applications",
+      "Real-time Chat & WebSockets"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Web Design & Prototyping",
+    "list": [
+      "Interactive User Interfaces",
+      "Figma to Code translation",
+      "Responsive CSS & Tailwind layouts",
+      "Glassmorphic & Kinetic Designs"
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Data Science & ML",
+    "list": [
+      "Natural Language Processing (NLP)",
+      "Sentiment Analysis Models",
+      "Data Analysis & Visualization",
+      "Scikit-Learn ML Pipelines"
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Competitive Programming",
+    "list": [
+      "Algorithm Design & Analysis",
+      "Data Structures Optimization",
+      "200+ Problems Solved",
+      "LeetCode & HackerRank Prep"
+    ]
+  }
+]

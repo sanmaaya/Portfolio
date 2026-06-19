@@ -1,0 +1,97 @@
+import { Building2 } from "lucide-react";
+import type { ProfessionalExperience, PositionOfResponsibility } from "@/types";
+
+interface CompanyHeaderProps {
+   item: ProfessionalExperience | PositionOfResponsibility;
+   accentColor: string;
+   isMobile: boolean;
+   marginLeft: number;
+}
+
+const CompanyHeader = ({
+   item,
+   accentColor,
+   isMobile,
+   marginLeft,
+}: CompanyHeaderProps) => (
+   <>
+      {/* Company row */}
+      <div
+         style={{
+            display: "flex",
+            alignItems: "center",
+            gap: 8,
+            marginBottom: 4,
+         }}
+      >
+         <div
+            style={{
+               width: 28,
+               height: 28,
+               borderRadius: 10,
+               background: `${accentColor}12`,
+               border: `1px solid ${accentColor}20`,
+               display: "flex",
+               alignItems: "center",
+               justifyContent: "center",
+               flexShrink: 0,
+            }}
+         >
+            <Building2 style={{ width: 14, height: 14, color: accentColor }} />
+         </div>
+         <h3
+            style={{
+               fontSize: isMobile ? 16 : 18,
+               fontWeight: 700,
+               color: "#eeeef5",
+               lineHeight: 1.2,
+            }}
+         >
+            {item.company}
+         </h3>
+      </div>
+
+      {/* Title + Position */}
+      <p
+         style={{
+            color: "#a855f7",
+            fontWeight: 600,
+            fontSize: isMobile ? 14 : 15,
+            marginTop: 4,
+            marginLeft,
+         }}
+      >
+         {item.title}
+         {item.position && (
+            <span
+               className="tag tag-purple"
+               style={{
+                  marginLeft: 8,
+                  verticalAlign: "middle",
+                  fontSize: 11,
+                  padding: "2px 8px",
+               }}
+            >
+               {item.position}
+            </span>
+         )}
+      </p>
+
+      {/* Summary (always visible) */}
+      {item.summary && (
+         <p
+            style={{
+               color: "#a5a5c0",
+               fontSize: 12,
+               lineHeight: 1.7,
+               marginTop: 8,
+               marginLeft,
+            }}
+         >
+            {item.summary}
+         </p>
+      )}
+   </>
+);
+
+export default CompanyHeader;

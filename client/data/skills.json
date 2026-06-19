@@ -1,0 +1,11 @@
+{
+  "languages": ["Java", "Python", "C++", "C", "SQL", "JavaScript"],
+  "frontend": ["React.js", "Tailwind CSS", "HTML5", "CSS3", "Bootstrap"],
+  "backend": ["Node.js", "Express.js", "Firebase", "MongoDB", "MySQL", "REST APIs"],
+  "cloud_devops": ["Docker", "Jenkins", "AWS EC2", "DockerHub", "Nginx", "CI/CD Pipelines", "Git & GitHub"],
+  "ai_ml": ["Sentiment Analysis", "Natural Language Processing"],
+  "tools_platforms": ["VS Code", "Figma", "Jupyter", "Power BI"],
+  "cs_fundamentals": ["Data Structures & Algorithms", "Object-Oriented Programming", "Computer Networks", "Database Management Systems"],
+  "soft_skills": ["Problem Solving", "Team Management", "Event Management", "Communication", "Creative Thinking"],
+  "areas_of_interest": ["Full-Stack Web Development", "Data Science", "Machine Learning"]
+}

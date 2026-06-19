@@ -1,0 +1,40 @@
+[
+  {
+    "id": 1,
+    "date": "August 2023 - Present",
+    "title": "B.Tech in Computer Science and Engineering",
+    "institution": "Lovely Professional University, Punjab",
+    "institutionType": "Private University",
+    "location": "Punjab, India",
+    "cgpa": "7.3",
+    "percentage": "",
+    "display_text": "Lovely Professional University - Punjab, India",
+    "skills": ["Data Structures & Algorithms", "OOPs", "DBMS", "Web Development", "Software Engineering"]
+  },
+  {
+    "id": 2,
+    "date": "March 2021 - May 2023",
+    "title": "Class XII (Science)",
+    "institution": "Presentation Higher Secondary School",
+    "institutionType": "Higher Secondary School",
+    "board": "Kerala State Board",
+    "location": "Kozhikode, Kerala, India",
+    "cgpa": "",
+    "percentage": "87.50%",
+    "display_text": "Presentation Higher Secondary School - Kozhikode, Kerala",
+    "skills": ["Physics", "Chemistry", "Mathematics", "Computer Science"]
+  },
+  {
+    "id": 3,
+    "date": "March 2020 - May 2021",
+    "title": "Class X",
+    "institution": "Pallotti Hill Public School",
+    "institutionType": "Secondary School",
+    "board": "CBSE",
+    "location": "Kozhikode, Kerala, India",
+    "cgpa": "",
+    "percentage": "85.00%",
+    "display_text": "Pallotti Hill Public School - Kozhikode, Kerala",
+    "skills": ["Mathematics", "Science", "Social Science", "English"]
+  }
+]
