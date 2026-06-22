@@ -2,6 +2,7 @@ import type { ReactNode } from "react";
 import { motion, useInView } from "motion/react";
 import { useRef } from "react";
 import { MONO_FONT, TEXT_MUTED, CHROME_BAR_STYLE } from "@/constants/theme";
+import useBreakpoint from "@hooks/useBreakpoint";
 
 interface BrowserMockupProps {
    children: ReactNode;
@@ -22,6 +23,7 @@ const BrowserMockup = ({
    tiltDeg = 48,
 }: BrowserMockupProps) => {
    const ref = useRef<HTMLDivElement>(null);
+   const { isTablet } = useBreakpoint();
    const isInView = useInView(ref, {
       once: false,
       margin: "0px 0px -100px 0px",
@@ -190,7 +192,7 @@ const BrowserMockup = ({
 
             {/* Content area with fade-up */}
             <motion.div
-               style={{ position: "relative", padding: "24px 40px 48px" }}
+               style={{ position: "relative", padding: isTablet ? "16px 16px 32px" : "24px 40px 48px" }}
                initial={{ opacity: 0, y: 20 }}
                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                transition={{
