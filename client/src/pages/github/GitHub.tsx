@@ -85,7 +85,7 @@ const calendarReducer = (
 
 // -- Main component --
 const GitHub = () => {
-   const { isMobile } = useBreakpoint();
+   const { isMobile, isTablet } = useBreakpoint();
    const githubUsername = getGitHubUsername();
    const [calendarState, dispatch] = useReducer(calendarReducer, "loading");
    const calendarRef = useRef<HTMLDivElement>(null);
@@ -127,7 +127,7 @@ const GitHub = () => {
             <div style={{ textAlign: "center" }}>
                <BrowserMockup
                   path={[githubUsername, "contributions"]}
-                  tiltDeg={isMobile ? 30 : 48}
+                  tiltDeg={isTablet ? 30 : 48}
                >
                   <div
                      ref={calendarRef}

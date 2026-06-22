@@ -10,7 +10,7 @@ import SendConfirmation from "./SendConfirmation";
 import useContactForm from "./useContactForm";
 
 const Contact = () => {
-   const { isMobile } = useBreakpoint();
+   const { isMobile, isTablet } = useBreakpoint();
    const contactOptions = getContactOptions();
 
    const {
@@ -37,8 +37,8 @@ const Contact = () => {
                maxWidth: 896,
                margin: "0 auto",
                display: "grid",
-               gap: isMobile ? 24 : 32,
-               gridTemplateColumns: isMobile ? "1fr" : "2fr 3fr",
+               gap: isTablet ? 24 : 32,
+               gridTemplateColumns: isTablet ? "1fr" : "2fr 3fr",
             }}
             variants={staggerContainer}
          >

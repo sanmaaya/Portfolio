@@ -24,7 +24,7 @@ const bentoEntry: Variants = {
 
 const ServiceCard = ({ service, index }: ServiceCardProps) => {
    const [isHovered, setIsHovered] = useState(false);
-   const { isMobile } = useBreakpoint();
+   const { isMobile, isTablet } = useBreakpoint();
    const colors = ACCENT_COLORS[index % ACCENT_COLORS.length];
    const IconComponent = iconMap[service.title] || Code;
 
@@ -43,21 +43,21 @@ const ServiceCard = ({ service, index }: ServiceCardProps) => {
          <div
             style={{
                display: "flex",
-               flexDirection: isMobile ? "column" : "row",
+               flexDirection: isTablet ? "column" : "row",
             }}
          >
             {/* Left: Animation */}
             <div
                style={{
-                  width: isMobile ? "100%" : 150,
-                  minHeight: isMobile ? 100 : "auto",
+                  width: isTablet ? "100%" : 150,
+                  minHeight: isTablet ? 100 : "auto",
                   flexShrink: 0,
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
                   background: `${colors.icon}06`,
-                  borderRight: isMobile ? "none" : `1px solid ${colors.icon}12`,
-                  borderBottom: isMobile
+                  borderRight: isTablet ? "none" : `1px solid ${colors.icon}12`,
+                  borderBottom: isTablet
                      ? `1px solid ${colors.icon}12`
                      : "none",
                   position: "relative",

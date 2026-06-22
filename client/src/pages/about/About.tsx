@@ -13,7 +13,7 @@ import StatCounter from "./StatCounter";
 const About = () => {
    const aboutInfo = getAbout();
    const statistics = getStatistics();
-   const { isMobile } = useBreakpoint();
+   const { isMobile, isTablet } = useBreakpoint();
 
    const highlights = useMemo(
       () => [
@@ -33,8 +33,8 @@ const About = () => {
             <motion.div
                style={{
                   display: "grid",
-                  gridTemplateColumns: isMobile ? "1fr" : "1fr 1fr",
-                  gap: isMobile ? 32 : 56,
+                  gridTemplateColumns: isTablet ? "1fr" : "1fr 1fr",
+                  gap: isTablet ? 32 : 56,
                   alignItems: "center",
                }}
                variants={staggerContainer}
@@ -136,7 +136,7 @@ const About = () => {
             </motion.div>
 
             {/* Stats Row */}
-            <StatCounter statEntries={statEntries} isMobile={isMobile} />
+            <StatCounter statEntries={statEntries} isMobile={isMobile} isTablet={isTablet} />
          </div>
       </PageSection>
    );

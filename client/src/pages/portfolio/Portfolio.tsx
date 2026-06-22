@@ -30,7 +30,7 @@ const Portfolio = () => {
          setActiveFilter(filter);
       }
    }, []);
-   const { isMobile } = useBreakpoint();
+   const { isMobile, isTablet } = useBreakpoint();
 
    const featuredProjects = useMemo(() => getFeaturedProjects(), []);
    const communityProjects = useMemo(() => getCommunityProjects(), []);
@@ -208,7 +208,7 @@ const Portfolio = () => {
             {/* Vertical timeline */}
             <ProjectTimeline
                projects={filteredProjects}
-               isMobile={isMobile}
+               isMobile={isTablet}
                onOpenProject={handleOpenProject}
             />
 

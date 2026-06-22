@@ -11,7 +11,7 @@ import ExperienceModal from "./ExperienceModal";
 const Experience = () => {
    const experienceArray = getExperience();
    const positionsArray = getPositionsOfResponsibility();
-   const { isMobile } = useBreakpoint();
+   const { isMobile, isTablet } = useBreakpoint();
    const [selectedExp, setSelectedExp] =
       useState<ProfessionalExperience | null>(null);
 
@@ -35,7 +35,7 @@ const Experience = () => {
                      item={item}
                      index={index}
                      accentColor="#06b6d4"
-                     isMobile={isMobile}
+                     isMobile={isTablet}
                      onClick={() => setSelectedExp(item)}
                   />
                ))}
@@ -77,7 +77,7 @@ const Experience = () => {
                            item={item}
                            index={index}
                            accentColor="#a855f7"
-                           isMobile={isMobile}
+                           isMobile={isTablet}
                         />
                      ))}
                   </motion.div>

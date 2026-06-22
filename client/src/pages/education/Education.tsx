@@ -8,7 +8,7 @@ import EducationCard from "./EducationCard";
 
 const Education = () => {
    const education = useMemo(() => getEducation(), []);
-   const { isMobile } = useBreakpoint();
+   const { isMobile, isTablet } = useBreakpoint();
 
    return (
       <PageSection
@@ -23,7 +23,7 @@ const Education = () => {
                   key={item.id}
                   item={item}
                   index={index}
-                  isMobile={isMobile}
+                  isMobile={isTablet}
                />
             ))}
          </motion.div>

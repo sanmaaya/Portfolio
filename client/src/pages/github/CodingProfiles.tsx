@@ -52,7 +52,7 @@ interface CodingProfilesProps {
 }
 
 const CodingProfiles = ({ githubUsername }: CodingProfilesProps) => {
-   const { isMobile } = useBreakpoint();
+   const { isMobile, isTablet } = useBreakpoint();
    const stats = getCodingPlatformStats();
    const entries = Object.entries(stats).filter(
       ([key]) => key in PLATFORM_CONFIG,
@@ -69,7 +69,7 @@ const CodingProfiles = ({ githubUsername }: CodingProfilesProps) => {
       justifyContent: "center",
       gap: 8,
       // Fixed aspect ratio keeps cards visually consistent across viewports
-      aspectRatio: "4 / 3",
+      aspectRatio: isMobile ? undefined : "4 / 3",
    };
 
    return (
@@ -92,8 +92,10 @@ const CodingProfiles = ({ githubUsername }: CodingProfilesProps) => {
             style={{
                display: "grid",
                gridTemplateColumns: isMobile
-                  ? "repeat(2, 1fr)"
-                  : `repeat(${entries.length + 1}, 1fr)`,
+                  ? "1fr"
+                  : isTablet
+                     ? "repeat(2, 1fr)"
+                     : `repeat(${entries.length + 1}, 1fr)`,
                gap: 12,
             }}
          >

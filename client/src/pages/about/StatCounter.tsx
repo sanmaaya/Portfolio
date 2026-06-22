@@ -14,15 +14,18 @@ const STAT_LABELS: Record<string, string> = {
 interface StatCounterProps {
    statEntries: [string, string][];
    isMobile: boolean;
+   isTablet: boolean;
 }
 
-const StatCounter = ({ statEntries, isMobile }: StatCounterProps) => (
+const StatCounter = ({ statEntries, isMobile, isTablet }: StatCounterProps) => (
    <motion.div
       style={{
          display: "grid",
          gridTemplateColumns: isMobile
             ? "repeat(2, 1fr)"
-            : `repeat(${statEntries.length}, 1fr)`,
+            : isTablet
+               ? "repeat(3, 1fr)"
+               : `repeat(${statEntries.length}, 1fr)`,
          gap: isMobile ? 12 : 16,
          marginTop: isMobile ? 40 : 56,
       }}
